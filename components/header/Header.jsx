@@ -16,7 +16,7 @@ const Header = () => {
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.wrapper}>
-          <Link href={"/"}>
+          <Link href="/">
             <Image src={"/logo.png"} alt={"Aziz Construction"} width={112} height={91} />
           </Link>
           <div className={styles.elements}>
