@@ -1,0 +1,11 @@
+.image {
+    background-image: url("/contact-us.jpeg");
+    background-position: center center;
+    background-size: cover;
+    height: 305px;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}

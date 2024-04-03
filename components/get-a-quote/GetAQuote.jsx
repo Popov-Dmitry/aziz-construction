@@ -4,10 +4,11 @@ import Input from "@/components/input/Input";
 import Button from "@/components/button/Button";
 import Contacts from "@/components/contacts/Contacts";
 import TextArea from "@/components/text-area/TextArea";
+import { joinClassNames } from "@/utils/join-class-names";
 
-const GetAQuote = () => {
+const GetAQuote = ({ className }) => {
   return (
-    <div className={styles.container}>
+    <div className={joinClassNames(styles.container, className)}>
       <div className={styles.wrapper}>
         <div className={styles.title}>Get A Quote</div>
         <div className={styles.header}>Contact Us.</div>
@@ -28,7 +29,7 @@ const GetAQuote = () => {
         </div>
         <Input placeholder="Your Address" />
         <TextArea className={styles.textArea} placeholder="Message" />
-        <Button className={styles.button} text="Send Message" />
+        <Button className={styles.button} text="Send Message" type="submit" />
       </form>
 
     </div>
