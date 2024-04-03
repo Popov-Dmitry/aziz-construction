@@ -1,0 +1,78 @@
+.button {
+    line-height: normal;
+    cursor: pointer;
+    z-index: 1;
+    isolation: isolate;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-open-sans);
+    font-size: 16px;
+    font-weight: 700;
+    color: #171818;
+    padding: 8px 20px 8px 20px;
+    transition: all .3s;
+    height: fit-content;
+}
+
+.outlined {
+    background-color: #3055AD00;
+    border-style: solid;
+    border-width: 3px 3px 3px 3px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.outlined.black {
+    border-color: #000000;
+}
+
+.outlined.red {
+    border-color: #D53446;
+    color: #D53446;
+}
+
+.outlined:after {
+    content: '';
+    position: absolute; bottom: 0; left: 0;
+    width: 100%;
+    height: 0;
+    z-index: -1;
+    -webkit-transition: .3s;
+    transition: .3s ease-in-out;
+}
+
+.outlined.black:after {
+    background-color: #000000;
+}
+
+.outlined.red:after {
+    background-color: #D53446;
+}
+
+.outlined:hover:after {
+    height: 100%;
+}
+
+.outlined:hover {
+    color: #FFFFFF;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.filled {
+    font-family: var(--font-roboto);
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: #FFFFFF;
+    border: none;
+}
+
+.filled.red {
+    background-color: #D53446;
+}
+
+.filled.black {
+    background-color: #171818;
+}
