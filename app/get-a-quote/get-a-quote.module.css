@@ -1,0 +1,8 @@
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--font-popins);
+    color: #171818;
+}

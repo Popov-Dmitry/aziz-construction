@@ -57,7 +57,7 @@ const Header = () => {
               Contact Us
             </Link>
           </div>
-          <Button text="GET A QUOTE" variant="outlined" color="black" />
+          <Button text="GET A QUOTE" variant="outlined" color="black" href="/get-a-quote" />
         </div>
       </div>
     </div>
