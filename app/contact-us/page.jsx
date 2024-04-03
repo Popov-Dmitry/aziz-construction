@@ -1,18 +1,8 @@
-"use client";
-
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./contact-us.module.css";
 import GetAQuote from "@/components/get-a-quote/GetAQuote";
 
 const ContactUs = () => {
-  useEffect(() => {
-    document.getElementsByTagName("main")[0].style.maxWidth = "100%";
-
-    return () => {
-      document.getElementsByTagName("main")[0].style.maxWidth = "1140px";
-    };
-  }, []);
-
   return (
     <div>
       <div className={styles.image} />

@@ -4,7 +4,7 @@ import GetAQuote from "@/components/get-a-quote/GetAQuote";
 
 const GetAQuotePage = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <h2 className={styles.title}>Get A Quote</h2>
       <GetAQuote />
     </div>
