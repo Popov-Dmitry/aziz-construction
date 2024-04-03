@@ -1,0 +1,54 @@
+.container {
+    background-image: url("/services/new-construction/cover.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    padding-top: 100vh;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 70px 0;
+    background-color: #ffffff;
+}
+
+.row:nth-child(even) {
+    flex-direction: row-reverse;
+    background-color: #E5E5E5;
+}
+
+.column {
+    max-width: 600px;
+    min-height: 250px;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.title {
+    color: #D53446;
+    font-family: var(--font-popins);
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+.row:nth-child(even) .title {
+    color: #21212D;
+}
+
+.description {
+    text-align: left;
+    color: #090909;
+    font-family: var(--font-popins);
+    font-weight: 400;
+}
