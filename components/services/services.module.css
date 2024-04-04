@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 70px 0;
+}
+
+.title {
+    color: #D53446;
+    font-family: var(--font-popins);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.subtitle {
+    color: #21212D;
+    font-family: var(--font-popins);
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1em;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}

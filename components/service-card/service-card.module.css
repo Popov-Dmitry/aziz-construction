@@ -1,0 +1,31 @@
+.container {
+    background-color: #f9fafa;
+}
+
+.image {
+    min-height: 230px;
+    width: 100%;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+}
+
+.title {
+    font-family: var(--font-popins);
+    font-size: 29px;
+    font-weight: 500;
+    color: #21212D;
+    margin-bottom: 7px;
+}
+
+.description {
+    font-family: var(--font-popins);
+    color: #090909;
+    margin-bottom: 15px;
+}
