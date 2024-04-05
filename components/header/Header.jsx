@@ -7,6 +7,7 @@ import Button from "@/components/button/Button";
 import { joinClassNames } from "@/utils/join-class-names";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Dropdown from "@/components/dropdown/Dropdown";
 
 const Header = () => {
   const path = usePathname();
@@ -16,7 +17,7 @@ const Header = () => {
       <div className={styles.content}>
         <div className={styles.wrapper}>
           <Link href="/">
-            <Image src={"/logo.png"} alt={"Aziz Construction"} width={112} height={91} />
+            <Image src="/logo.png" alt="Aziz Construction" width={112} height={91} />
           </Link>
           <div className={styles.elements}>
             <Link
@@ -35,7 +36,46 @@ const Header = () => {
               className={joinClassNames(styles.element, path === "/our-services" ? styles.active : undefined)}
               href="/our-services"
             >
-              Our Services
+              <Dropdown
+                title="Our Services"
+                arrowColor={path === "/our-services" ? "#D53446" : "#000000"}
+              >
+                <Link
+                  href="/new-construction"
+                >
+                  New Construction
+                </Link>
+                <Link
+                  className={styles.link}
+                  href="/full-house-renovation"
+                >
+                  Full House Renovation
+                </Link>
+                <Link
+                  className={styles.link}
+                  href="/adu-construction"
+                >
+                  ADU Construction
+                </Link>
+                <Link
+                  className={styles.link}
+                  href="/kitchen-remodeling"
+                >
+                  Kitchen Remodeling
+                </Link>
+                <Link
+                  className={styles.link}
+                  href="/bathroom-remodeling"
+                >
+                  Bathroom Remodeling
+                </Link>
+                <Link
+                  className={styles.link}
+                  href="addition-services"
+                >
+                  Addition Services
+                </Link>
+              </Dropdown>
             </Link>
             <Link
               className={joinClassNames(styles.element, path === "/blog" ? styles.active : undefined)}
