@@ -1,17 +1,20 @@
 import React from "react";
-import styles from "./new-construction.module.css";
-import { newConstructionData } from "@/app/new-construction/data";
+import styles from "./service.module.css";
+import { newConstructionData } from "@/app/our-services/[slug]/data";
 import Image from "next/image";
 
-const NewConstruction = () => {
+const Service = ({ params }) => {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{ backgroundImage: `url("/services/${params.slug}/cover.jpeg")`}}
+    >
       <div className={styles.wrapper}>
-        {newConstructionData.map((value, index) => (
+        {newConstructionData[params.slug].map((value, index) => (
           <div key={value.title} className={styles.row}>
             <div className={styles.column}>
               <Image
-                src={`/services/new-construction/${index + 1}.jpeg`}
+                src={`/services/${params.slug}/${index + 1}.jpeg`}
                 alt=""
                 fill
                 objectFit="contain"
@@ -28,4 +31,4 @@ const NewConstruction = () => {
   );
 };
 
-export default NewConstruction;
+export default Service;

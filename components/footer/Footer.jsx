@@ -58,37 +58,37 @@ const Footer = () => {
           <div className={joinClassNames(styles.links, styles.gap)}>
             <Link
               className={styles.link}
-              href="/new-construction"
+              href="/our-services/new-construction"
             >
               New Construction
             </Link>
             <Link
               className={styles.link}
-              href="/full-house-renovation"
+              href="/our-services/full-house-renovation"
             >
               Full House Renovation
             </Link>
             <Link
               className={styles.link}
-              href="/adu-construction"
+              href="/our-services/adu-construction"
             >
               ADU Construction
             </Link>
             <Link
               className={styles.link}
-              href="/kitchen-remodeling"
+              href="/our-services/kitchen-remodeling"
             >
               Kitchen Remodeling
             </Link>
             <Link
               className={styles.link}
-              href="/bathroom-remodeling"
+              href="/our-services/bathroom-remodeling"
             >
               Bathroom Remodeling
             </Link>
             <Link
               className={styles.link}
-              href="addition-services"
+              href="/our-services/addition-services"
             >
               Addition Services
             </Link>
