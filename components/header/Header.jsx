@@ -10,7 +10,6 @@ import { usePathname } from "next/navigation";
 
 const Header = () => {
   const path = usePathname();
-  console.log(path);
 
   return (
     <div className={styles.container}>

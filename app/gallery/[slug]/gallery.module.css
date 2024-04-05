@@ -1,0 +1,45 @@
+.container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 70px;
+}
+
+.title {
+    font-family: var(--font-popins);
+    font-weight: 500;
+    font-size: 2rem;
+    color: #D53446;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    width: 100%;
+}
+
+.photo {
+    position: relative;
+    aspect-ratio: 3/2;
+    width: 100%;
+    cursor: pointer;
+}
+
+.photo:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    opacity: 0;
+    transition: .7s;
+}
+
+.photo:hover:after {
+    opacity: .7;
+}

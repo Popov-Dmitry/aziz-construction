@@ -17,11 +17,3 @@
     aspect-ratio: 3/2;
     width: 100%;
 }
-
-.image {
-    height: auto;
-    max-width: 100%;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-}
