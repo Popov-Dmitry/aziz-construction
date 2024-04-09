@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./service.module.css";
-import { newConstructionData } from "@/app/our-services/[slug]/data";
+import { newConstructionData } from "@/data";
 import Image from "next/image";
 
 const Service = ({ params }) => {

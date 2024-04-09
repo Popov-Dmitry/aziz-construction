@@ -1,0 +1,22 @@
+.advantageCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 35px;
+    background-color: #FFFFFF;
+}
+
+.title {
+    color: #D53446;
+    font-family: var(--font-popins);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.description {
+    color: #090909;
+    font-family: var(--font-popins);
+    font-weight: 400;
+    text-align: center;
+}

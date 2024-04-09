@@ -31,7 +31,6 @@ const GetAQuote = ({ className }) => {
         <TextArea className={styles.textArea} placeholder="Message" />
         <Button className={styles.button} text="Send Message" type="submit" />
       </form>
-
     </div>
   );
 };
