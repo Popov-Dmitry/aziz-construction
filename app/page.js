@@ -1,15 +1,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { whyChooseUsData, faqData, recentWorksData, reviewsData } from "@/data"
+import { whyChooseUsData, faqData, recentWorksData } from "@/data"
 import AdvantageCard from "@/components/advantage-card/AdvantageCard";
 import Sns from "@/components/sns/Sns";
 import Services from "@/components/services/Services";
 import Accordion from "@/components/accordion/Accordion";
 import WorkCard from "@/components/work-card/WorkCard";
-import Reviews from "@/components/reviews/reviews";
-import GetAQuote from "@/components/get-a-quote/GetAQuote";
 import Button from "@/components/button/Button";
 import ReviewsBlock from "@/components/reviews-block/ReviewsBlock";
+import Input from "@/components/input/Input";
+import TextArea from "@/components/text-area/TextArea";
 
 const mainInfoBlock = () => (
   <div className={styles.main}>
@@ -135,7 +135,27 @@ const reviewsBlock = () => (
 const contactUsBlock = () => (
   <div className={styles.wrapper}>
     <div className={styles.container}>
-      <GetAQuote />
+      <div className={styles.twoColsFlex}>
+        <div className={styles.leftColumn}>
+          <div className={styles.contactUsTitle}>Contact Us</div>
+          <div className={styles.subtitle} style={{ marginTop: -12 }}>Get A Quote</div>
+          <form className={styles.contactUsForm}>
+            <div className={styles.contactUsRow}>
+              <Input className={styles.contactUsInput} placeholder="Name" />
+              <Input className={styles.contactUsInput} placeholder="Email" />
+            </div>
+            <div className={styles.contactUsRow}>
+              <Input className={styles.contactUsInput} placeholder="Phone" />
+              <Input className={styles.contactUsInput} placeholder="Your Address" />
+            </div>
+            <TextArea className={styles.tcontactUsTextArea} placeholder="Message" />
+            <Button className={styles.contactUsButton} text="Send Message" type="submit" />
+          </form>
+        </div>
+        <div className={styles.faqPhoto}>
+          <Image src="/home/contact-us.jpeg" alt="" fill />
+        </div>
+      </div>
     </div>
   </div>
 );

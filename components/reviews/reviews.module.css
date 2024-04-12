@@ -1,3 +1,14 @@
+.reviewsContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
 .reviews {
     max-width: 100%;
+}
+
+.rightNavigationButton, .leftNavigationButton {
+    opacity: 0.5;
+    cursor: pointer;
 }

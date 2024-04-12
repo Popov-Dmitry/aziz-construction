@@ -7,8 +7,8 @@ const ReviewsBlock = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-       <div className={styles.title}>Our Testimonials</div>
-       <div className={styles.subtitle}>What Our Clients Says About Us</div>
+        <div className={styles.title}>Our Testimonials</div>
+        <div className={styles.subtitle}>What Our Clients Says About Us</div>
       </div>
       <Reviews reviews={reviewsData} className={styles.reviews} />
       <div className={styles.raitingSummary}>
