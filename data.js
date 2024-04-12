@@ -260,5 +260,51 @@ export const newConstructionData = {
       description: "In the bustling and vibrant environment of San Francisco, every square foot of your property is precious. Aziz Construction specializes in addition services in San Francisco, Bay Area, providing homeowners and business proprietors with the extra space.",
       image: "/services/addition-services.jpeg",
       link: "/addition-services"
+    }
+  ];
+
+  export const timelineData = [
+    {
+      title: "Our Commitment:",
+      description: "As a general contractor, our commitment is to provide superior construction services and ensure client satisfaction. We understand the importance of your project and the trust you place in us. With every project, big or small, we strive to exceed your expectations and deliver exceptional results.",
+      src: "/about-us/calendar.svg"
     },
+    {
+      title: "Expertise and Experience",
+      description: "Our team at Aziz Construction comprises highly skilled professionals who have honed their craft through years of hands-on experience. We have worked on a diverse range of projects, from residential renovations to commercial construction. This expertise allows us to tackle complex challenges, find innovative solutions, and deliver projects of the highest quality.",
+      src: "/about-us/like-hand.svg"
+    },
+    {
+      title: "Personalized Approach",
+      description: "We believe that every project is unique, and we tailor our approach to meet your specific needs. From the initial consultation to project completion, we collaborate closely with you to understand your vision, goals, and budget. Our team will work diligently to ensure that your project is executed seamlessly, on time, and within budget.",
+      src: "/about-us/user-edit.svg"
+    },
+    {
+      title: "Quality Craftsmanship",
+      description: "At Aziz Construction, we take pride in our commitment to quality craftsmanship. We meticulously select the finest materials, employ proven construction techniques, and pay attention to every detail. Our dedication to excellence ensures that your project will not only be aesthetically pleasing but also built to withstand the test of time.",
+      src: "/about-us/tachometer.svg"
+    },
+    {
+      title: "Transparent Communication",
+      description: "We believe that effective communication is key to a successful project. Throughout the construction process, we maintain open and transparent lines of communication, keeping you informed about project progress, addressing any concerns promptly, and providing regular updates. We are here to listen to your needs and make your vision a reality.",
+      src: "/about-us/comment.svg"
+    },
+    {
+      title: "Building for the Future",
+      description: "One of our core values is to create a family legacy that extends beyond our current generation. We aim to build a reputation that our children and future generations can be proud of. With this long-term perspective in mind, we approach every project with dedication, integrity, and a commitment to excellence.",
+      src: "/about-us/building.svg"
+    }
+  ];
+
+  export const flipCardsData = [
+    {
+      title: "Our Values",
+      description: "Our general contracting services include project planning and design, construction, renovation, and remodeling. We collaborate closely with our customers to comprehend their requirements and preferences.",
+      src: "/about-us/our-values.jpeg"
+    },
+    {
+      title: "Our Specialty",
+      description: "Customized Solutions. We specialize in offering services tailored to your specific needs, delivering personalized solutions that exceed expectations.",
+      src: "/about-us/our-specialty.jpeg"
+    }
   ]

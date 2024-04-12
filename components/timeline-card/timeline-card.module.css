@@ -1,0 +1,42 @@
+.timelineCard {
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 2px 2px 30px 0 rgba(156,156,192,0.26);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+}
+
+.timelineCardArrowLeft, .timelineCardArrowRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    margin-left: calc(-20px / 2);
+    margin-right: calc(-20px / 2);
+}
+
+.timelineCardArrowLeft {
+    left: 0;
+}
+
+.timelineCardArrowRight {
+    right: 0;
+}
+
+.timelineCardTitle {
+    font-family: var(--font-popins);
+    font-size: 18px;
+    font-weight: 600;
+    color: #21212D;
+}
+
+.timelineCardDescription {
+    font-family: var(--font-popins);
+    font-weight: 300;
+    color: #090909;
+}

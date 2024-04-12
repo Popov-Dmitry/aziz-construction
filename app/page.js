@@ -9,23 +9,22 @@ import WorkCard from "@/components/work-card/WorkCard";
 import Reviews from "@/components/reviews/reviews";
 import GetAQuote from "@/components/get-a-quote/GetAQuote";
 import Button from "@/components/button/Button";
+import ReviewsBlock from "@/components/reviews-block/ReviewsBlock";
 
 const mainInfoBlock = () => (
   <div className={styles.main}>
     <div className={styles.mainContainer}>
       <div className={styles.mainContent}>
-      <Button text="License# 1103807" />
-    <div className={styles.mainText1}>Diversified General Contracting Services. Unvarying Quality</div>
-    <div className={styles.mainText2}>Innovative Concepts, Creative<br/> Design, Flawless Execution</div>
-    <div className={styles.mainText3}>We are a team of highly skilled professionals committed to delivering top-notch<br/> construction solutions to meet all your needs.</div>
-    <div className={styles.mainButtons}>
-      <Button text="Call Now" color="black" />
-      <Button text="Get A Quote" />
-    </div>
+        <Button text="License# 1103807" />
+        <div className={styles.mainText1}>Diversified General Contracting Services. Unvarying Quality</div>
+        <div className={styles.mainText2}>Innovative Concepts, Creative<br/> Design, Flawless Execution</div>
+        <div className={styles.mainText3}>We are a team of highly skilled professionals committed to delivering top-notch<br/> construction solutions to meet all your needs.</div>
+        <div className={styles.mainButtons}>
+          <Button text="Call Now" color="black" />
+          <Button text="Get A Quote" />
+        </div>
       </div>
-    
-    </div>
-    
+    </div>  
   </div>
 );
 
@@ -129,16 +128,7 @@ const clientsFeedbackBlock = () => (
 
 const reviewsBlock = () => (
   <div className={styles.wrapper}>
-    <div className={styles.container}>
-      <div className={styles.header}>
-        <div className={styles.title}>Our Testimonials</div>
-        <div className={styles.subtitle}>What Our Clients Says About Us</div>
-      </div>
-      <Reviews reviews={reviewsData} className={styles.reviews} />
-      <div>
-        <span className={styles.raitingSummaryBold}>Google</span> rating score: <span className={styles.raitingSummaryBold}>{(reviewsData.map((item) => item.raiting).reduce((prev, curr) => prev + curr) / reviewsData.length).toFixed(1)}</span> of 5, based on <span className={styles.raitingSummaryBold}>{reviewsData.length}</span> reviews
-      </div>
-    </div>
+    <ReviewsBlock />
   </div>
 );
 

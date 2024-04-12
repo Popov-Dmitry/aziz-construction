@@ -21,7 +21,7 @@
     width: 100%;
 }
 
-.wrapper:nth-child(even) {
+.wrapper:nth-child(odd) {
     background-color: #F1F1F1;
 }
 
@@ -176,15 +176,4 @@
 
 .reviews {
     margin: 8px 0 15px 0;
-}
-
-.raitingSummary, .raitingSummaryBold {
-    font-size: 14px;
-    font-family: var(--font-open-sans);
-    color: #000000;
-    line-height: 1.4em;
-}
-
-.raitingSummaryBold {
-    font-weight: bold;
 }

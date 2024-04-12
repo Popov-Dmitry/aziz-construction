@@ -13,7 +13,7 @@ const Header = () => {
   const path = usePathname();
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="header">
       <div className={styles.content}>
         <div className={styles.wrapper}>
           <Link href="/">
