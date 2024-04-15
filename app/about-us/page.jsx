@@ -8,12 +8,14 @@ import Image from "next/image";
 import ReviewsBlock from "@/components/reviews-block/ReviewsBlock";
 import FlipCard from "@/components/flip-card/FlipCard";
 import Button from "@/components/button/Button";
+import { useBreakpoints } from "@/hooks/use-breakpoints";
 
 const AboutUs = () => {
   const [timelinePosition, setTimelinePosition] = useState(0);
   const [lineOffset, setLineOffset] = useState(0);
   const lineRef = useRef();
   const iconsRef = useRef([]);
+  const breakpoint = useBreakpoints();
 
   const handleScroll = useCallback(() => {
     const offset = window.scrollY -
@@ -58,7 +60,7 @@ const AboutUs = () => {
                   <TimelineCard
                     title={item.title}
                     description={item.description}
-                    arrowDirection={index % 2 === 0 ? "right" : "left"}
+                    arrowDirection={breakpoint !== "lg" ? "left" : index % 2 === 0 ? "right" : "left"}
                   />
                 </div>
                 <div

@@ -13,13 +13,17 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 70px 0;
     background-color: #ffffff;
+}
+
+.row:nth-child(odd) {
+    padding: 70px 10px 70px 0;
 }
 
 .row:nth-child(even) {
     flex-direction: row-reverse;
     background-color: #E5E5E5;
+    padding: 70px 0 70px 10px;
 }
 
 .column {

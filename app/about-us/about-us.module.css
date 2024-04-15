@@ -187,3 +187,65 @@
     font-size: 18px;
     padding: 20px;
 }
+
+@media (max-width: 767px) {
+    .title {
+        text-align: center;
+    }
+
+    .subtitle, .subtitleSmall {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .aboutUsText {
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.7em;
+    }
+
+    .timelineBlock {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .timeline {
+        left: 28px;
+    }
+
+    .timelineRow, .timelineRow:nth-child(even) {
+        flex-direction: row-reverse;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .timelineCardWrapper {
+        width: 100%;
+    }
+
+    .benefitsBlock {
+        flex-direction: column;
+    }
+
+    .benefitsText {
+        text-align: center;
+        font-size: 17px;
+        line-height: 1.3em;
+        padding: 0 10px;
+    }
+    
+    .flipCardsBlock {
+        flex-direction: column;
+    }
+
+    .flipCardsLeft {
+        width: 100%;
+    }
+    
+    .flipCardsTitle {
+        font-size: 23px;
+        line-height: 34px;
+        text-align: center;
+    }
+}

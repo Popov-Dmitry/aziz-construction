@@ -7,7 +7,7 @@ const FlipCard = ({ src, title, description }) => {
     <div className={styles.flipCard}>
       <div className={styles.flipCardInner}>
         <div className={styles.flipCardFront}>
-          <Image src={src} alt="" fill />
+          <Image src={src} alt="" fill objectFit="cover" />
         </div>
         <div className={styles.flipCardBack}>
           <div className={styles.flipCardBackContent}>
