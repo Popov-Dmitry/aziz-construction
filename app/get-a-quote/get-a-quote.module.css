@@ -11,3 +11,9 @@
     font-family: var(--font-popins);
     color: #171818;
 }
+
+@media (max-width: 1024px) {
+    .title {
+        padding: 0 10px;
+    }
+}

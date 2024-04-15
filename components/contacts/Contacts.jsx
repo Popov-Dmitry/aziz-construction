@@ -27,7 +27,7 @@ const Contacts = ({ size = "sm" }) => {
         href="https://www.google.com/maps/place/Aziz+Construction/@37.5262686,-122.3594841,9z/data=!4m6!3m5!1s0xc5c2c91c9196b3b:0x116a5550123731a4!8m2!3d37.5262686!4d-122.3594841!16s%2Fg%2F11sv78lvh7?hl=en&entry=ttu"
       >
         <Image src="location-pin.svg" alt="" width={18} height={18} />
-        <div>530 Lytton Ave 2nd Floor Palo Alto,<br />CA 94301</div>
+        <div>530 Lytton Ave 2nd Floor Palo Alto, CA 94301</div>
       </Link>
       <Sns size={size} />
     </div>

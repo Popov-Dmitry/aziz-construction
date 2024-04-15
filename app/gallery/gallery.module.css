@@ -17,3 +17,9 @@
     aspect-ratio: 3/2;
     width: 100%;
 }
+
+@media (max-width: 1024px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+}
