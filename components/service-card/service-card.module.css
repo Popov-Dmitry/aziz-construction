@@ -29,3 +29,11 @@
     color: #090909;
     margin-bottom: 15px;
 }
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 21px;
+        line-height: 1.1em;
+    }
+}
+

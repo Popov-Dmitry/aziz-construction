@@ -11,8 +11,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { joinClassNames } from "@/utils/join-class-names";
 import Image from "next/image";
+import { useBreakpoints } from "@/hooks/use-breakpoints"
 
 const Reviews = ({ reviews, className }) => {
+  const breakpoint = useBreakpoints();
+
   return (
     <div className={styles.reviewsContainer}>
       <Image
@@ -28,8 +31,8 @@ const Reviews = ({ reviews, className }) => {
       autoplay={5000}
       spaceBetween={16}
       loop
-      loopedSlides={3}
-      slidesPerView={3}
+      loopedSlides={breakpoint === "lg" ? 3 : 2}
+      slidesPerView={breakpoint === "lg" ? 3 : 2}
       navigation={{
         nextEl: `.${styles.rightNavigationButton}`,
         prevEl: `.${styles.leftNavigationButton}`

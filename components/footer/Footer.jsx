@@ -9,8 +9,8 @@ const Footer = () => {
   return (
     <footer className={styles.container}>
       <div className={styles.wrapper}>
-        <Link href="/" style={{ margin: 30 }}>
-          <Image src={"/logo.png"} alt={"Aziz Construction"} width={251} height={204} />
+        <Link href="/" className={styles.logo}>
+          <Image src="/logo.png" alt="Aziz Construction" width={251} height={204} />
         </Link>
         <div>
           <h2 className={styles.title}>Quick Links</h2>

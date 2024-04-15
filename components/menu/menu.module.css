@@ -1,0 +1,37 @@
+.menuToggle {
+    display: flex;
+    padding: 6px;
+    background-color: #C52727;
+}
+
+.menuContent {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 100px;
+    background-color: #FFFFFF;
+    min-width: 220px;
+    z-index: 1;
+    padding-top: 10px;
+}
+
+.menuItem {
+    font-family: var(--font-open-sans);
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+.menuContent .menuItem:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.menuContentActive {
+    display: block;
+}

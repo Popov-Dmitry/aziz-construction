@@ -4,9 +4,9 @@ import styles from "./sns.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
-const Sns = ({ size = "sm" }) => {
+const Sns = ({ size = "sm", className }) => {
     return (
-      <div className={joinClassNames(styles.row, styles.sns)}>
+      <div className={joinClassNames(styles.row, styles.sns, className)}>
         <Link
           href="https://www.google.com/maps/place/Aziz+Construction/@37.5262686,-122.3594841,9z/data=!4m6!3m5!1s0xc5c2c91c9196b3b:0x116a5550123731a4!8m2!3d37.5262686!4d-122.3594841!16s%2Fg%2F11sv78lvh7?hl=en&entry=ttu"
         >

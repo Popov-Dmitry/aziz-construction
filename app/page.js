@@ -10,6 +10,7 @@ import Button from "@/components/button/Button";
 import ReviewsBlock from "@/components/reviews-block/ReviewsBlock";
 import Input from "@/components/input/Input";
 import TextArea from "@/components/text-area/TextArea";
+import { joinClassNames } from "@/utils/join-class-names";
 
 const mainInfoBlock = () => (
   <div className={styles.main}>
@@ -17,11 +18,11 @@ const mainInfoBlock = () => (
       <div className={styles.mainContent}>
         <Button text="License# 1103807" />
         <div className={styles.mainText1}>Diversified General Contracting Services. Unvarying Quality</div>
-        <div className={styles.mainText2}>Innovative Concepts, Creative<br/> Design, Flawless Execution</div>
-        <div className={styles.mainText3}>We are a team of highly skilled professionals committed to delivering top-notch<br/> construction solutions to meet all your needs.</div>
+        <div className={styles.mainText2}>Innovative Concepts, Creative Design, Flawless Execution</div>
+        <div className={styles.mainText3}>We are a team of highly skilled professionals committed to delivering top-notch construction solutions to meet all your needs.</div>
         <div className={styles.mainButtons}>
           <Button text="Call Now" color="black" />
-          <Button text="Get A Quote" />
+          <Button text="Get A Quote" className={styles.getAQuoteButton} />
         </div>
       </div>
     </div>  
@@ -31,7 +32,7 @@ const mainInfoBlock = () => (
 const aboutBlock = () => (
   <div className={styles.wrapper}>
     <div className={styles.container}>
-      <div className={styles.twoColsFlex}>
+      <div className={joinClassNames(styles.twoColsFlex, styles.aboutContainer)}>
         <div className={styles.leftColumn}>
           <div className={styles.title}>About Us</div>
           <div className={styles.aboutSlogan}>
@@ -58,7 +59,7 @@ const whyChooseUsBlock = () => (
   <div className={styles.wrapper}>
     <div className={styles.container}>
       <div className={styles.subtitle}>Why Choose Us</div>
-      <Sns size="lg" />
+      <Sns size="lg" className={styles.sns} />
       <div className={styles.twoColsGrid}>
         {whyChooseUsData.map((item) => (
           <AdvantageCard {...item} />

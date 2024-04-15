@@ -8,17 +8,9 @@ import { joinClassNames } from "@/utils/join-class-names";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Dropdown from "@/components/dropdown/Dropdown";
+import Menu from "../menu/Menu";
 
-const Header = () => {
-  const path = usePathname();
-
-  return (
-    <div className={styles.container} id="header">
-      <div className={styles.content}>
-        <div className={styles.wrapper}>
-          <Link href="/">
-            <Image src="/logo.png" alt="Aziz Construction" width={112} height={91} />
-          </Link>
+const menuItems = (path, mobile) => (
           <div className={styles.elements}>
             <Link
               className={joinClassNames(styles.element, path === "/" ? styles.active : undefined)}
@@ -33,12 +25,16 @@ const Header = () => {
               About Us
             </Link>
             <Link
-              className={joinClassNames(styles.element, path === "/our-services" ? styles.active : undefined)}
+              className={mobile ? styles.disabledLink : undefined}
               href="/our-services"
+              style={{ display: "flex", flexDirection: "column", padding: 0 }}
             >
               <Dropdown
                 title="Our Services"
-                arrowColor={path === "/our-services" ? "#D53446" : "#000000"}
+                arrowColor={path.startsWith("/our-services")
+                  ? mobile ? "#FFFFFF" : "#D53446"
+                  : "#000000"}
+                  className={joinClassNames(styles.element, path.startsWith("/our-services") ? styles.active : undefined)}
               >
                 <Link
                   href="/our-services/new-construction"
@@ -96,7 +92,23 @@ const Header = () => {
               Contact Us
             </Link>
           </div>
-          <Button text="GET A QUOTE" variant="outlined" color="black" href="/get-a-quote" />
+);
+
+const Header = () => {
+  const path = usePathname();
+
+  return (
+    <div className={styles.container} id="header">
+      <div className={styles.content}>
+        <div className={styles.wrapper}>
+          <Link href="/">
+            <Image src="/logo.png" alt="Aziz Construction" width={112} height={91} />
+          </Link>
+          {menuItems(path)}
+          <Button text="GET A QUOTE" variant="outlined" color="black" href="/get-a-quote" className={styles.getAQuoteButton} />
+          <Menu className={styles.menu}>
+            {menuItems(path, true).props.children}
+          </Menu>
         </div>
       </div>
     </div>

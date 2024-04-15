@@ -152,6 +152,10 @@
     width: 100%;
 }
 
+.sns {
+    margin-bottom: 16px;
+}
+
 .faqSubtitle {
     font-size: 36px;
 }
@@ -213,4 +217,91 @@
     font-family: var(--font-popins);
     font-size: 20px;
     font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 1024px;
+        padding: 150px 10px;
+    }
+
+    .mainContent {
+        width: 90%;
+    }
+
+    .mainText2 {
+        font-size: 40px;
+    }
+
+    .video {
+        width: 100%;
+    }
+
+    .aboutContainer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 767px;
+        padding: 50px 10px;
+    }
+
+    .mainText1 {
+        font-size: 18px;
+    }
+
+    .mainText2 {
+        font-size: 23px;
+        line-height: 1.4em;
+    }
+
+    .mainText3 {
+        font-size: 18px;
+    }
+
+    .getAQuoteButton {
+        display: none;
+    }
+
+    .leftColumn {
+        gap: 14px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 30px;
+    }
+
+    .aboutSlogan {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .aboutDescription {
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.7em;
+    }
+
+    .twoColsFlex {
+        flex-direction: column;
+    }
+
+    .twoColsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .faqSubtitle {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .recentWorks {
+        grid-template-columns: 1fr;
+    }
 }
