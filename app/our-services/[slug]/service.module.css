@@ -33,6 +33,10 @@
     gap: 20px;
 }
 
+.image {
+    object-fit: contain;
+}
+
 .title {
     color: #D53446;
     font-family: var(--font-popins);
@@ -50,4 +54,33 @@
     color: #090909;
     font-family: var(--font-popins);
     font-weight: 400;
+}
+
+@media (max-width: 767px) {
+    .row, .row:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        max-width: none;
+    }
+
+    .image {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .title {
+        padding: 0 10px;
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .description {
+        padding: 0 10px;
+        text-align: center;
+        font-size: 17px;
+        line-height: 1.3em;
+    }
 }

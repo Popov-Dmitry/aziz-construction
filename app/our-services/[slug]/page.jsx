@@ -17,7 +17,7 @@ const Service = ({ params }) => {
                 src={`/services/${params.slug}/${index + 1}.jpeg`}
                 alt=""
                 fill
-                objectFit="contain"
+                className={styles.image}
               />
             </div>
             <div className={styles.column}>
