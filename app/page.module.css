@@ -99,6 +99,14 @@
     gap: 20px;
 }
 
+.license {
+    font-family: var(--font-roboto) !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.3) !important;
+    color: #FFFFFF !important;
+}
+
 .mainText1, .mainText2, .mainText3 {
     color: #FFFFFF;
     font-family: var(--font-popins);
@@ -118,6 +126,13 @@
     font-weight: 400;
     font-style: normal;
     line-height: 28px;
+}
+
+.mainDivider {
+    height: 2px;
+    width: 100%;
+    max-width: 515px;
+    background-color: #D53446;
 }
 
 .mainButtons {
@@ -229,6 +244,10 @@
         width: 90%;
     }
 
+    .mainText1 {
+        font-weight: 400;
+    }
+
     .mainText2 {
         font-size: 40px;
     }
@@ -248,6 +267,14 @@
         padding: 50px 10px;
     }
 
+    .main {
+        height: 100%;
+    }
+
+    .mainContainer {
+        padding: 50px 0;
+    }
+
     .mainText1 {
         font-size: 18px;
     }
@@ -262,7 +289,7 @@
     }
 
     .getAQuoteButton {
-        display: none;
+        display: none !important;
     }
 
     .leftColumn {

@@ -16,8 +16,9 @@ const mainInfoBlock = () => (
   <div className={styles.main}>
     <div className={styles.mainContainer}>
       <div className={styles.mainContent}>
-        <Button text="License# 1103807" />
+        <Button className={styles.license} text="License# 1103807" />
         <div className={styles.mainText1}>Diversified General Contracting Services. Unvarying Quality</div>
+        <div className={styles.mainDivider} />
         <div className={styles.mainText2}>Innovative Concepts, Creative Design, Flawless Execution</div>
         <div className={styles.mainText3}>We are a team of highly skilled professionals committed to delivering top-notch construction solutions to meet all your needs.</div>
         <div className={styles.mainButtons}>
