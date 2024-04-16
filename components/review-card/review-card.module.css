@@ -72,3 +72,9 @@
     text-align: left;
     transition: height 0.5s;
 }
+
+@media (max-width: 625px) {
+    .reviewCard {
+        max-width: 100%;
+    }
+}

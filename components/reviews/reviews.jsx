@@ -11,7 +11,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { joinClassNames } from "@/utils/join-class-names";
 import Image from "next/image";
-import { useBreakpoints } from "@/hooks/use-breakpoints"
+import { useBreakpoints } from "@/hooks/use-breakpoints";
+
+const slidesPerViewByBreakpoints = {
+  lg: 3,
+  sm: 2,
+  xs: 1
+};
 
 const Reviews = ({ reviews, className }) => {
   const breakpoint = useBreakpoints();
@@ -26,28 +32,28 @@ const Reviews = ({ reviews, className }) => {
         className={styles.leftNavigationButton}
       />
       <Swiper
-      className={joinClassNames(styles.reviews, className)}
-      autoHeight
-      autoplay={5000}
-      spaceBetween={16}
-      loop
-      loopedSlides={breakpoint === "lg" ? 3 : 2}
-      slidesPerView={breakpoint === "lg" ? 3 : 2}
-      navigation={{
-        nextEl: `.${styles.rightNavigationButton}`,
-        prevEl: `.${styles.leftNavigationButton}`
-      }}
-      mousewheel={true}
-      modules={[Controller, Navigation, Pagination, Scrollbar, A11y]}
-      centerInsufficientSlides={true}
-    >
-      {reviews.map((item) => (
-        <SwiperSlide>
-          <ReviewCard {...item} />
-        </SwiperSlide>
-      ))}
-    </Swiper> 
-    <Image
+        className={joinClassNames(styles.reviews, className)}
+        autoHeight
+        autoplay={5000}
+        spaceBetween={16}
+        loop
+        loopedSlides={slidesPerViewByBreakpoints[breakpoint]}
+        slidesPerView={slidesPerViewByBreakpoints[breakpoint]}
+        navigation={{
+          nextEl: `.${styles.rightNavigationButton}`,
+          prevEl: `.${styles.leftNavigationButton}`
+        }}
+        mousewheel={true}
+        modules={[Controller, Navigation, Pagination, Scrollbar, A11y]}
+        centerInsufficientSlides={true}
+      >
+        {reviews.map((item) => (
+          <SwiperSlide>
+            <ReviewCard {...item} />
+          </SwiperSlide>
+        ))}
+      </Swiper> 
+      <Image
         src="/arrow-right.svg"
         alt=""
         height={40}
