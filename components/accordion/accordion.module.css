@@ -1,27 +1,17 @@
 .accordion {
     background-color: #FFFFFF;
     padding: 15px 15px 15px 15px;
-    /* width: 100%; */
 }
 
-.accordionHeader {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-}
-
-.accordionTitle {
+.accordionTitle, .accordionTitleActive {
     font-family: var(--font-popins);
     font-size: 17px;
     font-weight: 500;
     color: #000000;
+    cursor: pointer;
 }
 
 .accordionTitleActive {
-    font-family: var(--font-popins);
-    font-size: 17px;
-    font-weight: 500;
     color: #D53446;
 }
 
@@ -36,5 +26,4 @@
     font-size: 16px;
     font-weight: 300;
     line-height: 1.6em;
-    /* padding: 0px 20px 20px 20px; */
 }

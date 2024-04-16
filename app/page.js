@@ -4,13 +4,13 @@ import { whyChooseUsData, faqData, recentWorksData } from "@/data"
 import AdvantageCard from "@/components/advantage-card/AdvantageCard";
 import Sns from "@/components/sns/Sns";
 import Services from "@/components/services/Services";
-import Accordion from "@/components/accordion/Accordion";
 import WorkCard from "@/components/work-card/WorkCard";
 import Button from "@/components/button/Button";
 import ReviewsBlock from "@/components/reviews-block/ReviewsBlock";
 import Input from "@/components/input/Input";
 import TextArea from "@/components/text-area/TextArea";
 import { joinClassNames } from "@/utils/join-class-names";
+import AccordionsGroup from "@/components/accordions-group/AccordionsGroup";
 
 const mainInfoBlock = () => (
   <div className={styles.main}>
@@ -84,9 +84,7 @@ const faqBlock = () => (
         <div className={styles.leftColumn}>
           <div className={styles.title}>Ask Questions</div>
           <div className={styles.faqSubtitle}>Frequently Asked Questions</div>
-          {faqData.map((item) => (
-            <Accordion {...item} />
-          ))}
+          <AccordionsGroup data={faqData} />
         </div>
         <div className={styles.faqPhoto}>
           <Image src="/home/faq.jpeg" alt="" fill />

@@ -1,0 +1,13 @@
+.accordionsGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .accordionsGroup {
+        gap: 14px;
+    }
+}
