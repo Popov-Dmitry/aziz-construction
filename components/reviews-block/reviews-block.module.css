@@ -12,14 +12,14 @@
     color: #D53446;
     font-family: var(--font-popins);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .subtitle {
     color: #21212D;
     font-family: var(--font-popins);
     font-size: 42px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1em;
     text-align: center;
 }

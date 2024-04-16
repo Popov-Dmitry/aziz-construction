@@ -7,25 +7,29 @@ import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter"
+  variable: "--font-inter",
+  display: "swap"
 });
 
 const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-open-sans"
+  variable: "--font-open-sans",
+  display: "swap"
 });
 
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
-  variable: "--font-roboto"
+  variable: "--font-roboto",
+  display: "swap"
 });
 
 const popins = Poppins({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "700"],
-  variable: "--font-popins"
+  variable: "--font-popins",
+  display: "swap"
 });
 
 export const metadata = {

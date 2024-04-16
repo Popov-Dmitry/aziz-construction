@@ -31,12 +31,12 @@
 .timelineCardTitle {
     font-family: var(--font-popins);
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     color: #21212D;
 }
 
 .timelineCardDescription {
     font-family: var(--font-popins);
-    font-weight: 300;
+    font-weight: 400;
     color: #090909;
 }

@@ -50,14 +50,14 @@
     color: #D53446;
     font-family: var(--font-popins);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .subtitle, .faqSubtitle {
     color: #21212D;
     font-family: var(--font-popins);
     font-size: 42px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1em;
 }
 
@@ -129,7 +129,7 @@
     color: #21212D;
     font-family: var(--font-popins);
     font-size: 42px;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
     line-height: 1.3em;
 }
@@ -142,7 +142,7 @@
     color: #090909;
     font-family: var(--font-popins);
     font-size: 22px;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 34px;
 }
 
@@ -216,7 +216,7 @@
     color: #D53446;
     font-family: var(--font-popins);
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 @media (max-width: 1024px) {
