@@ -27,7 +27,7 @@
     white-space: nowrap;
 }
 
-.menuContent .menuItem:hover {
+.menuContent .menuItem:active {
     background-color: #000000;
     color: #FFFFFF;
 }

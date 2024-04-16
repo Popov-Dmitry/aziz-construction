@@ -24,13 +24,10 @@ const menuItems = (path, mobile) => (
             >
               About Us
             </Link>
-            <Link
-              className={mobile ? styles.disabledLink : undefined}
-              href="/our-services"
-              style={{ display: "flex", flexDirection: "column", padding: 0 }}
-            >
+            <div className={styles.dropdown}>
               <Dropdown
                 title="Our Services"
+                titleHref="/our-services"
                 arrowColor={path.startsWith("/our-services")
                   ? mobile ? "#FFFFFF" : "#D53446"
                   : "#000000"}
@@ -72,7 +69,7 @@ const menuItems = (path, mobile) => (
                   Addition Services
                 </Link>
               </Dropdown>
-            </Link>
+            </div>
             <Link
               className={joinClassNames(styles.element, path === "/blog" ? styles.active : undefined)}
               href="/blog"
