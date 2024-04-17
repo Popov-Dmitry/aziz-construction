@@ -31,4 +31,8 @@
     .services {
         grid-template-columns: 1fr;
     }
+
+    .subtitle {
+        font-size: 30px;
+    }
 }
