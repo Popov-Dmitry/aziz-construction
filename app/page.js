@@ -60,7 +60,7 @@ const whyChooseUsBlock = () => (
   <div className={styles.wrapper}>
     <div className={styles.container}>
       <div className={styles.subtitle}>Why Choose Us</div>
-      <Sns size="lg" className={styles.sns} />
+      <Sns fill="#D53446" size="lg" className={styles.sns} />
       <div className={styles.twoColsGrid}>
         {whyChooseUsData.map((item) => (
           <AdvantageCard {...item} />
@@ -88,7 +88,7 @@ const faqBlock = () => (
           <AccordionsGroup data={faqData} />
         </div>
         <div className={styles.faqPhoto}>
-          <Image src="/home/faq.jpeg" alt="" fill />
+          <Image src="/home/faq.jpeg" alt="" fill objectFit="cover" />
         </div>
       </div>
     </div>
@@ -153,7 +153,7 @@ const contactUsBlock = () => (
           </form>
         </div>
         <div className={styles.faqPhoto}>
-          <Image src="/home/contact-us.jpeg" alt="" fill />
+          <Image src="/home/contact-us.jpeg" alt="" fill objectFit="cover" />
         </div>
       </div>
     </div>

@@ -99,7 +99,7 @@ const AboutUs = () => {
               </div>
             </div>
             <div className={styles.benefitsPhoto}>
-              <Image src="/about-us/benefits-of-choosing-us.jpeg" alt="" fill />
+              <Image src="/about-us/benefits-of-choosing-us.jpeg" alt="" fill objectFit="cover" />
             </div>
           </div>
         </div>
