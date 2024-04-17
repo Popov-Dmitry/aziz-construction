@@ -135,7 +135,7 @@ const reviewsBlock = () => (
 const contactUsBlock = () => (
   <div className={styles.wrapper}>
     <div className={styles.container}>
-      <div className={styles.twoColsFlex}>
+      <div className={joinClassNames(styles.twoColsFlex, styles.contactUsWrapper)}>
         <div className={styles.leftColumn}>
           <div className={styles.contactUsTitle}>Contact Us</div>
           <div className={styles.subtitle} style={{ marginTop: -12 }}>Get A Quote</div>
@@ -148,7 +148,7 @@ const contactUsBlock = () => (
               <Input className={styles.contactUsInput} placeholder="Phone" />
               <Input className={styles.contactUsInput} placeholder="Your Address" />
             </div>
-            <TextArea className={styles.tcontactUsTextArea} placeholder="Message" />
+            <TextArea className={styles.contactUsTextArea} placeholder="Message" />
             <Button className={styles.contactUsButton} text="Send Message" type="submit" />
           </form>
         </div>

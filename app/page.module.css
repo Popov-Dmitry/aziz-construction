@@ -12,7 +12,7 @@
 }
 
 .container {
-    padding: 70px 0;
+    padding: 70px 10px;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
@@ -197,6 +197,10 @@
     margin: 8px 0 15px 0;
 }
 
+.contactUsWrapper {
+    gap: 50px;
+}
+
 .contactUsForm {
     display: flex;
     flex-direction: column;
@@ -206,6 +210,7 @@
 .contactUsTextArea {
     resize: vertical;
     height: 120px;
+    font-size: 18px !important;
 }
 
 .contactUsInput {
@@ -321,6 +326,10 @@
 
     .twoColsGrid {
         grid-template-columns: 1fr;
+    }
+
+    .contactUsWrapper {
+        gap: 20px;
     }
 
     .faqSubtitle {
