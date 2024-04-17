@@ -11,6 +11,7 @@ import Input from "@/components/input/Input";
 import TextArea from "@/components/text-area/TextArea";
 import { joinClassNames } from "@/utils/join-class-names";
 import AccordionsGroup from "@/components/accordions-group/AccordionsGroup";
+import { YouTubeEmbed } from '@next/third-parties/google'
 
 const mainInfoBlock = () => (
   <div className={styles.main}>
@@ -119,10 +120,10 @@ const clientsFeedbackBlock = () => (
         <div className={styles.subtitle}>Our Clients Reviews</div>
       </div>
       <div className={styles.twoColsFlex}>
-        <iframe className={styles.video} frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Full House Renovation Testimonial" src="https://www.youtube.com/embed/uop_Ps-PBlA?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fazizconstruction.com&amp;widgetid=1" id="widget2" data-gtm-yt-inspected-6="true"></iframe>
-        <iframe className={styles.video} frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Kitchen Remodel Testimonial in  San Jose" src="https://www.youtube.com/embed/vKwVM8xMsW8?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fazizconstruction.com&amp;widgetid=3" id="widget4" data-gtm-yt-inspected-6="true"></iframe>
+        <YouTubeEmbed videoid="uop_Ps-PBlA" width={600}/>
+        <YouTubeEmbed videoid="vKwVM8xMsW8" width={600}/>
       </div>
-      </div>
+    </div>
   </div>
 );
 
