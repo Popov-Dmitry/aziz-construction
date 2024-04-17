@@ -98,11 +98,17 @@ const Header = () => {
     <div className={styles.container} id="header">
       <div className={styles.content}>
         <div className={styles.wrapper}>
-          <Link href="/">
-            <Image src="/logo.png" alt="Aziz Construction" width={112} height={91} />
+          <Link href="/" className={styles.logo}>
+            <Image src="/logo.png" alt="Aziz Construction" fill />
           </Link>
           {menuItems(path)}
-          <Button text="GET A QUOTE" variant="outlined" color="black" href="/get-a-quote" className={styles.getAQuoteButton} />
+          <Button
+            text="GET A QUOTE"
+            variant="outlined"
+            color="black"
+            href="/get-a-quote"
+            className={styles.getAQuoteButton}
+          />
           <Menu className={styles.menu}>
             {menuItems(path, true).props.children}
           </Menu>
