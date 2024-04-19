@@ -39,6 +39,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/image/lOGO-01-80x80.png" sizes="32x32"/>
+        <link rel="icon" href="/image/lOGO-01.png" sizes="192x192"/>
+        <link rel="apple-touch-icon" href="/image/lOGO-01.png"/>
+      </head>
       <body className={joinClassNames(inter.variable, openSans.variable, roboto.variable, popins.variable)}>
         <Header />
         <main>
