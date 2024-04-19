@@ -106,7 +106,7 @@ const Header = () => {
             text="GET A QUOTE"
             variant="outlined"
             color="black"
-            href="/get-a-quote"
+            href="/contact-us"
             className={styles.getAQuoteButton}
           />
           <Menu className={styles.menu}>

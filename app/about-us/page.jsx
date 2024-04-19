@@ -116,7 +116,7 @@ const AboutUs = () => {
                 text="GET A QUOTE"
                 variant="outlined"
                 className={styles.flipCardsButton}
-                href="/get-a-quote"
+                href="/contact-us"
               />
             </div>
             {flipCardsData.map((item) => (
