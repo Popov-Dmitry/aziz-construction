@@ -2,6 +2,22 @@ import React from "react";
 import styles from "./service.module.css";
 import { newConstructionData } from "@/data";
 import Image from "next/image";
+import { unslug } from "@/utils/unslug";
+
+export async function generateMetadata({ params }) {
+  return {
+    title: `${unslug(params?.slug)} in San Francisco bay area | Aziz Construction`,
+    description: `${unslug(params?.slug)} in San Francisco bay area`,
+    openGraph: {
+      title: `${unslug(params?.slug)} in San Francisco bay area | Aziz Construction`,
+      url: `https://azizconstruction.com/our-services/${params?.slug}`
+    },
+    twitter: {
+      title: `${unslug(params?.slug)} in San Francisco bay area | Aziz Construction`,
+      description: `${unslug(params?.slug)} in San Francisco bay area`,
+    },
+  }
+};
 
 const Service = ({ params }) => {
   return (

@@ -3,6 +3,21 @@ import styles from "./gallery.module.css";
 import { unslug } from "@/utils/unslug";
 import Image from "next/image";
 
+export async function generateMetadata({ params }) {
+  return {
+    title: `${unslug(params?.slug)} - Aziz Construction`,
+    description: unslug(params?.slug),
+    openGraph: {
+      title: `${unslug(params?.slug)} - Aziz Construction`,
+      url: `https://azizconstruction.com/gallery/${params?.slug}`
+    },
+    twitter: {
+      title: `${unslug(params?.slug)} - Aziz Construction`,
+      description: unslug(params?.slug),
+    },
+  }
+};
+
 const Gallery = ({ params }) => {
   return (
     <div className={styles.container}>

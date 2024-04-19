@@ -33,7 +33,41 @@ const popins = Poppins({
 });
 
 export const metadata = {
-  title: "Aziz Construction"
+  title: "General Contractor in San Francisco Bay Area, CA | Aziz Construction",
+  description: "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!",
+  generator: "Next.js",
+  viewport: {
+    width: "device-width",
+    initialScale: 1
+  },
+  verification: {
+    google: "zOKY0pg-U3kuXV6RL2XaSKxAanNv4lg1RhkaMsTwe9k"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: 'General Contractor in San Francisco Bay Area, CA | Aziz Construction',
+    description: 'Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!',
+    url: 'https://azizconstruction.com/',
+    siteName: 'Aziz Construction',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'General Contractor in San Francisco Bay Area, CA | Aziz Construction',
+    description: 'Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!',
+  },
 };
 
 export default function RootLayout({ children }) {

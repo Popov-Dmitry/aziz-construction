@@ -3,6 +3,19 @@ import styles from "./gallery.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
+export async function generateMetadata({ params }) {
+  return {
+    title: "Gallery - Aziz Construction",
+    openGraph: {
+      title: "Gallery - Aziz Construction",
+      url: "https://azizconstruction.com/gallery/"
+    },
+    twitter: {
+      title: 'Gallery - Aziz Construction'
+    }
+  }
+};
+
 const Gallery = () => {
   return (
     <div className={styles.container}>

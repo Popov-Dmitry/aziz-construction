@@ -2,6 +2,21 @@ import React from "react";
 import styles from "./contact-us.module.css";
 import GetAQuote from "@/components/get-a-quote/GetAQuote";
 
+export async function generateMetadata({ params }) {
+  return {
+    title: "Contact Us - Aziz Construction",
+    description: "Get A Quote",
+    openGraph: {
+      title: "Contact Us - Aziz Construction",
+      url: "https://azizconstruction.com/contact-us/"
+    },
+    twitter: {
+      title: 'Contact Us - Aziz Construction',
+      description: 'Get A Quote',
+    },
+  }
+};
+
 const ContactUs = () => {
   return (
     <div>
