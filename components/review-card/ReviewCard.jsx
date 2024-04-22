@@ -23,8 +23,8 @@ const ReviewCard = ({ src, fullName, date, raiting, comment }) => {
       </div>
       <div className={styles.reviewCardContent}>
         <div className={styles.raiting}>
-          {[...Array(raiting)].map(() => (
-            <Image src="/star.svg" alt="" height={16} width={16} />
+          {[...Array(raiting)].map((_, index) => (
+            <Image src="/star.svg" alt="" height={16} width={16} key={index} />
           ))}
         </div>
         <div className={styles.comment}>{comment}</div>

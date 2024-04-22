@@ -12,6 +12,7 @@ const AccordionsGroup = ({ data }) => {
       {data.map((item, index) => (
         <Accordion
           {...item}
+          key={item.title}
           oppened={activeIndex === index}
           setOppened={() => setActiveIndex(activeIndex === index ? -1 : index)}
         />

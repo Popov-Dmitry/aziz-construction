@@ -37,7 +37,6 @@ const Reviews = ({ reviews, className }) => {
         autoplay={5000}
         spaceBetween={16}
         loop
-        loopedSlides={slidesPerViewByBreakpoints[breakpoint]}
         slidesPerView={slidesPerViewByBreakpoints[breakpoint]}
         navigation={{
           nextEl: `.${styles.rightNavigationButton}`,
@@ -48,7 +47,7 @@ const Reviews = ({ reviews, className }) => {
         centerInsufficientSlides={true}
       >
         {reviews.map((item) => (
-          <SwiperSlide>
+          <SwiperSlide key={item.src}>
             <ReviewCard {...item} />
           </SwiperSlide>
         ))}

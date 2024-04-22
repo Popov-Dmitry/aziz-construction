@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/header/Header";
 import { joinClassNames } from "@/utils/join-class-names";
 import Footer from "@/components/footer/Footer";
-import Script from "next/script";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({
   subsets: ["latin"],
@@ -85,7 +85,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
       </body>
-      <Script src="https://kit.fontawesome.com/a076d05399.js" crossOrigin="anonymous" />
+      <GoogleAnalytics gaId={process.env.GA_ID} />
     </html>
   );
 }
