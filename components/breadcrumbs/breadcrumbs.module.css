@@ -1,0 +1,40 @@
+.breadcrumbs {
+    display: flex;
+    gap: 8px;
+}
+
+.breadcrumbsContainer {
+    display: flex;
+    align-items: center;
+    padding: 2px 0 2px 0;
+    background-color: #FFFFFF;
+}
+
+.breadcrumbsWrapper {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    padding: 10px;
+}
+
+.breadcrumb {
+    display: flex;
+    gap: 8px;
+    font-family: var(--font-open-sans);
+    font-size: 15px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.title, .current {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+}
+
+.current {
+    color: #D53446;
+    cursor: text;
+}

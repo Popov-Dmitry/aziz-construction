@@ -3,6 +3,7 @@ import styles from "./service.module.css";
 import { newConstructionData } from "@/data";
 import Image from "next/image";
 import { unslug } from "@/utils/unslug";
+import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
 
 export async function generateMetadata({ params }) {
   return {
@@ -25,6 +26,7 @@ const Service = ({ params }) => {
       className={styles.container}
       style={{ backgroundImage: `url("/services/${params.slug}/cover.jpeg")`}}
     >
+      <Breadcrumbs useDefaultContainer />
       <div className={styles.wrapper}>
         {newConstructionData[params.slug].map((value, index) => (
           <div key={value.title} className={styles.row}>

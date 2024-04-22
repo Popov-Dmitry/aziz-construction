@@ -9,21 +9,22 @@ import ReviewsBlock from "@/components/reviews-block/ReviewsBlock";
 import FlipCard from "@/components/flip-card/FlipCard";
 import Button from "@/components/button/Button";
 import { useBreakpoints } from "@/hooks/use-breakpoints";
+import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
 
-export async function generateMetadata({ params }) {
-  return {
-    title: "Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction",
-    description: "Aziz Construction - Your trusted partner for general construction services in San Francisco, Bay Area. Call now for quality craftsmanship & customized solutions",
-    openGraph: {
-      title: "Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction",
-      url: "https://azizconstruction.com/about-us/"
-    },
-    twitter: {
-      title: 'Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction',
-      description: 'Aziz Construction - Your trusted partner for general construction services in San Francisco, Bay Area. Call now for quality craftsmanship & customized solutions',
-    },
-  }
-};
+// export async function generateMetadata({ params }) {
+//   return {
+//     title: "Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction",
+//     description: "Aziz Construction - Your trusted partner for general construction services in San Francisco, Bay Area. Call now for quality craftsmanship & customized solutions",
+//     openGraph: {
+//       title: "Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction",
+//       url: "https://azizconstruction.com/about-us/"
+//     },
+//     twitter: {
+//       title: 'Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction',
+//       description: 'Aziz Construction - Your trusted partner for general construction services in San Francisco, Bay Area. Call now for quality craftsmanship & customized solutions',
+//     },
+//   }
+// };
 
 const AboutUs = () => {
   const [timelinePosition, setTimelinePosition] = useState(0);
@@ -57,6 +58,7 @@ const AboutUs = () => {
 
   return (
     <div className={styles.container}>
+      <Breadcrumbs useDefaultContainer />
       <div className={styles.wrapper}>
         <div className={styles.block}>
           <div className={styles.aboutUsBlock}>

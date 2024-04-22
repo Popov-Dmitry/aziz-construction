@@ -3,7 +3,6 @@ import styles from "./review-card.module.css";
 import Image from "next/image";
 
 const ReviewCard = ({ src, fullName, date, raiting, comment }) => {
-    console.log(raiting);
   return (
     <div className={styles.reviewCard}>
       <div className={styles.reviewCardHeader}>

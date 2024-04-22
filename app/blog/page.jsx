@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./blog.module.css";
+import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
 
 export async function generateMetadata({ params }) {
   return {
@@ -16,9 +17,12 @@ export async function generateMetadata({ params }) {
 
 const Blog = () => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Archives</h1>
-    </div>
+    <>
+      <Breadcrumbs useDefaultContainer />
+      <div className={styles.container}>
+        <h1 className={styles.title}>Archives</h1>
+      </div>
+    </>
   );
 };
 
