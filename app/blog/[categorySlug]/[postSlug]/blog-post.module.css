@@ -1,0 +1,38 @@
+.container {
+    max-width: 768px;
+    padding: 20px 0 70px 0;
+    margin: auto;
+}
+
+.categories {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.postTitle {
+    cursor: pointer;
+    font-family: var(--font-popins);
+    font-weight: 600;
+    font-size: 40px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.postImage {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2/1;
+    position: relative;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.postInfo {
+    display: flex;
+    gap: 6px;
+    margin-top: 2px;
+    color: rgba(0, 0, 0, 0.33);
+    font-size: 14px;
+    font-family: var(--font-popins);
+}

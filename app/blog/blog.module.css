@@ -4,13 +4,30 @@
     padding-bottom: 80px;
 }
 
-.title {
+.categoriesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.categories {
+    display: flex;
+    gap: 8px;
+}
+
+.title, .categoriesTitle {
     font-size: 2.5rem;
     font-weight: 500;
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
     font-family: var(--font-roboto);
     color: #333;
+}
+
+.categoriesTitle {
+    font-family: var(--font-roboto);
+    color: #000000;
 }
 
 .posts {
