@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./reviews-block.module.css";
-import Reviews from "@/components/reviews/reviews";
+import Reviews from "@/components/elements/reviews/reviews";
 import { reviewsData } from "@/data";
 
 const ReviewsBlock = () => {

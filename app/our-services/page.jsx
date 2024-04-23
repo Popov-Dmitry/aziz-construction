@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./our-services.module.css";
-import Services from "@/components/services/Services";
-import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
+import Services from "@/components/sections/services/Services";
+import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
 
 export async function generateMetadata({ params }) {
   return {

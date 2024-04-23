@@ -2,12 +2,12 @@ import React from "react";
 import { joinClassNames } from "@/utils/join-class-names";
 import styles from "./sns.module.css";
 import Link from "next/link";
-import Google from "../icons/Google";
-import Facebook from "../icons/Facebook";
-import Instagram from "./Instagram";
-import Twitter from "../icons/Twitter";
-import Youtube from "../icons/Youtube";
-import Yelp from "../icons/Yelp";
+import Google from "@/components/icons/Google";
+import Facebook from "@/components/icons/Facebook";
+import Instagram from "@/components/icons/Instagram";
+import Twitter from "@/components/icons/Twitter";
+import Youtube from "@/components/icons/Youtube";
+import Yelp from "@/components/icons/Yelp";
 
 const Sns = ({ fill = "#21212d", size = "sm", className }) => {
   return (

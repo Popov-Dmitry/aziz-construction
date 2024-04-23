@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./gallery.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
+import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
 
 export async function generateMetadata({ params }) {
   return {

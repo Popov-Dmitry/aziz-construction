@@ -3,11 +3,11 @@
 import React from "react";
 import styles from "./header.module.css";
 import Image from "next/image";
-import Button from "@/components/button/Button";
+import Button from "@/components/elements/button/Button";
 import { joinClassNames } from "@/utils/join-class-names";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Dropdown from "@/components/dropdown/Dropdown";
+import Dropdown from "@/components/elements/dropdown/Dropdown";
 import Menu from "../menu/Menu";
 
 const menuItems = (path, mobile) => (

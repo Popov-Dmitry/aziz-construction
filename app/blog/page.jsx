@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./blog.module.css";
-import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
+import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
 
 export async function generateMetadata({ params }) {
   return {

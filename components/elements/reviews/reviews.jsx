@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "./reviews.module.css";
-import ReviewCard from "@/components/review-card/ReviewCard";
+import ReviewCard from "@/components/elements/review-card/ReviewCard";
 import { Navigation, Pagination, Scrollbar, A11y, Controller } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

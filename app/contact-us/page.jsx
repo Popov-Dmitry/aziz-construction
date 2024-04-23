@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./contact-us.module.css";
-import GetAQuote from "@/components/get-a-quote/GetAQuote";
-import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
+import GetAQuote from "@/components/sections/get-a-quote/GetAQuote";
+import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
 
 export async function generateMetadata({ params }) {
   return {

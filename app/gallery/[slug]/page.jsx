@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import styles from "./gallery.module.css";
 import { unslug } from "@/utils/unslug";
 import Image from "next/image";
-import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
+import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
 import Lightbox from "yet-another-react-lightbox";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Download from "yet-another-react-lightbox/plugins/download";
 import Share from "yet-another-react-lightbox/plugins/share";
 import "yet-another-react-lightbox/styles.css";
-import LightboxImage from "@/components/lightbox-image/LightboxImage";
+import LightboxImage from "@/components/elements/lightbox-image/LightboxImage";
 import { useWindowSize } from "@react-hook/window-size";
 
 // export async function generateMetadata({ params }) {

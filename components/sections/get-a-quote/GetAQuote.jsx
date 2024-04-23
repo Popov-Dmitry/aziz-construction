@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./get-a-quote.module.css";
-import Input from "@/components/input/Input";
-import Button from "@/components/button/Button";
-import Contacts from "@/components/contacts/Contacts";
-import TextArea from "@/components/text-area/TextArea";
+import Input from "@/components/elements/input/Input";
+import Button from "@/components/elements/button/Button";
+import Contacts from "@/components/elements/contacts/Contacts";
+import TextArea from "@/components/elements/text-area/TextArea";
 import { joinClassNames } from "@/utils/join-class-names";
 
 const GetAQuote = ({ className }) => {

@@ -3,7 +3,7 @@ import styles from "./service.module.css";
 import { newConstructionData } from "@/data";
 import Image from "next/image";
 import { unslug } from "@/utils/unslug";
-import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
+import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
 
 export async function generateMetadata({ params }) {
   return {

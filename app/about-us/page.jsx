@@ -3,13 +3,13 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./about-us.module.css";
 import { flipCardsData, timelineData } from "@/data";
-import TimelineCard from "@/components/timeline-card/TimelineCard";
+import TimelineCard from "@/components/elements/timeline-card/TimelineCard";
 import Image from "next/image";
-import ReviewsBlock from "@/components/reviews-block/ReviewsBlock";
-import FlipCard from "@/components/flip-card/FlipCard";
-import Button from "@/components/button/Button";
+import ReviewsBlock from "@/components/sections/reviews-block/ReviewsBlock";
+import FlipCard from "@/components/elements/flip-card/FlipCard";
+import Button from "@/components/elements/button/Button";
 import { useBreakpoints } from "@/hooks/use-breakpoints";
-import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
+import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
 
 // export async function generateMetadata({ params }) {
 //   return {

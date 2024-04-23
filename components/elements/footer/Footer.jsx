@@ -3,7 +3,7 @@ import styles from "./footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { joinClassNames } from "@/utils/join-class-names";
-import Contacts from "@/components/contacts/Contacts";
+import Contacts from "@/components/elements/contacts/Contacts";
 
 const Footer = () => {
   return (

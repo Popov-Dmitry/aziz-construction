@@ -1,8 +1,8 @@
 import { Open_Sans, Inter, Roboto, Poppins } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header/Header";
+import Header from "@/components/elements/header/Header";
 import { joinClassNames } from "@/utils/join-class-names";
-import Footer from "@/components/footer/Footer";
+import Footer from "@/components/elements/footer/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./service-card.module.css";
 import Image from "next/image";
-import Button from "@/components/button/Button";
+import Button from "@/components/elements/button/Button";
 
 const ServiceCard = ({ src, title, description, href }) => {
   return (

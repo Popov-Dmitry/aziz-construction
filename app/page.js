@@ -1,16 +1,16 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { whyChooseUsData, faqData, recentWorksData } from "@/data";
-import AdvantageCard from "@/components/advantage-card/AdvantageCard";
-import Sns from "@/components/sns/Sns";
-import Services from "@/components/services/Services";
-import WorkCard from "@/components/work-card/WorkCard";
-import Button from "@/components/button/Button";
-import ReviewsBlock from "@/components/reviews-block/ReviewsBlock";
-import Input from "@/components/input/Input";
-import TextArea from "@/components/text-area/TextArea";
+import AdvantageCard from "@/components/elements/advantage-card/AdvantageCard";
+import Sns from "@/components/elements/sns/Sns";
+import Services from "@/components/sections/services/Services";
+import WorkCard from "@/components/elements/work-card/WorkCard";
+import Button from "@/components/elements/button/Button";
+import ReviewsBlock from "@/components/sections/reviews-block/ReviewsBlock";
+import Input from "@/components/elements/input/Input";
+import TextArea from "@/components/elements/text-area/TextArea";
 import { joinClassNames } from "@/utils/join-class-names";
-import AccordionsGroup from "@/components/accordions-group/AccordionsGroup";
+import AccordionsGroup from "@/components/elements/accordions-group/AccordionsGroup";
 import { YouTubeEmbed } from "@next/third-parties/google";
 
 const mainInfoBlock = () => (
