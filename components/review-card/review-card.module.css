@@ -64,7 +64,7 @@
 .comment {
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
     overflow: hidden;
     line-height: 21.75px;
     font-family: var(--font-open-sans);

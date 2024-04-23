@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import styles from  "./about-us.module.css";
+import styles from "./about-us.module.css";
 import { flipCardsData, timelineData } from "@/data";
 import TimelineCard from "@/components/timeline-card/TimelineCard";
 import Image from "next/image";
@@ -43,16 +43,16 @@ const AboutUs = () => {
   }, [timelinePosition, iconsRef?.current[0]?.offsetTop]);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-}, [handleScroll]);
+  }, [handleScroll]);
 
   useEffect(() => {
     if (lineRef.current) {
-      setTimelinePosition(lineRef.current.getBoundingClientRect().top + window.scrollY)
+      setTimelinePosition(lineRef.current.getBoundingClientRect().top + window.scrollY);
     }
   }, [lineRef.current]);
 
@@ -65,7 +65,11 @@ const AboutUs = () => {
             <div className={styles.title}>About Us</div>
             <div className={styles.subtitle}>General Construction Services in San Francisco, Bay Area</div>
             <div className={styles.aboutUsText}>
-              Welcome to Aziz Construction, where craftsmanship and family legacy meet. With years of hands-on experience and guidance from industry experts, I have established a general contractor business in San Fransisco, Bay Area, that aims to stand the test of time. At Aziz Construction, we believe in creating a lasting reputation for excellence, delivering quality workmanship, and building a foundation for future generations.
+              Welcome to Aziz Construction, where craftsmanship and family legacy meet. With years of hands-on
+              experience and guidance from industry experts, I have established a general contractor business in San
+              Fransisco, Bay Area, that aims to stand the test of time. At Aziz Construction, we believe in creating a
+              lasting reputation for excellence, delivering quality workmanship, and building a foundation for future
+              generations.
             </div>
           </div>
         </div>
@@ -87,7 +91,7 @@ const AboutUs = () => {
                       : styles.timelineIcon
                   }
                   ref={el => iconsRef.current[index] = el}
-                  >
+                >
                   <Image src={item.src} alt="" width={16} height={16} />
                 </div>
               </div>
@@ -102,7 +106,10 @@ const AboutUs = () => {
               }}
             />
             <div className={styles.timelineBottomText}>
-              At Aziz Construction, we understand that your construction project is not just a structure; it’s an investment in your future. We are here to turn your vision into reality, create spaces that inspire, and build a foundation for generations to come. Contact us today to discuss your project and let us be a part of your journey.
+              At Aziz Construction, we understand that your construction project is not just a structure; it’s an
+              investment in your future. We are here to turn your vision into reality, create spaces that inspire, and
+              build a foundation for generations to come. Contact us today to discuss your project and let us be a part
+              of your journey.
             </div>
           </div>
         </div>
@@ -112,7 +119,14 @@ const AboutUs = () => {
               <div className={styles.title}>About Us</div>
               <div className={styles.subtitleSmall}>Benefits of Choosing Us</div>
               <div className={styles.benefitsText}>
-                When it comes to choosing construction services in San Francisco, Bay Area, Aziz Construction stands out as the premier choice. Our dedication to superior quality, meticulous attention to detail, and total concern for our client’s needs allow us to exceed their wildest dreams consistently. We provide a wide variety of services, including general contracting, kitchen and bathroom remodeling, electrical services, and flooring, all of which may be customized to fit your unique requirements. We prioritize transparent communication, providing you with peace of mind as we keep you informed at every step of the process. Choose our services, and let us transform your vision into reality with unmatched craftsmanship and an unwavering commitment to quality.
+                When it comes to choosing construction services in San Francisco, Bay Area, Aziz Construction stands out
+                as the premier choice. Our dedication to superior quality, meticulous attention to detail, and total
+                concern for our client’s needs allow us to exceed their wildest dreams consistently. We provide a wide
+                variety of services, including general contracting, kitchen and bathroom remodeling, electrical
+                services, and flooring, all of which may be customized to fit your unique requirements. We prioritize
+                transparent communication, providing you with peace of mind as we keep you informed at every step of the
+                process. Choose our services, and let us transform your vision into reality with unmatched craftsmanship
+                and an unwavering commitment to quality.
               </div>
             </div>
             <div className={styles.benefitsPhoto}>

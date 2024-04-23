@@ -16,7 +16,7 @@ const WorkCard = ({ src, title, href }) => {
       <div className={styles.workCardTitleContainer}>
         <div className={styles.workCardTitle}>
           {title}
-        </div>    
+        </div>
       </div>
     </Link>
   );

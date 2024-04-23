@@ -4,16 +4,15 @@ import { useMemo } from "react";
 
 export const useBreadcrumbs = () => {
   const pathname = usePathname();
-  const breadcrumbs = useMemo(() => {
+
+  return useMemo(() => {
     const paths = pathname.split("/");
     const result = paths.map((value, index) => ({
-        title: unslug(value),
-        path: paths.slice(0, index + 1).join("/")
+      title: unslug(value),
+      path: paths.slice(0, index + 1).join("/")
     }));
     result[0] = { title: "Home", path: "/" };
 
     return result;
   }, [pathname]);
-
-  return breadcrumbs;
 };

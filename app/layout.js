@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/header/Header";
 import { joinClassNames } from "@/utils/join-class-names";
 import Footer from "@/components/footer/Footer";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -50,42 +50,42 @@ export const metadata = {
       index: true,
       follow: true,
       noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
   },
   openGraph: {
-    title: 'General Contractor in San Francisco Bay Area, CA | Aziz Construction',
-    description: 'Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!',
-    url: 'https://azizconstruction.com/',
-    siteName: 'Aziz Construction',
-    locale: 'en_US',
-    type: 'website',
+    title: "General Contractor in San Francisco Bay Area, CA | Aziz Construction",
+    description: "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!",
+    url: "https://azizconstruction.com/",
+    siteName: "Aziz Construction",
+    locale: "en_US",
+    type: "website"
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'General Contractor in San Francisco Bay Area, CA | Aziz Construction',
-    description: 'Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!',
-  },
+    card: "summary_large_image",
+    title: "General Contractor in San Francisco Bay Area, CA | Aziz Construction",
+    description: "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!"
+  }
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/image/lOGO-01-80x80.png" sizes="32x32"/>
-        <link rel="icon" href="/image/lOGO-01.png" sizes="192x192"/>
-        <link rel="apple-touch-icon" href="/image/lOGO-01.png"/>
-      </head>
-      <body className={joinClassNames(inter.variable, openSans.variable, roboto.variable, popins.variable)}>
-        <Header />
-        <main>
-          {children}
-        </main>
-        <Footer />
-      </body>
-      <GoogleAnalytics gaId={process.env.GA_ID} />
+    <head>
+      <link rel="icon" href="/image/lOGO-01-80x80.png" sizes="32x32" />
+      <link rel="icon" href="/image/lOGO-01.png" sizes="192x192" />
+      <link rel="apple-touch-icon" href="/image/lOGO-01.png" />
+    </head>
+    <body className={joinClassNames(inter.variable, openSans.variable, roboto.variable, popins.variable)}>
+    <Header />
+    <main>
+      {children}
+    </main>
+    <Footer />
+    </body>
+    <GoogleAnalytics gaId={process.env.GA_ID} />
     </html>
   );
 }

@@ -12,9 +12,9 @@ export async function generateMetadata({ params }) {
       url: "https://azizconstruction.com/gallery/"
     },
     twitter: {
-      title: 'Gallery - Aziz Construction'
+      title: "Gallery - Aziz Construction"
     }
-  }
+  };
 };
 
 const Gallery = () => {

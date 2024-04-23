@@ -12,10 +12,10 @@ export async function generateMetadata({ params }) {
       url: "https://azizconstruction.com/contact-us/"
     },
     twitter: {
-      title: 'Contact Us - Aziz Construction',
-      description: 'Get A Quote',
-    },
-  }
+      title: "Contact Us - Aziz Construction",
+      description: "Get A Quote"
+    }
+  };
 };
 
 const ContactUs = () => {

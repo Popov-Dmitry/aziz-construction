@@ -12,11 +12,11 @@ export async function generateMetadata({ params }) {
       url: "https://azizconstruction.com/our-services/"
     },
     twitter: {
-      title: 'Our Services - Aziz Construction',
-      description: 'Our Services',
-    },
-  }
-};
+      title: "Our Services - Aziz Construction",
+      description: "Our Services"
+    }
+  };
+}
 
 const OurServices = () => {
   return (

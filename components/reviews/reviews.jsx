@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import styles from  "./reviews.module.css";
+import styles from "./reviews.module.css";
 import ReviewCard from "@/components/review-card/ReviewCard";
-import { Navigation, Pagination, Scrollbar, A11y, Controller } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import { Navigation, Pagination, Scrollbar, A11y, Controller } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import { joinClassNames } from "@/utils/join-class-names";
 import Image from "next/image";
 import { useBreakpoints } from "@/hooks/use-breakpoints";
@@ -51,7 +51,7 @@ const Reviews = ({ reviews, className }) => {
             <ReviewCard {...item} />
           </SwiperSlide>
         ))}
-      </Swiper> 
+      </Swiper>
       <Image
         src="/arrow-right.svg"
         alt=""

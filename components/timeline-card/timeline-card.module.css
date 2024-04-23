@@ -1,7 +1,7 @@
 .timelineCard {
     border-radius: 6px;
     background-color: #fff;
-    box-shadow: 2px 2px 30px 0 rgba(156,156,192,0.26);
+    box-shadow: 2px 2px 30px 0 rgba(156, 156, 192, 0.26);
     padding: 40px;
     display: flex;
     flex-direction: column;

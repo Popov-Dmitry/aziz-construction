@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { whyChooseUsData, faqData, recentWorksData } from "@/data"
+import { whyChooseUsData, faqData, recentWorksData } from "@/data";
 import AdvantageCard from "@/components/advantage-card/AdvantageCard";
 import Sns from "@/components/sns/Sns";
 import Services from "@/components/services/Services";
@@ -11,7 +11,7 @@ import Input from "@/components/input/Input";
 import TextArea from "@/components/text-area/TextArea";
 import { joinClassNames } from "@/utils/join-class-names";
 import AccordionsGroup from "@/components/accordions-group/AccordionsGroup";
-import { YouTubeEmbed } from '@next/third-parties/google'
+import { YouTubeEmbed } from "@next/third-parties/google";
 
 const mainInfoBlock = () => (
   <div className={styles.main}>
@@ -21,13 +21,15 @@ const mainInfoBlock = () => (
         <div className={styles.mainText1}>Diversified General Contracting Services. Unvarying Quality</div>
         <div className={styles.mainDivider} />
         <div className={styles.mainText2}>Innovative Concepts, Creative Design, Flawless Execution</div>
-        <div className={styles.mainText3}>We are a team of highly skilled professionals committed to delivering top-notch construction solutions to meet all your needs.</div>
+        <div className={styles.mainText3}>We are a team of highly skilled professionals committed to delivering
+          top-notch construction solutions to meet all your needs.
+        </div>
         <div className={styles.mainButtons}>
           <Button text="Call Now" color="black" />
           <Button text="Get A Quote" className={styles.getAQuoteButton} />
         </div>
       </div>
-    </div>  
+    </div>
   </div>
 );
 
@@ -43,8 +45,10 @@ const aboutBlock = () => (
             <span className={styles.aboutSloganBold}>FRANCISCO</span> BAY AREA
           </div>
           <div className={styles.aboutDescription}>
-            Welcome to Aziz Construction, where craftsmanship and family legacy meet. With years of hands-on experience and
-            guidance from industry experts, I have established a general contractor business that aims to stand the test of
+            Welcome to Aziz Construction, where craftsmanship and family legacy meet. With years of hands-on experience
+            and
+            guidance from industry experts, I have established a general contractor business that aims to stand the test
+            of
             time. At Aziz Construction, we believe in creating a lasting reputation for excellence, delivering quality
             workmanship, and building a foundation for future generations.
           </div>
@@ -120,8 +124,8 @@ const clientsFeedbackBlock = () => (
         <div className={styles.subtitle}>Our Clients Reviews</div>
       </div>
       <div className={styles.twoColsFlex}>
-        <YouTubeEmbed videoid="uop_Ps-PBlA" width={600}/>
-        <YouTubeEmbed videoid="vKwVM8xMsW8" width={600}/>
+        <YouTubeEmbed videoid="uop_Ps-PBlA" width={600} />
+        <YouTubeEmbed videoid="vKwVM8xMsW8" width={600} />
       </div>
     </div>
   </div>

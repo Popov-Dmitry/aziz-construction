@@ -15,16 +15,16 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       title: `${unslug(params?.slug)} in San Francisco bay area | Aziz Construction`,
-      description: `${unslug(params?.slug)} in San Francisco bay area`,
-    },
-  }
-};
+      description: `${unslug(params?.slug)} in San Francisco bay area`
+    }
+  };
+}
 
 const Service = ({ params }) => {
   return (
     <div
       className={styles.container}
-      style={{ backgroundImage: `url("/services/${params.slug}/cover.jpeg")`}}
+      style={{ backgroundImage: `url("/services/${params.slug}/cover.jpeg")` }}
     >
       <Breadcrumbs useDefaultContainer />
       <div className={styles.wrapper}>

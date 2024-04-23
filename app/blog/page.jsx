@@ -10,9 +10,9 @@ export async function generateMetadata({ params }) {
       url: "https://azizconstruction.com/blog/"
     },
     twitter: {
-      title: 'Blog - Aziz Construction',
-    },
-  }
+      title: "Blog - Aziz Construction"
+    }
+  };
 };
 
 const Blog = () => {

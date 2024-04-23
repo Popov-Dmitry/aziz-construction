@@ -11,84 +11,84 @@ import Dropdown from "@/components/dropdown/Dropdown";
 import Menu from "../menu/Menu";
 
 const menuItems = (path, mobile) => (
-          <div className={styles.elements}>
-            <Link
-              className={joinClassNames(styles.element, path === "/" ? styles.active : undefined)}
-              href="/"
-            >
-              Home
-            </Link>
-            <Link
-              className={joinClassNames(styles.element, path === "/about-us" ? styles.active : undefined)}
-              href="/about-us"
-            >
-              About Us
-            </Link>
-            <div className={styles.dropdown}>
-              <Dropdown
-                title="Our Services"
-                titleHref="/our-services"
-                arrowColor={path.startsWith("/our-services")
-                  ? mobile ? "#FFFFFF" : "#D53446"
-                  : "#000000"}
-                  className={joinClassNames(styles.element, path.startsWith("/our-services") ? styles.active : undefined)}
-              >
-                <Link
-                  href="/our-services/new-construction"
-                >
-                  New Construction
-                </Link>
-                <Link
-                  className={styles.link}
-                  href="/our-services/full-house-renovation"
-                >
-                  Full House Renovation
-                </Link>
-                <Link
-                  className={styles.link}
-                  href="/our-services/adu-construction"
-                >
-                  ADU Construction
-                </Link>
-                <Link
-                  className={styles.link}
-                  href="/our-services/kitchen-remodeling"
-                >
-                  Kitchen Remodeling
-                </Link>
-                <Link
-                  className={styles.link}
-                  href="/our-services/bathroom-remodeling"
-                >
-                  Bathroom Remodeling
-                </Link>
-                <Link
-                  className={styles.link}
-                  href="/our-services/addition-services"
-                >
-                  Addition Services
-                </Link>
-              </Dropdown>
-            </div>
-            <Link
-              className={joinClassNames(styles.element, path === "/blog" ? styles.active : undefined)}
-              href="/blog"
-            >
-              Blog
-            </Link>
-            <Link
-              className={joinClassNames(styles.element, path.startsWith("/gallery") ? styles.active : undefined)}
-              href="/gallery"
-            >
-              Gallery
-            </Link>
-            <Link
-              className={joinClassNames(styles.element, path === "/contact-us" ? styles.active : undefined)}
-              href="/contact-us"
-            >
-              Contact Us
-            </Link>
-          </div>
+  <div className={styles.elements}>
+    <Link
+      className={joinClassNames(styles.element, path === "/" ? styles.active : undefined)}
+      href="/"
+    >
+      Home
+    </Link>
+    <Link
+      className={joinClassNames(styles.element, path === "/about-us" ? styles.active : undefined)}
+      href="/about-us"
+    >
+      About Us
+    </Link>
+    <div className={styles.dropdown}>
+      <Dropdown
+        title="Our Services"
+        titleHref="/our-services"
+        arrowColor={path.startsWith("/our-services")
+          ? mobile ? "#FFFFFF" : "#D53446"
+          : "#000000"}
+        className={joinClassNames(styles.element, path.startsWith("/our-services") ? styles.active : undefined)}
+      >
+        <Link
+          href="/our-services/new-construction"
+        >
+          New Construction
+        </Link>
+        <Link
+          className={styles.link}
+          href="/our-services/full-house-renovation"
+        >
+          Full House Renovation
+        </Link>
+        <Link
+          className={styles.link}
+          href="/our-services/adu-construction"
+        >
+          ADU Construction
+        </Link>
+        <Link
+          className={styles.link}
+          href="/our-services/kitchen-remodeling"
+        >
+          Kitchen Remodeling
+        </Link>
+        <Link
+          className={styles.link}
+          href="/our-services/bathroom-remodeling"
+        >
+          Bathroom Remodeling
+        </Link>
+        <Link
+          className={styles.link}
+          href="/our-services/addition-services"
+        >
+          Addition Services
+        </Link>
+      </Dropdown>
+    </div>
+    <Link
+      className={joinClassNames(styles.element, path === "/blog" ? styles.active : undefined)}
+      href="/blog"
+    >
+      Blog
+    </Link>
+    <Link
+      className={joinClassNames(styles.element, path.startsWith("/gallery") ? styles.active : undefined)}
+      href="/gallery"
+    >
+      Gallery
+    </Link>
+    <Link
+      className={joinClassNames(styles.element, path === "/contact-us" ? styles.active : undefined)}
+      href="/contact-us"
+    >
+      Contact Us
+    </Link>
+  </div>
 );
 
 const Header = () => {

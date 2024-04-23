@@ -11,7 +11,7 @@ const FlipCard = ({ src, title, description }) => {
         </div>
         <div className={styles.flipCardBack}>
           <div className={styles.flipCardBackContent}>
-            <div className={styles.flipCardBackTitle}>{title}</div> 
+            <div className={styles.flipCardBackTitle}>{title}</div>
             <div className={styles.flipCardBackDescription}>{description}</div>
           </div>
         </div>
