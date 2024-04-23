@@ -13,7 +13,7 @@ const Breadcrumbs = ({ useDefaultContainer }) => {
     <div className={useDefaultContainer ? styles.breadcrumbsContainer : ""}>
       <div className={joinClassNames(styles.breadcrumbs, useDefaultContainer ? styles.breadcrumbsWrapper : "")}>
       {breadcrumbs.map((breadcrumb, index) => (
-        <div className={styles.breadcrumb}>
+        <div key={breadcrumb.title} className={styles.breadcrumb}>
           <div>{index !== 0 ? ">" : ""}</div>
           <Link 
             className={index === breadcrumbs.length - 1 ? styles.current : styles.title}

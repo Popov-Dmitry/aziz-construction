@@ -137,7 +137,7 @@ const AboutUs = () => {
               />
             </div>
             {flipCardsData.map((item) => (
-              <FlipCard {...item} />
+              <FlipCard key={item.title} {...item} />
             ))}
           </div>
         </div>

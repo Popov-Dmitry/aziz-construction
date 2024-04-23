@@ -64,7 +64,7 @@ const whyChooseUsBlock = () => (
       <Sns fill="#D53446" size="lg" className={styles.sns} />
       <div className={styles.twoColsGrid}>
         {whyChooseUsData.map((item) => (
-          <AdvantageCard {...item} />
+          <AdvantageCard key={item.title} {...item} />
         ))}
       </div>
     </div>
@@ -105,7 +105,7 @@ const recentWorksBock = () => (
       </div>
       <div className={styles.recentWorks}>
         {recentWorksData.map((item) => (
-          <WorkCard {...item} />
+          <WorkCard key={item.title} {...item} />
         ))}
       </div>
     </div>
