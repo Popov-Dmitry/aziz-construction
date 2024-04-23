@@ -1,6 +1,7 @@
 .container {
     max-width: 1140px;
     margin: auto;
+    padding-bottom: 80px;
 }
 
 .title {
@@ -10,4 +11,10 @@
     -webkit-font-smoothing: antialiased;
     font-family: var(--font-roboto);
     color: #333;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
 }
