@@ -1,0 +1,27 @@
+.container {
+    max-width: 768px;
+    padding: 20px 0 70px 0;
+    margin: auto;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.title {
+    font-family: var(--font-popins);
+    font-weight: 600;
+    font-size: 40px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.description {
+    font-family: var(--font-popins);
+    font-size: 22px;
+    text-decoration: none;
+    color: #000000;
+}
