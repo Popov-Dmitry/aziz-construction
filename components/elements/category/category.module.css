@@ -9,10 +9,21 @@
     padding: 8px 16px;
     background-color: #f9fafa;
     transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .category:hover {
     border-color: #D53446;
     background-color: #D53446;
     color: #FFFFFF;
+}
+
+@media (max-width: 767px) {
+    .category {
+        font-size: 14px;
+        padding: 6px 14px;
+    }
 }
