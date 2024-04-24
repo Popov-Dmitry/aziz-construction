@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "./get-a-quote.module.css";
+import styles from "./get-a-quote-section.module.css";
 import Input from "@/components/elements/input/Input";
 import Button from "@/components/elements/button/Button";
 import Contacts from "@/components/elements/contacts/Contacts";
 import TextArea from "@/components/elements/text-area/TextArea";
 import { joinClassNames } from "@/utils/join-class-names";
 
-const GetAQuote = ({ className }) => {
+const GetAQuoteSection = ({ className }) => {
   return (
     <div className={joinClassNames(styles.container, className)}>
       <div className={styles.wrapper}>
@@ -35,4 +35,4 @@ const GetAQuote = ({ className }) => {
   );
 };
 
-export default GetAQuote;
+export default GetAQuoteSection;

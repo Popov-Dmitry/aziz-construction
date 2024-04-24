@@ -3,10 +3,10 @@ import styles from "./page.module.css";
 import { whyChooseUsData, faqData, recentWorksData } from "@/data";
 import AdvantageCard from "@/components/elements/advantage-card/AdvantageCard";
 import Sns from "@/components/elements/sns/Sns";
-import Services from "@/components/sections/services/Services";
+import OurServicesSection from "@/components/sections/our-services-section/OurServicesSection";
 import WorkCard from "@/components/elements/work-card/WorkCard";
 import Button from "@/components/elements/button/Button";
-import ReviewsBlock from "@/components/sections/reviews-block/ReviewsBlock";
+import GoogleReviewsSection from "@/components/sections/google-reviews-section/GoogleReviewsSection";
 import Input from "@/components/elements/input/Input";
 import TextArea from "@/components/elements/text-area/TextArea";
 import { joinClassNames } from "@/utils/join-class-names";
@@ -78,7 +78,7 @@ const whyChooseUsBlock = () => (
 const servicesBlock = () => (
   <div className={styles.wrapper}>
     <div className={styles.container}>
-      <Services />
+      <OurServicesSection />
     </div>
   </div>
 );
@@ -133,7 +133,7 @@ const clientsFeedbackBlock = () => (
 
 const reviewsBlock = () => (
   <div className={styles.wrapper}>
-    <ReviewsBlock />
+    <GoogleReviewsSection />
   </div>
 );
 

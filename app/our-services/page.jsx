@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./our-services.module.css";
-import Services from "@/components/sections/services/Services";
+import OurServicesSection from "@/components/sections/our-services-section/OurServicesSection";
 import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
 
 export async function generateMetadata({ params }) {
@@ -25,7 +25,7 @@ const OurServices = () => {
       <div className={styles.wrapper}>
         <div className={styles.background}>
           <div className={styles.width}>
-            <Services />
+            <OurServicesSection />
           </div>
         </div>
       </div>

@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./services.module.css";
+import styles from "./our-services-section.module.css";
 import { servicesData } from "@/data";
 import ServiceCard from "@/components/elements/service-card/ServiceCard";
 
-const Services = () => {
+const OurServicesSection = () => {
   return (
     <div className={styles.container}>
       <div className={styles.title}>Our Services</div>
@@ -23,4 +23,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default OurServicesSection;

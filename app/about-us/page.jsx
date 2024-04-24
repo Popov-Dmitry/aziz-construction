@@ -5,7 +5,7 @@ import styles from "./about-us.module.css";
 import { flipCardsData, timelineData } from "@/data";
 import TimelineCard from "@/components/elements/timeline-card/TimelineCard";
 import Image from "next/image";
-import ReviewsBlock from "@/components/sections/reviews-block/ReviewsBlock";
+import GoogleReviewsSection from "@/components/sections/google-reviews-section/GoogleReviewsSection";
 import FlipCard from "@/components/elements/flip-card/FlipCard";
 import Button from "@/components/elements/button/Button";
 import { useBreakpoints } from "@/hooks/use-breakpoints";
@@ -135,7 +135,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className={styles.block}>
-          <ReviewsBlock />
+          <GoogleReviewsSection />
         </div>
         <div className={styles.block}>
           <div className={styles.flipCardsBlock}>

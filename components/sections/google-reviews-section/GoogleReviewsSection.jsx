@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./reviews-block.module.css";
+import styles from "./googlereviews-section.module.css";
 import Reviews from "@/components/elements/reviews/reviews";
 import { reviewsData } from "@/data";
 
-const ReviewsBlock = () => {
+const GoogleReviewsSection = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -18,4 +18,4 @@ const ReviewsBlock = () => {
   );
 };
 
-export default ReviewsBlock;
+export default GoogleReviewsSection;
