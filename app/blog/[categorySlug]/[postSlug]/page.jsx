@@ -2,20 +2,24 @@ import React from "react";
 import styles from "./blog-post.module.css";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
-import { getPost } from "@/lib/api";
+import { getPost, getPostMetaData } from "@/lib/api";
 import Image from "next/image";
 import Category from "@/components/elements/category/Category";
-import { unslug } from "@/utils/unslug";
 
 export async function generateMetadata({ params }) {
+  const { title, shortDescription, cover } = await getPostMetaData(params?.postSlug);
+
   return {
-    title: `${unslug(params?.postSlug)} - Aziz Construction`,
+    title: `${title} - Aziz Construction`,
+    description: shortDescription,
     openGraph: {
-      title: `${unslug(params?.postSlug)} - Aziz Construction`,
-      url: `https://azizconstruction.com/blog/${params?.postSlug}`
+      title: `${title} - Aziz Construction`,
+      url: `https://azizconstruction.com/blog/${params?.postSlug}`,
+      images: [cover.url]
     },
     twitter: {
-      title: `${unslug(params?.postSlug)} - Aziz Construction`
+      title: `${title} - Aziz Construction`,
+      description: shortDescription
     }
   };
 }
