@@ -48,7 +48,7 @@ const BlogPost = async ({ params }) => {
         <div className={styles.postImage}>
           <Image src={cover.url} alt="" fill objectFit="cover"/>
         </div>
-        <div>
+        <div className={styles.postContent}>
           {documentToReactComponents(body?.json)}
         </div>
       </div>
