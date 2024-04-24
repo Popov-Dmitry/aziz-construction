@@ -1,61 +1,29 @@
-"use client";
-
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React from "react";
 import styles from "./about-us.module.css";
-import { flipCardsData, timelineData } from "@/data";
-import TimelineCard from "@/components/elements/timeline-card/TimelineCard";
+import { flipCardsData } from "@/data";
 import Image from "next/image";
 import GoogleReviewsSection from "@/components/sections/google-reviews-section/GoogleReviewsSection";
 import FlipCard from "@/components/elements/flip-card/FlipCard";
 import Button from "@/components/elements/button/Button";
-import { useBreakpoints } from "@/hooks/use-breakpoints";
 import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
+import TimelineSection from "@/components/sections/timeline-section/TimelineSection";
 
-// export async function generateMetadata({ params }) {
-//   return {
-//     title: "Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction",
-//     description: "Aziz Construction - Your trusted partner for general construction services in San Francisco, Bay Area. Call now for quality craftsmanship & customized solutions",
-//     openGraph: {
-//       title: "Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction",
-//       url: "https://azizconstruction.com/about-us/"
-//     },
-//     twitter: {
-//       title: 'Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction',
-//       description: 'Aziz Construction - Your trusted partner for general construction services in San Francisco, Bay Area. Call now for quality craftsmanship & customized solutions',
-//     },
-//   }
-// };
+export async function generateMetadata({ params }) {
+  return {
+    title: "Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction",
+    description: "Aziz Construction - Your trusted partner for general construction services in San Francisco, Bay Area. Call now for quality craftsmanship & customized solutions",
+    openGraph: {
+      title: "Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction",
+      url: "https://azizconstruction.com/about-us/"
+    },
+    twitter: {
+      title: 'Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction',
+      description: 'Aziz Construction - Your trusted partner for general construction services in San Francisco, Bay Area. Call now for quality craftsmanship & customized solutions',
+    },
+  }
+}
 
 const AboutUs = () => {
-  const [timelinePosition, setTimelinePosition] = useState(0);
-  const [lineOffset, setLineOffset] = useState(0);
-  const lineRef = useRef();
-  const iconsRef = useRef([]);
-  const breakpoint = useBreakpoints();
-
-  const handleScroll = useCallback(() => {
-    const offset = window.scrollY -
-      timelinePosition +
-      document.getElementById("header")?.clientHeight +
-      window.innerHeight / 2 -
-      iconsRef?.current[0]?.offsetTop;
-    setLineOffset(offset);
-  }, [timelinePosition, iconsRef?.current[0]?.offsetTop]);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
-
-  useEffect(() => {
-    if (lineRef.current) {
-      setTimelinePosition(lineRef.current.getBoundingClientRect().top + window.scrollY);
-    }
-  }, [lineRef.current]);
-
   return (
     <div className={styles.container}>
       <Breadcrumbs useDefaultContainer />
@@ -74,44 +42,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className={styles.block}>
-          <div className={styles.timelineBlock}>
-            {timelineData.map((item, index) => (
-              <div className={styles.timelineRow} key={item.title}>
-                <div className={styles.timelineCardWrapper}>
-                  <TimelineCard
-                    title={item.title}
-                    description={item.description}
-                    arrowDirection={breakpoint !== "lg" ? "left" : index % 2 === 0 ? "right" : "left"}
-                  />
-                </div>
-                <div
-                  className={
-                    lineOffset > iconsRef?.current[index]?.offsetTop - iconsRef?.current[0]?.offsetTop
-                      ? styles.timelineIconActive
-                      : styles.timelineIcon
-                  }
-                  ref={el => iconsRef.current[index] = el}
-                >
-                  <Image src={item.src} alt="" width={16} height={16} />
-                </div>
-              </div>
-            ))}
-            <div
-              ref={lineRef}
-              className={styles.timeline}
-              style={{
-                background: `linear-gradient(to bottom, #D53446 ${lineOffset}px, #e8e8f6 0)`,
-                top: iconsRef?.current[0]?.offsetTop,
-                height: iconsRef?.current[iconsRef?.current.length - 1]?.offsetTop - iconsRef?.current[0]?.offsetTop
-              }}
-            />
-            <div className={styles.timelineBottomText}>
-              At Aziz Construction, we understand that your construction project is not just a structure; it’s an
-              investment in your future. We are here to turn your vision into reality, create spaces that inspire, and
-              build a foundation for generations to come. Contact us today to discuss your project and let us be a part
-              of your journey.
-            </div>
-          </div>
+          <TimelineSection />
         </div>
         <div className={styles.block}>
           <div className={styles.benefitsBlock}>

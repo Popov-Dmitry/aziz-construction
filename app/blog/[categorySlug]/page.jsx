@@ -3,6 +3,20 @@ import styles from "./post-category.module.css";
 import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
 import { getAllPosts, getCategory } from "@/lib/api";
 import PostCard from "@/components/elements/post-card/PostCard";
+import { unslug } from "@/utils/unslug";
+
+export async function generateMetadata({ params }) {
+  return {
+    title: `${unslug(params?.categorySlug)} - Aziz Construction`,
+    openGraph: {
+      title: `${unslug(params?.categorySlug)} - Aziz Construction`,
+      url: `https://azizconstruction.com/blog/${params?.categorySlug}`
+    },
+    twitter: {
+      title: `${unslug(params?.categorySlug)} - Aziz Construction`
+    }
+  };
+}
 
 const PostCategory = async ({ params }) => {
   const { name, description } = await getCategory(params?.categorySlug);
