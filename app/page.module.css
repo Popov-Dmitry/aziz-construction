@@ -53,7 +53,7 @@
     font-weight: 600;
 }
 
-.subtitle, .faqSubtitle {
+.subtitle {
     color: #21212D;
     font-family: var(--font-popins);
     font-size: 42px;
@@ -173,16 +173,6 @@
     gap: 23px;
 }
 
-.faqSubtitle {
-    font-size: 36px;
-}
-
-.faqPhoto {
-    position: relative;
-    height: 500px;
-    width: 100%;
-}
-
 .recentWorks {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -192,48 +182,6 @@
 
 .reviews {
     margin: 8px 0 15px 0;
-}
-
-.contactUsWrapper {
-    gap: 50px;
-}
-
-.contactUsForm {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.contactUsTextArea {
-    resize: vertical;
-    height: 120px;
-    font-size: 18px !important;
-}
-
-.contactUsInput {
-    font-size: 18px !important;
-    min-height: 59px !important;
-    padding: 7px 20px !important;
-}
-
-.contactUsButton {
-    width: fit-content;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    line-height: 40px !important;
-    font-family: var(--font-popins) !important;
-}
-
-.contactUsRow {
-    display: flex;
-    gap: 20px;
-}
-
-.contactUsTitle {
-    color: #D53446;
-    font-family: var(--font-popins);
-    font-size: 20px;
-    font-weight: 600;
 }
 
 @media (max-width: 1024px) {
@@ -328,15 +276,6 @@
 
     .twoColsGrid {
         grid-template-columns: 1fr;
-    }
-
-    .contactUsWrapper {
-        gap: 20px;
-    }
-
-    .faqSubtitle {
-        font-size: 30px;
-        text-align: center;
     }
 
     .recentWorks {

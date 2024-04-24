@@ -60,6 +60,11 @@
     font-weight: 400;
 }
 
+.bottom {
+    max-width: 1200px;
+    width: 100%;
+}
+
 @media (max-width: 767px) {
     .row, .row:nth-child(even) {
         flex-direction: column;

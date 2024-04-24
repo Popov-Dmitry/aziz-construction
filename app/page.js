@@ -1,17 +1,16 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { whyChooseUsData, faqData, recentWorksData } from "@/data";
+import { whyChooseUsData, recentWorksData } from "@/data";
 import AdvantageCard from "@/components/elements/advantage-card/AdvantageCard";
 import Sns from "@/components/elements/sns/Sns";
 import OurServicesSection from "@/components/sections/our-services-section/OurServicesSection";
 import WorkCard from "@/components/elements/work-card/WorkCard";
 import Button from "@/components/elements/button/Button";
 import GoogleReviewsSection from "@/components/sections/google-reviews-section/GoogleReviewsSection";
-import Input from "@/components/elements/input/Input";
-import TextArea from "@/components/elements/text-area/TextArea";
 import { joinClassNames } from "@/utils/join-class-names";
-import AccordionsGroup from "@/components/elements/accordions-group/AccordionsGroup";
-import { YouTubeEmbed } from "@next/third-parties/google";
+import FaqSection from "@/components/sections/faq-section/FaqSection";
+import YoutubeReviewsSection from "@/components/sections/youtube-reviews-section/YoutubeReviewsSection";
+import ContactUsSection from "@/components/sections/contact-us-section/ContactUsSection";
 
 const mainInfoBlock = () => (
   <div className={styles.main}>
@@ -86,16 +85,7 @@ const servicesBlock = () => (
 const faqBlock = () => (
   <div className={styles.wrapper}>
     <div className={styles.container}>
-      <div className={styles.twoColsFlex}>
-        <div className={styles.leftColumn}>
-          <div className={styles.title}>Ask Questions</div>
-          <div className={styles.faqSubtitle}>Frequently Asked Questions</div>
-          <AccordionsGroup data={faqData} />
-        </div>
-        <div className={styles.faqPhoto}>
-          <Image src="/home/faq.jpeg" alt="" fill objectFit="cover" />
-        </div>
-      </div>
+      <FaqSection />
     </div>
   </div>
 );
@@ -119,14 +109,7 @@ const recentWorksBock = () => (
 const clientsFeedbackBlock = () => (
   <div className={styles.wrapper}>
     <div className={styles.container}>
-      <div className={styles.header}>
-        <div className={styles.title}>Clients Feedback</div>
-        <div className={styles.subtitle}>Our Clients Reviews</div>
-      </div>
-      <div className={styles.twoColsFlex}>
-        <YouTubeEmbed videoid="uop_Ps-PBlA" width={600} />
-        <YouTubeEmbed videoid="vKwVM8xMsW8" width={600} />
-      </div>
+      <YoutubeReviewsSection />
     </div>
   </div>
 );
@@ -140,27 +123,7 @@ const reviewsBlock = () => (
 const contactUsBlock = () => (
   <div className={styles.wrapper}>
     <div className={styles.container}>
-      <div className={joinClassNames(styles.twoColsFlex, styles.contactUsWrapper)}>
-        <div className={styles.leftColumn}>
-          <div className={styles.contactUsTitle}>Contact Us</div>
-          <div className={styles.subtitle} style={{ marginTop: -12 }}>Get A Quote</div>
-          <form className={styles.contactUsForm}>
-            <div className={styles.contactUsRow}>
-              <Input className={styles.contactUsInput} placeholder="Name" />
-              <Input className={styles.contactUsInput} placeholder="Email" />
-            </div>
-            <div className={styles.contactUsRow}>
-              <Input className={styles.contactUsInput} placeholder="Phone" />
-              <Input className={styles.contactUsInput} placeholder="Your Address" />
-            </div>
-            <TextArea className={styles.contactUsTextArea} placeholder="Message" />
-            <Button className={styles.contactUsButton} text="Send Message" type="submit" />
-          </form>
-        </div>
-        <div className={styles.faqPhoto}>
-          <Image src="/home/contact-us.jpeg" alt="" fill objectFit="cover" />
-        </div>
-      </div>
+      <ContactUsSection />
     </div>
   </div>
 );

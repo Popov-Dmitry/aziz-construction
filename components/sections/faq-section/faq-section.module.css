@@ -1,0 +1,54 @@
+.twoColsFlex {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.title {
+    color: #D53446;
+    font-family: var(--font-popins);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #21212D;
+    font-family: var(--font-popins);
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+.photo {
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .twoColsFlex {
+        flex-direction: column;
+    }
+
+    .leftColumn {
+        gap: 14px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 30px;
+        text-align: center;
+    }
+}

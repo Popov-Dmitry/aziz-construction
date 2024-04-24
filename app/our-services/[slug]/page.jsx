@@ -4,6 +4,10 @@ import { newConstructionData } from "@/data";
 import Image from "next/image";
 import { unslug } from "@/utils/unslug";
 import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
+import GoogleReviewsSection from "@/components/sections/google-reviews-section/GoogleReviewsSection";
+import FaqSection from "@/components/sections/faq-section/FaqSection";
+import YoutubeReviewsSection from "@/components/sections/youtube-reviews-section/YoutubeReviewsSection";
+import ContactUsSection from "@/components/sections/contact-us-section/ContactUsSection";
 
 export async function generateMetadata({ params }) {
   return {
@@ -44,6 +48,26 @@ const Service = ({ params }) => {
             </div>
           </div>
         ))}
+        <div className={styles.row}>
+          <div className={styles.bottom}>
+            <GoogleReviewsSection />
+          </div>
+        </div>
+        <div className={styles.row}>
+          <div className={styles.bottom}>
+            <FaqSection />
+          </div>
+        </div>
+        <div className={styles.row}>
+          <div className={styles.bottom}>
+            <YoutubeReviewsSection />
+          </div>
+        </div>
+        <div className={styles.row}>
+          <div className={styles.bottom}>
+            <ContactUsSection />
+          </div>
+        </div>
       </div>
     </div>
   );

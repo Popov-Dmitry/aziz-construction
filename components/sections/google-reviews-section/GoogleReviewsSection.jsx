@@ -2,10 +2,11 @@ import React from "react";
 import styles from "./googlereviews-section.module.css";
 import Reviews from "@/components/elements/reviews/reviews";
 import { reviewsData } from "@/data";
+import { joinClassNames } from "@/utils/join-class-names";
 
-const GoogleReviewsSection = () => {
+const GoogleReviewsSection = ({ className }) => {
   return (
-    <div className={styles.container}>
+    <div className={joinClassNames(styles.container, className)}>
       <div className={styles.header}>
         <div className={styles.title}>Our Testimonials</div>
         <div className={styles.subtitle}>What Our Clients Says About Us</div>
