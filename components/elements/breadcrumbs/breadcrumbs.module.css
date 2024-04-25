@@ -22,6 +22,7 @@
 .breadcrumb {
     display: flex;
     gap: 8px;
+    flex-shrink: 0;
     font-family: var(--font-open-sans);
     font-size: 15px;
     font-weight: 600;
@@ -37,4 +38,16 @@
 .current {
     color: #D53446;
     cursor: text;
+}
+
+@media (max-width: 1024px) {
+    .breadcrumbs {
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .breadcrumbs::-webkit-scrollbar {
+        display: none;
+    }
 }
