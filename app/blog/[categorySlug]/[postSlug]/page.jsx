@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
 import { getPost, getPostMetaData } from "@/lib/api";
 import Image from "next/image";
 import Category from "@/components/elements/category/Category";
+import SnsShareSection from "@/components/sections/sns-share-section/SnsShareSection";
 
 export async function generateMetadata({ params }) {
   const { title, shortDescription, cover } = await getPostMetaData(params?.postSlug);
@@ -55,6 +56,7 @@ const BlogPost = async ({ params }) => {
         <div className={styles.postContent}>
           {documentToReactComponents(body?.json)}
         </div>
+        <SnsShareSection className={styles.snsShare} />
       </div>
     </>
   );

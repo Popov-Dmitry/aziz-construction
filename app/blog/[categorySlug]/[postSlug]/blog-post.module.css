@@ -40,6 +40,10 @@
     font-family: var(--font-roboto);
 }
 
+.snsShare {
+    margin-top: 32px;
+}
+
 @media (max-width: 767px) {
     .posts {
         grid-template-columns: 1fr;

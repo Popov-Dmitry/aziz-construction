@@ -1,0 +1,13 @@
+.title {
+    font-family: var(--font-popins);
+    font-weight: 600;
+    font-size: 26px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
