@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import styles from "./get-a-quote-section.module.css";
 import Input from "@/components/elements/input/Input";
@@ -5,8 +7,12 @@ import Button from "@/components/elements/button/Button";
 import Contacts from "@/components/elements/contacts/Contacts";
 import TextArea from "@/components/elements/text-area/TextArea";
 import { joinClassNames } from "@/utils/join-class-names";
+import { useFormState } from "react-dom";
+import { submitData } from "@/lib/airtable";
 
 const GetAQuoteSection = ({ className }) => {
+  const [_, dispatch] = useFormState(submitData);
+
   return (
     <div className={joinClassNames(styles.container, className)}>
       <div className={styles.wrapper}>
@@ -18,17 +24,17 @@ const GetAQuoteSection = ({ className }) => {
         </div>
         <Contacts size="lg" />
       </div>
-      <form className={styles.form}>
+      <form className={styles.form} action={dispatch}>
         <div className={styles.row}>
-          <Input placeholder="Name" />
-          <Input placeholder="Email" />
+          <Input placeholder="Name" name="Name" />
+          <Input placeholder="Email" name="Email" type="email" />
         </div>
         <div className={styles.row}>
-          <Input placeholder="Phone" />
-          <Input placeholder="Subject" />
+          <Input placeholder="Phone" name="Phone" type="tel" />
+          <Input placeholder="Subject" name="Subject" />
         </div>
-        <Input placeholder="Your Address" />
-        <TextArea className={styles.textArea} placeholder="Message" />
+        <Input placeholder="Your Address" name="Address" />
+        <TextArea className={styles.textArea} placeholder="Message" name="Message" />
         <Button className={styles.button} text="Send Message" type="submit" />
       </form>
     </div>
