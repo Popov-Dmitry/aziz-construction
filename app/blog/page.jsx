@@ -34,7 +34,6 @@ const Blog = async () => {
             ))}
           </div>
         </div>
-        <h1 className={styles.title}>Archives</h1>
         <div className={styles.posts}>
           {posts.map((post) => (
             <PostCard key={post.slug} {...post} categorySlug={post.categoriesCollection.items[0].slug} />
