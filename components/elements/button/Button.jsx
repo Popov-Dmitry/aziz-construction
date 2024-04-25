@@ -4,7 +4,16 @@ import { joinClassNames } from "@/utils/join-class-names";
 import Link from "next/link";
 
 
-const Button = ({ text, variant = "filled", color = "red", type, onClick, className, href }) => {
+const Button = ({
+  text,
+  variant = "filled",
+  color = "red",
+  type,
+  disabled,
+  onClick,
+  className,
+  href,
+}) => {
   if (href) {
     return (
       <Link className={joinClassNames(styles.button, styles[variant], styles[color], className)} href={href}>
@@ -18,6 +27,7 @@ const Button = ({ text, variant = "filled", color = "red", type, onClick, classN
       type={type}
       className={joinClassNames(styles.button, styles[variant], styles[color], className)}
       onClick={onClick}
+      disabled={disabled}
     >
       {text}
     </button>

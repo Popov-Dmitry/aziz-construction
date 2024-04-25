@@ -55,7 +55,28 @@
 
 .row {
     display: flex;
+    align-items: center;
     gap: 10px;
+}
+
+@keyframes loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.spinner {
+    animation: loading-spinner 1s linear infinite;
+}
+
+.error {
+    color: #D53446;
+    font-family: var(--font-roboto);
+    font-size: 14px;
 }
 
 @media (max-width: 1024px) {

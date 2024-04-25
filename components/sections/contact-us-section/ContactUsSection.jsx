@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { useFormState } from 'react-dom';
+import React, { useEffect, useRef } from "react";
+import { useFormState, useFormStatus } from "react-dom";
 import styles from "./contact-us-section.module.css";
 import Input from "@/components/elements/input/Input";
 import TextArea from "@/components/elements/text-area/TextArea";
@@ -9,51 +9,87 @@ import Button from "@/components/elements/button/Button";
 import Image from "next/image";
 import { submitData } from "@/lib/airtable";
 
+const Form = ({ result }) => {
+  const { pending } = useFormStatus();
+
+  return (
+    <>
+      <div className={styles.contactUsRow}>
+        <Input
+          className={styles.contactUsInput}
+          placeholder="Name"
+          name="Name"
+          required
+        />
+        <Input
+          className={styles.contactUsInput}
+          placeholder="Email"
+          name="Email"
+          type="email"
+          required
+        />
+      </div>
+      <div className={styles.contactUsRow}>
+        <Input
+          className={styles.contactUsInput}
+          placeholder="Phone"
+          name="Phone"
+          type="tel"
+        />
+        <Input
+          className={styles.contactUsInput}
+          placeholder="Your Address"
+          name="Address"
+        />
+      </div>
+      <TextArea
+        className={styles.contactUsTextArea}
+        placeholder="Message"
+        name="Message"
+      />
+      <div className={styles.contactUsRow}>
+        <Button
+          className={styles.contactUsButton}
+          text="Send Message"
+          type="submit"
+        />
+        {pending && (
+          <Image
+            className={styles.spinner}
+            src="/spinner.svg"
+            alt=""
+            width={48}
+            height={48}
+          />
+        )}
+        {(!pending && result === true) && (
+          <Image src="/checkmark-circle.svg" alt="" width={48} height={48} />
+        )}
+        {result?.message && (
+          <div className={styles.error}>{result?.message}</div>
+        )}
+      </div>
+    </>
+  );
+};
+
 const ContactUsSection = () => {
-  const [_, dispatch] = useFormState(submitData);
+  const [result, dispatch] = useFormState(submitData);
+  const ref = useRef();
+
+  useEffect(() => {
+    if (result === true) {
+      ref.current.reset();
+    }
+  }, [result]);
 
   return (
     <div className={styles.twoColsFlex}>
       <div className={styles.leftColumn}>
         <div className={styles.contactUsTitle}>Contact Us</div>
         <div className={styles.subtitle}>Get A Quote</div>
-        <form className={styles.contactUsForm} action={dispatch}>
-          <div className={styles.contactUsRow}>
-            <Input
-              className={styles.contactUsInput}
-              placeholder="Name"
-              name="Name"
-            />
-            <Input
-              className={styles.contactUsInput}
-              placeholder="Email"
-              name="Email"
-              type="email"
-            />
-          </div>
-          <div className={styles.contactUsRow}>
-            <Input
-              className={styles.contactUsInput}
-              placeholder="Phone"
-              name="Phone"
-              type="tel"
-            />
-            <Input
-              className={styles.contactUsInput}
-              placeholder="Your Address"
-              name="Address"
-            />
-          </div>
-          <TextArea
-            className={styles.contactUsTextArea}
-            placeholder="Message"
-            name="Message"
-          />
-          <Button
-            className={styles.contactUsButton}
-            text="Send Message"
-            type="submit"
-          />
+        <form className={styles.contactUsForm} action={dispatch} ref={ref}>
+          <Form result={result} />
         </form>
       </div>
       <div className={styles.photo}>

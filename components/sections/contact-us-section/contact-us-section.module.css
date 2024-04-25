@@ -51,6 +51,7 @@
 .contactUsRow {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .contactUsTitle {
@@ -64,6 +65,20 @@
     position: relative;
     height: 500px;
     width: 100%;
+}
+
+@keyframes loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.spinner {
+    animation: loading-spinner 1s linear infinite;
 }
 
 @media (max-width: 767px) {
