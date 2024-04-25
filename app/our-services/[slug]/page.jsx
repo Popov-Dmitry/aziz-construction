@@ -8,6 +8,7 @@ import GoogleReviewsSection from "@/components/sections/google-reviews-section/G
 import FaqSection from "@/components/sections/faq-section/FaqSection";
 import YoutubeReviewsSection from "@/components/sections/youtube-reviews-section/YoutubeReviewsSection";
 import ContactUsSection from "@/components/sections/contact-us-section/ContactUsSection";
+import { redirect } from "next/navigation";
 
 export async function generateMetadata({ params }) {
   return {
@@ -25,6 +26,10 @@ export async function generateMetadata({ params }) {
 }
 
 const Service = ({ params }) => {
+  if (!newConstructionData[params.slug]) {
+    redirect("/our-services");
+  }
+
   return (
     <div
       className={styles.container}
