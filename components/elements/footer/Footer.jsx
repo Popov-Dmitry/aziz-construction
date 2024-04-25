@@ -47,7 +47,7 @@ const Footer = () => {
               Contact Us
             </Link>
             <div className={styles.row} style={{ marginTop: 20 }}>
-              <Image src="clipboard-list.svg" alt="" width={24} height={24} />
+              <Image src="/clipboard-list.svg" alt="" width={24} height={24} />
               <div className={styles.license}>License # 1103807</div>
             </div>
           </div>
