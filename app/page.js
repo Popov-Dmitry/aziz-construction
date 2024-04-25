@@ -14,6 +14,12 @@ import ContactUsSection from "@/components/sections/contact-us-section/ContactUs
 
 const mainInfoBlock = () => (
   <div className={styles.main}>
+    <div className={styles.slideshow} />
+    <div className={styles.slideshow} />
+    <div className={styles.slideshow} />
+    <div className={styles.slideshow} />
+    <div className={styles.slideshow} />
+    <div className={styles.slideshow} />
     <div className={styles.mainContainer}>
       <div className={styles.mainContent}>
         <Button className={styles.license} text="License# 1103807" />
