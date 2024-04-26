@@ -44,8 +44,27 @@
     margin-top: 32px;
 }
 
+.relativePostsContainer {
+    margin-top: 8px;
+}
+
+.relativePostsTitle {
+    font-family: var(--font-popins);
+    font-weight: 600;
+    font-size: 26px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.relativePosts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 8px;
+}
+
 @media (max-width: 767px) {
-    .posts {
+    .relativePosts {
         grid-template-columns: 1fr;
     }
 

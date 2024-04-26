@@ -2,10 +2,11 @@ import React from "react";
 import styles from "./blog-post.module.css";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
-import { getPost, getPostMetaData } from "@/lib/api";
+import { getAllPosts, getPost, getPostMetaData } from "@/lib/api";
 import Image from "next/image";
 import Category from "@/components/elements/category/Category";
 import SnsShareSection from "@/components/sections/sns-share-section/SnsShareSection";
+import PostCard from "@/components/elements/post-card/PostCard";
 
 export async function generateMetadata({ params }) {
   const { title, shortDescription, cover } = await getPostMetaData(params?.postSlug);
@@ -28,12 +29,14 @@ export async function generateMetadata({ params }) {
 const BlogPost = async ({ params }) => {
   const {
     title,
+    slug,
     cover,
     categoriesCollection,
     publishDate,
     minutesToRead,
     body
   } = await getPost(params?.postSlug);
+  const relativePosts = await getAllPosts(2, categoriesCollection.items[0]?.slug, slug)
 
   return (
     <>
@@ -57,6 +60,16 @@ const BlogPost = async ({ params }) => {
           {documentToReactComponents(body?.json)}
         </div>
         <SnsShareSection className={styles.snsShare} />
+        {relativePosts && (
+          <div className={styles.relativePostsContainer}>
+            <div className={styles.relativePostsTitle}>See more</div>
+            <div className={styles.relativePosts}>
+              {relativePosts.map((post) => (
+                <PostCard {...post} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
