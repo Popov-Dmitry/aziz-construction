@@ -60,7 +60,9 @@ const Service = ({ params }) => {
         </div>
         <div className={styles.row}>
           <div className={styles.bottom}>
-            <FaqSection />
+            <FaqSection
+              accordionClassname={newConstructionData[params.slug].length % 2 !== 0 ? styles.accordion : undefined}
+            />
           </div>
         </div>
         <div className={styles.row}>
