@@ -1,0 +1,38 @@
+.galleryCard {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: hidden;
+}
+
+.galleryCardImage {
+    position: relative;
+    aspect-ratio: 3/2;
+    width: 100%;
+    transition: .2s opacity;
+}
+
+.galleryCardTitle {
+    color: #000000;
+    font-family: var(--font-popins);
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.galleryCardImage:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    transition: .7s;
+}
+
+.galleryCardImage:hover:after {
+    opacity: .5;
+}

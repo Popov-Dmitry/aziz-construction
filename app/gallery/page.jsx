@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./gallery.module.css";
-import Image from "next/image";
-import Link from "next/link";
 import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
+import GalleryCard from "@/components/elements/gallery-card/GalleryCard";
 
 export async function generateMetadata({ params }) {
   return {
@@ -15,7 +14,7 @@ export async function generateMetadata({ params }) {
       title: "Gallery - Aziz Construction"
     }
   };
-};
+}
 
 const Gallery = () => {
   return (
@@ -23,20 +22,28 @@ const Gallery = () => {
       <Breadcrumbs useDefaultContainer />
       <div className={styles.container}>
         <div className={styles.row}>
-          <Link className={styles.link} href="/gallery/kitchen-remodel/">
-            <Image src="/gallery/Kitchen-Remodel.jpeg" alt="" fill />
-          </Link>
-          <Link className={styles.link} href="/gallery/bathroom/">
-            <Image src="/gallery/Bathroom-Remodel.jpeg" alt="" fill />
-          </Link>
+          <GalleryCard
+            title="Kitchen Remodel"
+            src="/gallery/Kitchen-Remodel.jpeg"
+            href="/gallery/kitchen-remodel/"
+          />
+          <GalleryCard
+            title="Bathroom Remodel"
+            src="/gallery/Bathroom-Remodel.jpeg"
+            href="/gallery/bathroom/"
+          />
         </div>
         <div className={styles.row}>
-          <Link className={styles.link} href="/gallery/adu/">
-            <Image src="/gallery/ADU1.jpeg" alt="" fill />
-          </Link>
-          <Link className={styles.link} href="/gallery/adu/">
-            <Image src="/gallery/ADU2.jpeg" alt="" fill />
-          </Link>
+          <GalleryCard
+            title="ADU"
+            src="/gallery/ADU1.jpeg"
+            href="/gallery/adu/"
+          />
+          <GalleryCard
+            title="ADU"
+            src="/gallery/ADU2.jpeg"
+            href="/gallery/adu/"
+          />
         </div>
       </div>
     </>
