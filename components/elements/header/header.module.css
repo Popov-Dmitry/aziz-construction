@@ -7,6 +7,7 @@
     position: sticky;
     top: 0;
     background-color: #FFFFFF;
+    border-bottom: 1px solid #eee;
 }
 
 .content {
