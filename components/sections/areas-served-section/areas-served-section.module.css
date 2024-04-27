@@ -1,0 +1,52 @@
+.areasServedSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.title {
+    color: #21212D;
+    font-family: var(--font-popins);
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1em;
+    margin-bottom: 24px;
+}
+
+.text, .areas, .boldText {
+    color: #000000;
+    font-family: var(--font-popins);
+    font-size: 16px;
+}
+
+.boldText {
+    font-weight: 600;
+}
+
+.areas {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.area {
+    padding-left: 1em;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+@media (max-width: 767px) {
+    .areasServedSection {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+}

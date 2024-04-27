@@ -21,7 +21,7 @@
     width: 100%;
 }
 
-.wrapper:nth-child(odd) {
+.wrapper:nth-child(even) {
     background-color: #F1F1F1;
 }
 

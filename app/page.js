@@ -11,6 +11,7 @@ import { joinClassNames } from "@/utils/join-class-names";
 import FaqSection from "@/components/sections/faq-section/FaqSection";
 import YoutubeReviewsSection from "@/components/sections/youtube-reviews-section/YoutubeReviewsSection";
 import ContactUsSection from "@/components/sections/contact-us-section/ContactUsSection";
+import AreasServedSection from "@/components/sections/areas-served-section/AreasServedSection";
 
 const mainInfoBlock = () => (
   <div className={styles.main}>
@@ -62,6 +63,14 @@ const aboutBlock = () => (
           <Image src="/home/aziz.jpeg" alt="" fill />
         </div>
       </div>
+    </div>
+  </div>
+);
+
+const areasServedBlock = () => (
+  <div className={styles.wrapper}>
+    <div className={styles.container}>
+      <AreasServedSection />
     </div>
   </div>
 );
@@ -138,6 +147,7 @@ export default function Home() {
   return (
     <div className={styles.home}>
       {mainInfoBlock()}
+      {areasServedBlock()}
       {aboutBlock()}
       {whyChooseUsBlock()}
       {servicesBlock()}
