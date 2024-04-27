@@ -1,0 +1,97 @@
+.pageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 70px 10px;
+}
+
+.pageHeaderColumn {
+    max-width: 600px;
+    min-height: 250px;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pageHeaderTitle {
+    color: #ED1D24;
+    font-family: var(--font-popins);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.pageHeaderSubtitle {
+    color: #21212D;
+    font-family: var(--font-popins);
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+.pageHeaderDescription {
+    color: #090909;
+    font-family: var(--font-popins);
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 33px;
+    max-width: 93%;
+}
+
+.pageHeaderImage {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.pageHeaderButton {
+    width: fit-content;
+}
+
+@media (max-width: 1024px) {
+    .pageHeader {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .pageHeaderColumn {
+        max-width: 100%;
+        width: 100%;
+    }
+    .pageHeaderTitle {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .pageHeaderSubtitle {
+        font-size: 35px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .pageHeaderDescription {
+        text-align: center;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .pageHeaderButton {
+        align-self: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .pageHeaderSubtitle {
+        font-size: 25px;
+    }
+
+    .pageHeaderDescription {
+        font-size: 16px;
+        line-height: 1.7em;
+    }
+}

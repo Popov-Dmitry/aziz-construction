@@ -9,6 +9,7 @@ import FaqSection from "@/components/sections/faq-section/FaqSection";
 import YoutubeReviewsSection from "@/components/sections/youtube-reviews-section/YoutubeReviewsSection";
 import ContactUsSection from "@/components/sections/contact-us-section/ContactUsSection";
 import { redirect } from "next/navigation";
+import PageHeader from "@/components/sections/page-header/PageHeader";
 
 export async function generateMetadata({ params }) {
   return {
@@ -31,12 +32,20 @@ const Service = ({ params }) => {
   }
 
   return (
-    <div
-      className={styles.container}
-      style={{ backgroundImage: `url("/services/${params.slug}/cover.jpeg")` }}
-    >
+    <div>
       <Breadcrumbs useDefaultContainer />
-      <div className={styles.wrapper}>
+      <PageHeader
+        title={unslug(params.slug)}
+        subtitle="Let's Make Your Dream Home a Reality"
+        description="Welcome to Aziz Construction, where craftsmanship and family legacy meet. With years of hands-on
+              experience and guidance from industry experts, I have established a general contractor business in San
+              Fransisco, Bay Area, that aims to stand the test of time. At Aziz Construction, we believe in creating a
+              lasting reputation for excellence, delivering quality workmanship, and building a foundation for future
+              generations."
+        src={`/services/${params.slug}/cover.jpeg`}
+        contactUsId="contact-us"
+      />
+      <div>
         {newConstructionData[params.slug].map((value, index) => (
           <div key={value.title} className={styles.row}>
             <div className={styles.column}>
@@ -70,7 +79,7 @@ const Service = ({ params }) => {
             <YoutubeReviewsSection />
           </div>
         </div>
-        <div className={styles.row}>
+        <div className={styles.row} id="contact-us">
           <div className={styles.bottom}>
             <ContactUsSection />
           </div>
