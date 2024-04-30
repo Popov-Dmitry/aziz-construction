@@ -101,7 +101,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.rights}>
-        2023 © All Rights Reserved by Aziz Construction
+        {new Date().getFullYear()} © All Rights Reserved by Aziz Construction
       </div>
     </footer>
   );
