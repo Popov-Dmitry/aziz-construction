@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./service.module.css";
-import { newConstructionData } from "@/data";
-import Image from "next/image";
 import { unslug } from "@/utils/unslug";
 import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
 import GoogleReviewsSection from "@/components/sections/google-reviews-section/GoogleReviewsSection";
@@ -10,6 +8,8 @@ import YoutubeReviewsSection from "@/components/sections/youtube-reviews-section
 import ContactUsSection from "@/components/sections/contact-us-section/ContactUsSection";
 import { redirect } from "next/navigation";
 import PageHeader from "@/components/sections/page-header/PageHeader";
+import { getService } from "@/lib/api";
+import ServiceRow from "@/components/elements/service-row/ServiceRow";
 
 export async function generateMetadata({ params }) {
   return {
@@ -26,8 +26,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const Service = ({ params }) => {
-  if (!newConstructionData[params.slug]) {
+const Service = async ({ params }) => {
+  const service = await getService(params.slug)
+  if (!service) {
     redirect("/our-services");
   }
 
@@ -35,33 +36,43 @@ const Service = ({ params }) => {
     <div>
       <Breadcrumbs useDefaultContainer />
       <PageHeader
-        title={unslug(params.slug)}
-        subtitle="Let's Make Your Dream Home a Reality"
-        description="Welcome to Aziz Construction, where craftsmanship and family legacy meet. With years of hands-on
-              experience and guidance from industry experts, I have established a general contractor business in San
-              Fransisco, Bay Area, that aims to stand the test of time. At Aziz Construction, we believe in creating a
-              lasting reputation for excellence, delivering quality workmanship, and building a foundation for future
-              generations."
-        src={`/services/${params.slug}/cover.jpeg`}
+        title={service.name}
+        subtitle={service.heading}
+        description={service.description}
+        src={service.cover?.url}
         contactUsId="contact-us"
       />
       <div>
-        {newConstructionData[params.slug].map((value, index) => (
-          <div key={value.title} className={styles.row}>
-            <div className={styles.column}>
-              <Image
-                src={`/services/${params.slug}/${index + 1}.jpeg`}
-                alt=""
-                fill
-                className={styles.image}
-              />
-            </div>
-            <div className={styles.column}>
-              <div className={styles.title}>{value.title}</div>
-              <div className={styles.description}>{value.description}</div>
-            </div>
-          </div>
-        ))}
+        <ServiceRow
+          className={styles.row}
+          title={service.fIrstSectionHeading}
+          description={service.firstSectionDescription}
+          src={service.firstSectionImage?.url}
+        />
+        <ServiceRow
+          className={styles.row}
+          title={service.secondSectionTitle}
+          description={service.secondSectionDescription}
+          src={service.secondSectionImage?.url}
+        />
+        <ServiceRow
+          className={styles.row}
+          title={service.thirdSectionTitle}
+          description={service.thirdSectionDescription}
+          src={service.thirdSectionImage?.url}
+        />
+        <ServiceRow
+          className={styles.row}
+          title={service.fourthSectionTitle}
+          description={service.fourthSectionDescription}
+          src={service.fourthSectionImage?.url}
+        />
+        <ServiceRow
+          className={styles.row}
+          title={service.fifthSectionTitle}
+          description={service.fifthSectionDescription}
+          src={service.fifthSectionImage?.url}
+        />
         <div className={styles.row}>
           <div className={styles.bottom}>
             <GoogleReviewsSection />
@@ -70,7 +81,8 @@ const Service = ({ params }) => {
         <div className={styles.row}>
           <div className={styles.bottom}>
             <FaqSection
-              accordionClassname={newConstructionData[params.slug].length % 2 !== 0 ? styles.accordion : undefined}
+              accordionClassname={styles.accordion}
+              data={service.faqSectionCollection.items}
             />
           </div>
         </div>

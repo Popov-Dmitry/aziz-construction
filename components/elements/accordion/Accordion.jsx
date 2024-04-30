@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./accordion.module.css";
 import { joinClassNames } from "@/utils/join-class-names";
 
-const Accordion = ({ title, details, opened, setOpened, className }) => {
+const Accordion = ({ title, description, opened, setOpened, className }) => {
   return (
     <div className={joinClassNames(styles.accordion, className)}>
       <div className={opened ? styles.accordionTitleActive : styles.accordionTitle} onClick={setOpened}>
@@ -16,7 +16,7 @@ const Accordion = ({ title, details, opened, setOpened, className }) => {
         {" "}{title}
       </div>
       <div className={opened ? styles.accordionDetailsActive : styles.accordionDetails}>
-        {details}
+        {description}
       </div>
     </div>
   );
