@@ -3,6 +3,7 @@ import { unslug } from "@/utils/unslug";
 import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
 import "yet-another-react-lightbox/styles.css";
 import GallerySection from "@/components/sections/gallery-section/GallerySection";
+import { getGallery } from "@/lib/api";
 
 export async function generateMetadata({ params }) {
   return {
@@ -19,11 +20,13 @@ export async function generateMetadata({ params }) {
   }
 };
 
-const Gallery = ({ params }) => {
+const Gallery = async ({ params }) => {
+  const gallery = await getGallery(params?.slug);
+
   return (
     <>
       <Breadcrumbs useDefaultContainer />
-      <GallerySection slug={params?.slug} />
+      <GallerySection gallery={gallery} />
     </>
   );
 };

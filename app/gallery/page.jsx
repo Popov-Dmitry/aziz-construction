@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const Gallery = async () => {
+const Galleries = async () => {
   const galleries = await getGalleries();
 
   if (!galleries) {
@@ -42,4 +42,4 @@ const Gallery = async () => {
   );
 };
 
-export default Gallery;
+export default Galleries;

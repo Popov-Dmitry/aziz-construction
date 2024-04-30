@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import styles from "./gallery-section.module.css";
-import { unslug } from "@/utils/unslug";
 import Image from "next/image";
 import Lightbox from "yet-another-react-lightbox";
 import LightboxImage from "@/components/elements/lightbox-image/LightboxImage";
@@ -11,19 +10,23 @@ import Download from "yet-another-react-lightbox/plugins/download";
 import Share from "yet-another-react-lightbox/plugins/share";
 import { useWindowSize } from "@react-hook/window-size";
 
-const GallerySection = ({ slug }) => {
+const GallerySection = ({ gallery }) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [width, height] = useWindowSize();
 
+  if (!gallery) {
+    return ;
+  }
+
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.title}>{unslug(slug)}</div>
+        <div className={styles.title}>{gallery.name}</div>
         <div className={styles.photos}>
-          {[1, 2, 3, 4].map((value, index) => (
+          {gallery.photosCollection.items.map((value, index) => (
             <div
-              key={value}
+              key={value.url}
               className={styles.photo}
               onClick={() => {
                 setCurrentIndex(index);
@@ -31,8 +34,7 @@ const GallerySection = ({ slug }) => {
               }}
             >
               <Image
-                key={value}
-                src={`/gallery/${slug}/${value}.jpeg`}
+                src={value.url}
                 alt=""
                 fill
                 objectFit="cover"
@@ -45,7 +47,7 @@ const GallerySection = ({ slug }) => {
         open={lightboxOpen}
         close={() => setLightboxOpen(false)}
         index={currentIndex}
-        slides={[1, 2, 3, 4].map((value) => ({ src: `/gallery/${slug}/${value}.jpeg`, width, height }))}
+        slides={gallery.photosCollection.items.map((value) => ({ src: value.url, width, height }))}
         render={{ slide: LightboxImage }}
         plugins={[Fullscreen, Download, Share]}
       />
