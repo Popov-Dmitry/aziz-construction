@@ -5,7 +5,7 @@
     padding: 20px 20px 80px 20px;
 }
 
-.row {
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -19,7 +19,7 @@
 }
 
 @media (max-width: 1024px) {
-    .row {
+    .grid {
         grid-template-columns: 1fr;
     }
 }

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./gallery.module.css";
 import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
 import GalleryCard from "@/components/elements/gallery-card/GalleryCard";
+import { getGalleries } from "@/lib/api";
 
 export async function generateMetadata({ params }) {
   return {
@@ -16,34 +17,25 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const Gallery = () => {
+const Gallery = async () => {
+  const galleries = await getGalleries();
+
+  if (!galleries) {
+    return;
+  }
+
   return (
     <>
       <Breadcrumbs useDefaultContainer />
       <div className={styles.container}>
-        <div className={styles.row}>
-          <GalleryCard
-            title="Kitchen Remodel"
-            src="/gallery/Kitchen-Remodel.jpeg"
-            href="/gallery/kitchen-remodel/"
-          />
-          <GalleryCard
-            title="Bathroom Remodel"
-            src="/gallery/Bathroom-Remodel.jpeg"
-            href="/gallery/bathroom/"
-          />
-        </div>
-        <div className={styles.row}>
-          <GalleryCard
-            title="ADU"
-            src="/gallery/ADU1.jpeg"
-            href="/gallery/adu/"
-          />
-          <GalleryCard
-            title="ADU"
-            src="/gallery/ADU2.jpeg"
-            href="/gallery/adu/"
-          />
+        <div className={styles.grid}>
+          {galleries.map((gallery) => (
+            <GalleryCard
+              title={gallery.name}
+              src={gallery.photosCollection.items[0].url}
+              href={`/gallery/${gallery.url}`}
+            />
+          ))}
         </div>
       </div>
     </>
