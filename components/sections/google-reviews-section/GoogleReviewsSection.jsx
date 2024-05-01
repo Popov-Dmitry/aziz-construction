@@ -14,7 +14,7 @@ const GoogleReviewsSection = ({ className }) => {
       </div>
       <Reviews reviews={reviewsData} className={styles.reviews} />
       <Link href="https://maps.app.goo.gl/63AE7NpeyVnuYKk88" target="_blank" className={styles.raitingSummary}>
-        <span className={styles.raitingSummaryBold}>Google</span> rating score: <span className={styles.raitingSummaryBold}>5.0</span> of 5, based on <span className={styles.raitingSummaryBold}>40</span> reviews
+        <span className={styles.raitingSummaryBold}>Google</span> rating score: <span className={styles.raitingSummaryBold}>5.0</span> of 5, based on <span className={styles.raitingSummaryBold}>45</span> reviews
       </Link>
     </div>
   );
