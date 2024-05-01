@@ -1,20 +1,8 @@
 .container {
-    background-image: url("/services/cover.jpeg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.wrapper {
-    padding-top: 100vh;
-}
-
-.background {
     background-color: #ffffff;
 }
 
-.width {
+.wrapper {
     max-width: 1140px;
-    margin: auto;
+    margin: -40px auto auto;
 }

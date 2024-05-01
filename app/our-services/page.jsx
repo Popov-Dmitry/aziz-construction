@@ -23,11 +23,7 @@ const OurServices = () => {
     <div className={styles.container}>
       <Breadcrumbs useDefaultContainer />
       <div className={styles.wrapper}>
-        <div className={styles.background}>
-          <div className={styles.width}>
-            <OurServicesSection />
-          </div>
-        </div>
+        <OurServicesSection />
       </div>
     </div>
   );
