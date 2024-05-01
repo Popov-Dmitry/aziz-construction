@@ -18,6 +18,7 @@
     color: #000000;
     font-family: var(--font-popins);
     font-size: 16px;
+    gap: 2px 16px;
 }
 
 .boldText {
@@ -28,10 +29,6 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 16px;
-}
-
-.area {
-    padding-left: 1em;
 }
 
 .row {
