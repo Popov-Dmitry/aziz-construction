@@ -46,9 +46,7 @@ const aboutBlock = () => (
         <div className={styles.leftColumn}>
           <div className={styles.title}>About Us</div>
           <div className={styles.aboutSlogan}>
-            <span className={styles.aboutSloganBold}>GENERAL</span> CONTRACTING<br />
-            <span className={styles.aboutSloganBold}>SERVICES</span> IN SAN<br />
-            <span className={styles.aboutSloganBold}>FRANCISCO</span> BAY AREA
+            <span className={styles.aboutSloganBold}>Constructive Partners in Building Your Future</span>
           </div>
           <div className={styles.aboutDescription}>
             Welcome to Aziz Construction, where craftsmanship and family legacy meet. With years of hands-on experience
@@ -58,6 +56,7 @@ const aboutBlock = () => (
             time. At Aziz Construction, we believe in creating a lasting reputation for excellence, delivering quality
             workmanship, and building a foundation for future generations.
           </div>
+          <div className={styles.aboutDescriptionBold}>Let's build together!</div>
         </div>
         <div className={styles.aboutPhoto}>
           <Image src="/home/aziz.jpeg" alt="" fill />

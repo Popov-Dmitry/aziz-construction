@@ -201,12 +201,17 @@
     font-weight: 600;
 }
 
-.aboutDescription {
+.aboutDescription, .aboutDescriptionBold {
     color: #090909;
     font-family: var(--font-popins);
     font-size: 22px;
     font-weight: 300;
     line-height: 34px;
+}
+
+.aboutDescriptionBold {
+    font-weight: 600;
+    margin-top: -20px;
 }
 
 .aboutPhoto {
@@ -312,7 +317,7 @@
         text-align: center;
     }
 
-    .aboutDescription {
+    .aboutDescription, .aboutDescriptionBold {
         text-align: center;
         font-size: 16px;
         line-height: 1.7em;
