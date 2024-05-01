@@ -31,6 +31,7 @@ const Galleries = async () => {
         <div className={styles.grid}>
           {galleries.map((gallery) => (
             <GalleryCard
+              key={gallery.url}
               title={gallery.name}
               src={gallery.photosCollection.items[0].url}
               href={`/gallery/${gallery.url}`}

@@ -65,7 +65,7 @@ const BlogPost = async ({ params }) => {
             <div className={styles.relativePostsTitle}>See more</div>
             <div className={styles.relativePosts}>
               {relativePosts.map((post) => (
-                <PostCard {...post} />
+                <PostCard {...post} key={post.slug} />
               ))}
             </div>
           </div>
