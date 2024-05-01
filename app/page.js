@@ -23,15 +23,17 @@ const mainInfoBlock = () => (
     <div className={styles.slideshow} />
     <div className={styles.mainContainer}>
       <div className={styles.mainContent}>
-        <Button className={styles.license} text="License# 1103807" />
-        <div className={styles.mainText1}>Diversified General Contracting Services. Unvarying Quality</div>
+        {/*<Button className={styles.license} text="License# 1103807" />*/}
+        <div className={styles.mainText1}>
+          Top-notch construction solutions at competitive rates in San Francisco Bay Area
+        </div>
         <div className={styles.mainDivider} />
         <div className={styles.mainText2}>Innovative Concepts, Creative Design, Flawless Execution</div>
         <div className={styles.mainText3}>We are a team of highly skilled professionals committed to delivering
           top-notch construction solutions to meet all your needs.
         </div>
         <div className={styles.mainButtons}>
-          <Button text="Call Now" color="black" />
+          <Button text="Call Now" color="black" className={styles.callButton} />
           <Button text="Get A Quote" className={styles.getAQuoteButton} />
         </div>
       </div>

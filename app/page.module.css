@@ -84,6 +84,10 @@
     overflow: hidden;
 }
 
+.callButton {
+    width: 148px !important;
+}
+
 .slideshow {
     position: absolute;
     animation: imageAnimation 36s linear infinite 0s;
