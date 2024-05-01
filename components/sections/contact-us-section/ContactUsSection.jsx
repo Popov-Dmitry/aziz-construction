@@ -38,13 +38,13 @@ const Form = ({ result }) => {
         />
         <Input
           className={styles.contactUsInput}
-          placeholder="Your Address"
-          name="Address"
+          placeholder="ZIP code"
+          name="ZIP code"
         />
       </div>
       <TextArea
         className={styles.contactUsTextArea}
-        placeholder="Message"
+        placeholder="How we may help you?"
         name="Message"
       />
       <div className={styles.contactUsRow}>

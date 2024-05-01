@@ -41,12 +41,12 @@ const Form = ({ result }) => {
         />
       </div>
       <Input
-        placeholder="Your Address"
-        name="Address"
+        placeholder="ZIP code"
+        name="ZIP code"
       />
       <TextArea
         className={styles.textArea}
-        placeholder="Message"
+        placeholder="How we may help you?"
         name="Message"
       />
       <div className={styles.row}>
