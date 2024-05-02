@@ -4,8 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { joinClassNames } from "@/utils/join-class-names";
 import Contacts from "@/components/elements/contacts/Contacts";
+import { getServicesMenu } from "@/lib/api";
 
-const Footer = () => {
+const Footer = async () => {
+  const services = await getServicesMenu();
+
   return (
     <footer className={styles.container}>
       <div className={styles.wrapper}>
@@ -56,42 +59,14 @@ const Footer = () => {
           <h2 className={styles.title}>Services</h2>
           <div className={styles.line} />
           <div className={joinClassNames(styles.links, styles.gap)}>
-            <Link
-              className={styles.link}
-              href="/our-services/new-construction"
-            >
-              New Construction
-            </Link>
-            <Link
-              className={styles.link}
-              href="/our-services/full-house-renovation"
-            >
-              Full House Renovation
-            </Link>
-            <Link
-              className={styles.link}
-              href="/our-services/adu-construction"
-            >
-              ADU Construction
-            </Link>
-            <Link
-              className={styles.link}
-              href="/our-services/kitchen-remodeling"
-            >
-              Kitchen Remodeling
-            </Link>
-            <Link
-              className={styles.link}
-              href="/our-services/bathroom-remodeling"
-            >
-              Bathroom Remodeling
-            </Link>
-            <Link
-              className={styles.link}
-              href="/our-services/addition-services"
-            >
-              Addition Services
-            </Link>
+            {services.map((service) => (
+              <Link
+                href={`/our-services/${service.slug}`}
+                className={styles.link}
+              >
+                {service.name}
+              </Link>
+            ))}
           </div>
         </div>
         <div>
