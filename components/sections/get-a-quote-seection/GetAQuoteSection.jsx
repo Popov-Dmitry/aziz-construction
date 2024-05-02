@@ -36,14 +36,10 @@ const Form = ({ result }) => {
           type="tel"
         />
         <Input
-          placeholder="Subject"
-          name="Subject"
+          placeholder="ZIP code"
+          name="ZIP code"
         />
       </div>
-      <Input
-        placeholder="ZIP code"
-        name="ZIP code"
-      />
       <TextArea
         className={styles.textArea}
         placeholder="How we may help you?"
