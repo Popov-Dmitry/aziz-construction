@@ -27,12 +27,15 @@ export async function generateMetadata({ params }) {
         height: 534,
         alt: "About Us",
         type: "image/jpeg"
-      }],
+      }]
     },
     twitter: {
       title: "Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction",
       description: "Aziz Construction - Your trusted partner for general construction services in San Francisco, Bay Area. Call now for quality craftsmanship & customized solutions",
       images: ["https://azizconstruction.com/about-us/cover.jpeg"],
+    },
+    alternates: {
+      canonical: "https://azizconstruction.com/about-us/",
     }
   };
 }

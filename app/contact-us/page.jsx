@@ -9,14 +9,27 @@ export async function generateMetadata({ params }) {
     description: "Get A Quote",
     openGraph: {
       title: "Contact Us - Aziz Construction",
-      url: "https://azizconstruction.com/contact-us/"
+      description: "Home remodel inquiries, other inquiries, our office location in San Francisco, and where to find Aziz Construction online and on social media",
+      url: "https://azizconstruction.com/contact-us/",
+      type: "article",
+      images: [{
+        url: "https://azizconstruction.com/contact-us.jpeg",
+        width: 1366,
+        height: 519,
+        alt: "Contact Us",
+        type: "image/jpeg"
+      }]
     },
     twitter: {
       title: "Contact Us - Aziz Construction",
-      description: "Get A Quote"
+      description: "Home remodel inquiries, other inquiries, our office location in San Francisco, and where to find Aziz Construction online and on social media",
+      image: "https://azizconstruction.com/contact-us.jpeg"
+    },
+    alternates: {
+      canonical: "https://azizconstruction.com/contact-us/",
     }
   };
-};
+}
 
 const ContactUs = () => {
   return (
