@@ -213,11 +213,6 @@
     line-height: 34px;
 }
 
-.aboutDescriptionBold {
-    font-weight: 600;
-    margin-top: -20px;
-}
-
 .aboutPhoto {
     position: relative;
     aspect-ratio: 8/10;

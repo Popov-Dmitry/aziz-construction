@@ -58,7 +58,7 @@ const aboutBlock = () => (
             time. At Aziz Construction, we believe in creating a lasting reputation for excellence, delivering quality
             workmanship, and building a foundation for future generations.
           </div>
-          <div className={styles.aboutDescriptionBold}>Let's build together!</div>
+          <div className={styles.aboutDescription}>Let's build together!</div>
         </div>
         <div className={styles.aboutPhoto}>
           <Image src="/home/aziz.jpeg" alt="" fill />
