@@ -47,9 +47,9 @@ const aboutBlock = () => (
       <div className={joinClassNames(styles.twoColsFlex, styles.aboutContainer)}>
         <div className={styles.leftColumn}>
           <div className={styles.title}>About Us</div>
-          <div className={styles.aboutSlogan}>
-            <span className={styles.aboutSloganBold}>Constructive Partners in Building Your Future</span>
-          </div>
+          <h1 className={styles.aboutSlogan}>
+            Constructive Partners in Building Your Future
+          </h1>
           <div className={styles.aboutDescription}>
             Welcome to Aziz Construction, where craftsmanship and family legacy meet. With years of hands-on experience
             and

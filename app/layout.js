@@ -59,14 +59,18 @@ export const metadata = {
     title: "General Contractor in San Francisco Bay Area, CA | Aziz Construction",
     description: "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!",
     url: "https://azizconstruction.com/",
+    images: ["https://azizconstruction.com/home/aziz.jpeg"],
     siteName: "Aziz Construction",
     locale: "en_US",
-    type: "website"
+    type: "website",
+    videos: ["https://youtu.be/uop_Ps-PBlA?si=G8goBMjOs99Wuehu"]
   },
   twitter: {
     card: "summary_large_image",
     title: "General Contractor in San Francisco Bay Area, CA | Aziz Construction",
-    description: "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!"
+    description: "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!",
+    images: ["https://azizconstruction.com/home/aziz.jpeg"],
+    creator: "aziz-construction",
   }
 };
 
@@ -77,6 +81,10 @@ export default function RootLayout({ children }) {
       <link rel="icon" href="/image/lOGO-01-80x80.png" sizes="32x32" />
       <link rel="icon" href="/image/lOGO-01.png" sizes="192x192" />
       <link rel="apple-touch-icon" href="/image/lOGO-01.png" />
+      <meta name="twitter:label1" content="Written by" />
+      <meta name="twitter:data1" content="aziz-construction" />
+      <meta name="twitter:label2" content="Time to read" />
+      <meta name="twitter:data2" content="3 minutes" />
     </head>
     <body className={joinClassNames(inter.variable, openSans.variable, roboto.variable, popins.variable)}>
     <Header />
