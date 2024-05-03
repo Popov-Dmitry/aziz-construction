@@ -1,16 +1,14 @@
-"use client";
-
 import React from "react";
 import styles from "./header.module.css";
 import Image from "next/image";
 import Button from "@/components/elements/button/Button";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import Menu from "../menu/Menu";
 import MenuItems from "@/components/elements/menu-items/MenuItems";
+import { getServicesMenu } from "@/lib/api";
 
-const Header = () => {
-  const path = usePathname();
+const Header = async () => {
+  const services = await getServicesMenu();
 
   return (
     <div className={styles.container} id="header">
@@ -19,7 +17,7 @@ const Header = () => {
           <Link href="/" className={styles.logo}>
             <Image src="/logo.png" alt="Aziz Construction" fill />
           </Link>
-          <MenuItems path={path} />
+          <MenuItems services={services} />
           <Button
             text="GET A QUOTE"
             variant="outlined"
@@ -28,7 +26,7 @@ const Header = () => {
             className={styles.getAQuoteButton}
           />
           <Menu className={styles.menu}>
-            <MenuItems path={path} mobile />
+            <MenuItems services={services} mobile />
           </Menu>
         </div>
       </div>

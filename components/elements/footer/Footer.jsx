@@ -61,6 +61,7 @@ const Footer = async () => {
           <div className={joinClassNames(styles.links, styles.gap)}>
             {services.map((service) => (
               <Link
+                key={service.slug}
                 href={`/our-services/${service.slug}`}
                 className={styles.link}
               >

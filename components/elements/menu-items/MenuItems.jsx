@@ -1,9 +1,11 @@
+"use client";
+
 import React from "react";
 import styles from "./menu-items.module.css";
 import Link from "next/link";
 import { joinClassNames } from "@/utils/join-class-names";
 import Dropdown from "@/components/elements/dropdown/Dropdown";
-import { getServicesMenu } from "@/lib/api";
+import { usePathname } from "next/navigation";
 
 const Items = ({ path, mobile, services }) => (
   <>
@@ -28,8 +30,9 @@ const Items = ({ path, mobile, services }) => (
           : "#000000"}
         className={joinClassNames(styles.element, path.startsWith("/our-services") ? styles.active : undefined)}
       >
-        {services.map((service) => (
+        {services?.map((service) => (
           <Link
+            key={service.slug}
             href={`/our-services/${service.slug}`}
           >
             {service.name}
@@ -58,8 +61,9 @@ const Items = ({ path, mobile, services }) => (
   </>
 );
 
-const MenuItems = async ({ path, mobile }) => {
-  const services = await getServicesMenu();
+const MenuItems = async ({ services, mobile }) => {
+  const path = usePathname();
+
 
   if (mobile) {
     return <Items path={path} mobile services={services} />;
