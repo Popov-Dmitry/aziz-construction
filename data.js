@@ -44,16 +44,19 @@ export const recentWorksData = [
   {
     src: "/home/kitchen.jpeg",
     title: "Kitchen",
+    alt: "kitchen remodel",
     href: "/gallery/kitchen-remodel"
   },
   {
     src: "/home/bathroom.jpeg",
     title: "Bathroom",
+    alt: "bath remodels",
     href: "/gallery/bathroom"
   },
   {
     src: "/home/adu.jpeg",
     title: "ADU",
+    alt: "accessory dwelling unit construction",
     href: "/gallery/adu"
   }
 ];

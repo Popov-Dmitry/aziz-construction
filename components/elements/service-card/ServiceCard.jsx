@@ -7,7 +7,7 @@ const ServiceCard = ({ src, title, description, href }) => {
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <Image src={src} alt="" fill objectFit="cover" />
+        <Image src={src} alt={title} fill objectFit="cover" />
       </div>
       <div className={styles.content}>
         <div className={styles.title}>{title}</div>
