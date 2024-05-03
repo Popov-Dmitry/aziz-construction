@@ -4,7 +4,7 @@ import styles from "./about-us.module.css";
 import Image from "next/image";
 import GoogleReviewsSection from "@/components/sections/google-reviews-section/GoogleReviewsSection";
 // import FlipCard from "@/components/elements/flip-card/FlipCard";
-import Button from "@/components/elements/button/Button";
+// import Button from "@/components/elements/button/Button";
 import Breadcrumbs from "@/components/elements/breadcrumbs/Breadcrumbs";
 import TimelineSection from "@/components/sections/timeline-section/TimelineSection";
 import PageHeader from "@/components/sections/page-header/PageHeader";
@@ -18,18 +18,28 @@ export async function generateMetadata({ params }) {
     description: "Aziz Construction - Your trusted partner for general construction services in San Francisco, Bay Area. Call now for quality craftsmanship & customized solutions",
     openGraph: {
       title: "Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction",
-      url: "https://azizconstruction.com/about-us/"
+      description: "Aziz Construction - Your trusted partner for general construction services in San Francisco, Bay Area. Call now for quality craftsmanship & customized solutions",
+      url: "https://azizconstruction.com/about-us/",
+      type: "article",
+      images: [{
+        url: "https://azizconstruction.com/about-us/cover.jpeg",
+        width: 800,
+        height: 534,
+        alt: "About Us",
+        type: "image/jpeg"
+      }],
     },
     twitter: {
       title: "Reliable General Construction Services in San Francisco, Bay Are | Aziz Construction",
-      description: "Aziz Construction - Your trusted partner for general construction services in San Francisco, Bay Area. Call now for quality craftsmanship & customized solutions"
+      description: "Aziz Construction - Your trusted partner for general construction services in San Francisco, Bay Area. Call now for quality craftsmanship & customized solutions",
+      images: ["https://azizconstruction.com/about-us/cover.jpeg"],
     }
   };
 }
 
 const AboutUs = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Breadcrumbs useDefaultContainer />
       <div>
         <PageHeader
