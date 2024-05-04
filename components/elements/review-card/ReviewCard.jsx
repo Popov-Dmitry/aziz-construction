@@ -3,6 +3,18 @@ import styles from "./review-card.module.css";
 import Image from "next/image";
 
 const ReviewCard = ({ src, fullName, date, raiting, comment }) => {
+  const jsonLd = {
+    "@context": "https://schema.org/",
+    "@type": "Review",
+    "author": { "@type": "Person", "name": fullName },
+    "itemReviewed": { "@type": "Book", "name": "kitchen remodeling " },
+    "reviewRating": { "@type": "Rating", "ratingValue": raiting },
+    "reviewBody": comment,
+    "name": "What Our Clients Say About Us",
+    "datePublished": date,
+    "publisher": { "@type": "Organization", "name": "Google" }
+  };
+
   return (
     <div className={styles.reviewCard}>
       <div className={styles.reviewCardHeader}>
@@ -29,6 +41,10 @@ const ReviewCard = ({ src, fullName, date, raiting, comment }) => {
         </div>
         <div className={styles.comment}>{comment}</div>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </div>
   );
 };

@@ -13,6 +13,28 @@ import YoutubeReviewsSection from "@/components/sections/youtube-reviews-section
 import ContactUsSection from "@/components/sections/contact-us-section/ContactUsSection";
 import AreasServedSection from "@/components/sections/areas-served-section/AreasServedSection";
 
+const jsonLd = {
+  "@context": "http://www.schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Aziz Construction",
+  "url": "https://azizconstruction.com/",
+  "logo": "https://azizconstruction.com/image/lOGO-01.png",
+  "description": "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fremont",
+    "addressRegion": "CA ",
+    "postalCode": "94538",
+    "addressCountry": "USA"
+  },
+  "hasMap": "https://maps.app.goo.gl/UH3tS4oYdBFxRqwG6",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "(510) 478-3188",
+    "contactType": "Phone"
+  }
+};
+
 const mainInfoBlock = () => (
   <div className={styles.main}>
     <div className={styles.slideshow} />
@@ -157,6 +179,10 @@ export default function Home() {
       {clientsFeedbackBlock()}
       {reviewsBlock()}
       {contactUsBlock()}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </div>
   );
 }
