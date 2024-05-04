@@ -40,6 +40,31 @@ export async function generateMetadata({ params }) {
   };
 }
 
+const jsonLd = {
+  "@context": "http://schema.org/",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://azizconstruction.com/about-us/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": " Aziz Construction"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Aziz Construction",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://azizconstruction.com/image/lOGO-01.png"
+    }
+  },
+  "headline": "General Contractor in San Francisco Bay Area, CA | Aziz Construction",
+  "image": "https://azizconstruction.com/image/lOGO-01.png",
+  "datePublished": "2022-03-17",
+  "dateModified": "2024-04-30"
+};
+
 const AboutUs = () => {
   return (
     <div>
@@ -115,6 +140,10 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </div>
   );
 };
