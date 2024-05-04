@@ -16,14 +16,22 @@
 }
 
 .accordionDetails {
-    display: none;
+    opacity: 0;
+    height: 0;
+    transition: ease padding-bottom .2s;
+    padding-bottom: 0;
 }
 
 .accordionDetailsActive {
-    display: block;
+    opacity: 1;
+    height: fit-content;
     color: #090909;
     font-family: var(--font-popins);
     font-size: 16px;
     font-weight: 300;
     line-height: 1.6em;
+    padding-bottom: 5px;
+
+    max-height: 500px;
+    transition: ease padding-bottom .2s;
 }
