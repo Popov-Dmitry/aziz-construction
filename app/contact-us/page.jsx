@@ -31,6 +31,54 @@ export async function generateMetadata({ params }) {
   };
 }
 
+const jsonLd = {
+  "@context": "http://schema.org/",
+  "@type": "LocalBusiness",
+  "name": "",
+  "image": "",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": " 530 Lytton Ave 2nd Floor",
+    "addressLocality": "Palo Alto",
+    "addressRegion": "CA",
+    "postalCode": "94301",
+    "addressCountry": "United States"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Wednesday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Thursday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Friday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "sameAs": ["https://www.facebook.com/aziz.construction12/", "https://www.instagram.com/azizconstruction12/", "https://youtube.com/@azizconstruction?si=sBsemdUwGbPuPByY"]
+};
+
 const ContactUs = () => {
   return (
     <div>
@@ -44,6 +92,10 @@ const ContactUs = () => {
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
     </div>
   );
