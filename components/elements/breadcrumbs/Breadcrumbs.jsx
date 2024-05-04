@@ -9,6 +9,17 @@ import { joinClassNames } from "@/utils/join-class-names";
 const Breadcrumbs = ({ useDefaultContainer }) => {
   const breadcrumbs = useBreadcrumbs();
 
+  const jsonLd = {
+    "@context": "http://schema.org/",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbs.map((breadcrumb, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": breadcrumb.title,
+      "item": `https://azizconstruction.com/${breadcrumb.path}`
+    }))
+  };
+
   return (
     <div className={useDefaultContainer ? styles.breadcrumbsContainer : ""}>
       <div className={joinClassNames(styles.breadcrumbs, useDefaultContainer ? styles.breadcrumbsWrapper : "")}>
@@ -24,6 +35,10 @@ const Breadcrumbs = ({ useDefaultContainer }) => {
           </div>
         ))}
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </div>
   );
 };
