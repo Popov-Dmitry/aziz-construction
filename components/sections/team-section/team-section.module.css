@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 72px;
     padding: 0 10px;
 }
 
@@ -11,10 +11,11 @@
 }
 
 .title {
-    color: #ED1D24;
+    color: #21212D;
     font-family: var(--font-popins);
-    font-size: 16px;
+    font-size: 42px;
     font-weight: 600;
+    line-height: 1em;
     text-align: center;
 }
 
@@ -32,7 +33,7 @@
 .name {
     color: #21212D;
     font-family: var(--font-popins);
-    font-size: 46px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1em;
 }
@@ -45,20 +46,30 @@
     margin-top: 14px;
 }
 
+.texts {
+    align-self: center;
+}
+
 @media (max-width: 1024px) {
+    .title {
+        font-size: 30px;
+    }
+
     .wrapper {
         flex-direction: column-reverse;
     }
     .name {
-        text-align: center;
+        text-align: left;
     }
 
     .description {
-        text-align: center;
+        text-align: left;
     }
 
     .photoWrapper {
         margin: auto;
+        width: 100%;
+        padding-bottom: 50%;
     }
 }
 

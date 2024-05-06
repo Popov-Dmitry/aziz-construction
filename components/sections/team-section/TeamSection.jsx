@@ -10,7 +10,7 @@ const TeamSection = () => {
         <div className={styles.photoWrapper}>
           <Image src="/home/aziz.jpeg" alt="Aziz" fill className={styles.photo} />
         </div>
-        <div>
+        <div className={styles.texts}>
           <div className={styles.name}>Aziz</div>
           <div className={styles.description}>
             Aziz started his journey as a general contractor in 2016. He
@@ -19,12 +19,15 @@ const TeamSection = () => {
             in these professions and solving many complex problems
             seasoned him as a construction specialist whom you could
             trust with anything.
+            <br /><br/>
             Throughout his career, Aziz has earned the trust of
             numerous families who have entrusted him with the
             construction of entire houses, DUs, and the renovation of
             kitchens and bathrooms. This trust has led to the successful
             completion of these projects and significantly enhanced the
-            value of his client's properties.
+            value of his {"client's"} properties.
+
+            <br /><br/>
             Completing these projects is only possible with an honest
             and reliable team of experts he gathered around him. Aziz
             hired the best contractors in his area and community and
@@ -37,19 +40,19 @@ const TeamSection = () => {
         <div className={styles.photoWrapper}>
           <Image src="/image/oleg.jpg" alt="Oleg" fill className={styles.photo} />
         </div>
-        <div>
+        <div className={styles.texts}>
           <div className={styles.name}>Oleg</div>
           <div className={styles.description}>
             Oleg joined Aziz Construction in 2023 after a successful asset management and operations career with various
             international organizations. As a seasoned operations specialist, he served abroad and domestically,
             managing millions in property assets for private and public companies.
-
+            <br /><br/>
             As the COO at Aziz Construction, Oleg is at the helm of day-to-day operations, spearheading strategic
             initiatives, and managing all forms of external communications, be it digital or analog. His previous role
             as an operations manager for the Ministry of Foreign Affairs honed his analytical and problem-solving
             skills, and enhanced his project and risk management capabilities.
-
-            Oleg earned his Bachelor's degree from the University of California, Berkeley, and a Master's from Stanford
+            <br /><br/>
+            Oleg earned his {"Bachelor's"} degree from the University of California, Berkeley, and a {"Master's"} from Stanford
             University.
           </div>
         </div>
