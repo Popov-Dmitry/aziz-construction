@@ -11,6 +11,7 @@ import PageHeader from "@/components/sections/page-header/PageHeader";
 import ContactUsSection from "@/components/sections/contact-us-section/ContactUsSection";
 import OurServicesSection from "@/components/sections/our-services-section/OurServicesSection";
 import AreasServedSection from "@/components/sections/areas-served-section/AreasServedSection";
+import TeamSection from "@/components/sections/team-section/TeamSection";
 
 export async function generateMetadata({ params }) {
   return {
@@ -110,7 +111,7 @@ const AboutUs = () => {
         </div>
         <div className={styles.block}>
           <div className={styles.blockWrapper}>
-            <AreasServedSection />
+            <TeamSection />
           </div>
         </div>
         <div className={styles.block}>
