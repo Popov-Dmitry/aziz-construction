@@ -61,7 +61,7 @@ const Items = ({ path, mobile, services }) => (
   </>
 );
 
-const MenuItems = async ({ services, mobile }) => {
+const MenuItems = ({ services, mobile }) => {
   const path = usePathname();
 
 

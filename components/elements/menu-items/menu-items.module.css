@@ -32,3 +32,24 @@
 .active {
     color: #D53446;
 }
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+@media (max-width: 1024px) {
+    .element {
+        padding: 10px 20px;
+    }
+
+    .element:hover::after {
+        border-bottom: none;
+    }
+
+    .active {
+        background-color: #D53446;
+        color: #FFFFFF;
+    }
+}

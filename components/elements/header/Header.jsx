@@ -17,7 +17,9 @@ const Header = async () => {
           <Link href="/" className={styles.logo}>
             <Image src="/logo.png" alt="Aziz Construction" fill />
           </Link>
-          <MenuItems services={services} />
+          <div className={styles.elements}>
+            <MenuItems services={services} />
+          </div>
           <Button
             text="GET A QUOTE"
             variant="outlined"
