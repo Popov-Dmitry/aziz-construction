@@ -16,22 +16,23 @@ import AreasServedSection from "@/components/sections/areas-served-section/Areas
 const jsonLd = {
   "@context": "http://www.schema.org",
   "@type": "HomeAndConstructionBusiness",
-  "name": "Aziz Construction",
-  "url": "https://azizconstruction.com/",
-  "logo": "https://azizconstruction.com/image/lOGO-01.png",
-  "description": "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!",
-  "address": {
+  name: "Aziz Construction",
+  url: "https://azizconstruction.com/",
+  logo: "https://azizconstruction.com/image/lOGO-01.png",
+  description:
+    "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!",
+  address: {
     "@type": "PostalAddress",
-    "addressLocality": "Fremont",
-    "addressRegion": "CA ",
-    "postalCode": "94538",
-    "addressCountry": "USA"
+    addressLocality: "Fremont",
+    addressRegion: "CA ",
+    postalCode: "94538",
+    addressCountry: "USA"
   },
-  "hasMap": "https://maps.app.goo.gl/UH3tS4oYdBFxRqwG6",
-  "contactPoint": {
+  hasMap: "https://maps.app.goo.gl/UH3tS4oYdBFxRqwG6",
+  contactPoint: {
     "@type": "ContactPoint",
-    "telephone": "(510) 478-3188",
-    "contactType": "Phone"
+    telephone: "(510) 478-3188",
+    contactType: "Phone"
   }
 };
 
@@ -47,11 +48,15 @@ const mainInfoBlock = () => (
       <div className={styles.mainContent}>
         {/*<Button className={styles.license} text="License# 1103807" />*/}
         <div className={styles.mainText1}>
-          Top-notch construction solutions at competitive rates in San Francisco Bay Area
+          Top-notch construction solutions at competitive rates in San Francisco
+          Bay Area
         </div>
         <div className={styles.mainDivider} />
-        <div className={styles.mainText2}>Innovative Concepts, Creative Design, Flawless Execution</div>
-        <div className={styles.mainText3}>We are a team of highly skilled professionals committed to delivering
+        <div className={styles.mainText2}>
+          Innovative Concepts, Creative Design, Flawless Execution
+        </div>
+        <div className={styles.mainText3}>
+          We are a team of highly skilled professionals committed to delivering
           top-notch construction solutions to meet all your needs.
         </div>
         <div className={styles.mainButtons}>
@@ -66,21 +71,25 @@ const mainInfoBlock = () => (
 const aboutBlock = () => (
   <div className={styles.wrapper}>
     <div className={styles.container}>
-      <div className={joinClassNames(styles.twoColsFlex, styles.aboutContainer)}>
+      <div
+        className={joinClassNames(styles.twoColsFlex, styles.aboutContainer)}
+      >
         <div className={styles.leftColumn}>
           <div className={styles.title}>About Us</div>
           <h1 className={styles.aboutSlogan}>
             Constructive Partners in Building Your Future
           </h1>
           <div className={styles.aboutDescription}>
-            Welcome to Aziz Construction, where craftsmanship and family legacy meet. With years of hands-on experience
-            and
-            guidance from industry experts, I have established a general contractor business that aims to stand the test
-            of
-            time. At Aziz Construction, we believe in creating a lasting reputation for excellence, delivering quality
+            Welcome to Aziz Construction, where craftsmanship and family legacy
+            meet. With years of hands-on experience and guidance from industry
+            experts, I have established a general contractor business that aims
+            to stand the test of time. At Aziz Construction, we believe in
+            creating a lasting reputation for excellence, delivering quality
             workmanship, and building a foundation for future generations.
           </div>
-          <div className={styles.aboutDescription}>Let's build together!</div>
+          <div className={styles.aboutDescription}>
+            {"Let's build together!"}
+          </div>
         </div>
         <div className={styles.aboutPhoto}>
           <Image src="/home/aziz.jpeg" alt="" fill />
