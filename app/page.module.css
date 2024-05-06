@@ -141,7 +141,7 @@
 }
 
 .mainContent {
-    width: 75.32%;
+    width: 900px;
     height: 100%;
     display: flex;
     flex-direction: column;
