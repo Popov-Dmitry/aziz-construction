@@ -13,10 +13,15 @@ const Button = ({
   onClick,
   className,
   href,
+  newTab
 }) => {
   if (href) {
     return (
-      <Link className={joinClassNames(styles.button, styles[variant], styles[color], className)} href={href}>
+      <Link
+        className={joinClassNames(styles.button, styles[variant], styles[color], className)}
+        href={href}
+        target={newTab ? "_blank" : undefined}
+      >
         {text}
       </Link>
     );

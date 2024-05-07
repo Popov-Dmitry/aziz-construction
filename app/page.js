@@ -60,8 +60,18 @@ const mainInfoBlock = () => (
           top-notch construction solutions to meet all your needs.
         </div>
         <div className={styles.mainButtons}>
-          <Button text="Call Now" color="black" className={styles.callButton} />
-          <Button text="Get A Quote" className={styles.getAQuoteButton} />
+          <Button
+            text="Call Now"
+            color="black"
+            href="https://calendly.com/azizconstruction"
+            newTab
+            className={styles.callButton}
+          />
+          <Button
+            text="Get A Quote"
+            href="/contact-us"
+            className={styles.getAQuoteButton}
+          />
         </div>
       </div>
     </div>
