@@ -79,7 +79,7 @@ const Service = async ({ params }) => {
           </div>
         </div>
         <div className={styles.row}>
-          <div className={styles.bottom}>
+          <div className={styles.bottom} style={{ padding: "0 10px" }}>
             <FaqSection
               accordionClassname={styles.accordion}
               data={service.faqSectionCollection.items}
@@ -87,7 +87,7 @@ const Service = async ({ params }) => {
           </div>
         </div>
         <div className={styles.row}>
-          <div className={styles.bottom}>
+          <div className={styles.bottom} style={{ padding: "0 10px 0 0" }}>
             <YoutubeReviewsSection />
           </div>
         </div>

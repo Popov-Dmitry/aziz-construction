@@ -31,3 +31,28 @@
     font-family: var(--font-popins);
     font-weight: 400;
 }
+
+@media (max-width: 767px) {
+    .column {
+        width: 100%;
+        max-width: none;
+    }
+
+    .image {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .title {
+        padding: 0 10px;
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .description {
+        padding: 0 10px;
+        text-align: center;
+        font-size: 17px;
+        line-height: 1.3em;
+    }
+}
