@@ -38,7 +38,7 @@ const TeamSection = () => {
       </div>
       <div className={styles.wrapper}>
         <div className={styles.photoWrapper}>
-          <Image src="/image/oleg.jpg" alt="Oleg" fill className={styles.photo} />
+          <Image src="/image/oleg.jpg" alt="Oleg" fill className={styles.photoPositionTop} />
         </div>
         <div className={styles.texts}>
           <div className={styles.name}>Oleg</div>

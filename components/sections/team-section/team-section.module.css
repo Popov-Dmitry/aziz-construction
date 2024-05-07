@@ -26,8 +26,12 @@
     flex-shrink: 0;
 }
 
-.photo {
+.photo, .photoFitTop {
     object-fit: cover;
+}
+
+.photoPositionTop {
+    object-position: top;
 }
 
 .name {
