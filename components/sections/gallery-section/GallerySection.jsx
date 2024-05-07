@@ -9,6 +9,7 @@ import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Download from "yet-another-react-lightbox/plugins/download";
 import Share from "yet-another-react-lightbox/plugins/share";
 import { useWindowSize } from "@react-hook/window-size";
+import Button from "@/components/elements/button/Button";
 
 const GallerySection = ({ gallery }) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -23,6 +24,14 @@ const GallerySection = ({ gallery }) => {
     <>
       <div className={styles.container}>
         <div className={styles.title}>{gallery.name}</div>
+        {gallery.renderLink && (
+          <Button
+            text="View 3D Render"
+            href={gallery.renderLink}
+            newTab
+            className={styles.button}
+          />
+        )}
         <div className={styles.photos}>
           {gallery.photosCollection.items.map((value, index) => (
             <div
