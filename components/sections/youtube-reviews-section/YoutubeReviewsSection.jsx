@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/app/page.module.css";
+import styles from "./youtube-reviews-section.module.css";
 import { YouTubeEmbed } from "@next/third-parties/google";
 
 const jsonLd1 = {
@@ -26,21 +26,21 @@ const jsonLd2 = {
 
 const YoutubeReviewsSection = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles.title}>Clients Feedback</div>
         <div className={styles.subtitle}>Our Clients Reviews</div>
       </div>
       <div className={styles.twoColsFlex}>
-        <div>
-          <YouTubeEmbed videoid="uop_Ps-PBlA" width={600} />
+        <div className={styles.video}>
+          <YouTubeEmbed videoid="uop_Ps-PBlA" />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd1) }}
           />
         </div>
-        <div>
-          <YouTubeEmbed videoid="vKwVM8xMsW8" width={600} />
+        <div className={styles.video}>
+          <YouTubeEmbed videoid="vKwVM8xMsW8" />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd2) }}

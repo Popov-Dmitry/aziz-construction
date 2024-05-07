@@ -14,7 +14,7 @@
     background-color: #FFFFFFD9;
     position: absolute;
     top: 50%;
-    width: 100%;
+    width: calc(100% - 20px);
 }
 
 .workCardTitle {
