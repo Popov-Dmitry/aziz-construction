@@ -18,7 +18,7 @@ const Menu = ({ children, className }) => {
   return (
     <div className={className} onClick={(event) => event.stopPropagation()}>
       <div className={styles.menuToggle} onClick={() => setOpen((prevState) => !prevState)}>
-        <Image src={open ? "close.svg" : "menu.svg"} alt="" width={22} height={22} />
+        <Image src={open ? "/close.svg" : "/menu.svg"} alt="" width={22} height={22} />
       </div>
       <div className={joinClassNames(styles.menuContent, open ? styles.menuContentActive : undefined)}>
         {styleInjector(styles.menuItem, children)}
