@@ -54,7 +54,7 @@ const BlogPost = async ({ params }) => {
           <div>{minutesToRead} min read</div>
         </div>
         <div className={styles.postImage}>
-          <Image src={cover.url} alt="" fill objectFit="cover"/>
+          <Image src={cover.url} alt="" fill className={styles.fitCover} />
         </div>
         <div className={styles.postContent}>
           {documentToReactComponents(body?.json)}

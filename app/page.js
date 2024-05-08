@@ -102,7 +102,7 @@ const aboutBlock = () => (
           </div>
         </div>
         <div className={styles.aboutPhoto}>
-          <Image src="/home/aziz.jpeg" alt="" fill />
+          <Image src="/home/aziz.jpeg" alt="" fill className={styles.fitCover} />
         </div>
       </div>
     </div>

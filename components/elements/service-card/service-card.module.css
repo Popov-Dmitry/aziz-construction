@@ -30,6 +30,10 @@
     opacity: .5;
 }
 
+.fitCover {
+    object-fit: cover;
+}
+
 .content {
     display: flex;
     flex-direction: column;

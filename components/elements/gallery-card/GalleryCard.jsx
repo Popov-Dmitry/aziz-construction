@@ -7,7 +7,7 @@ const GalleryCard = ({ title, src, href }) => {
   return (
     <Link href={href} className={styles.galleryCard}>
       <div className={styles.galleryCardImage}>
-        <Image src={src} alt={title} fill />
+        <Image src={src} alt={title} fill className={styles.fitCover} />
       </div>
       <div className={styles.galleryCardTitle}>{title}</div>
     </Link>

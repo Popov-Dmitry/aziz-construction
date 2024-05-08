@@ -216,6 +216,10 @@
     height: 600px;
 }
 
+.fitCover {
+    object-fit: cover;
+}
+
 .sns {
     margin-top: 16px;
     margin-bottom: 16px;

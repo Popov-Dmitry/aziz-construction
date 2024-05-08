@@ -46,7 +46,7 @@ const GallerySection = ({ gallery }) => {
                 src={value.url}
                 alt=""
                 fill
-                objectFit="cover"
+                className={styles.fitCover}
               />
             </div>
           ))}

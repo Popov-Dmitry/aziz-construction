@@ -11,6 +11,7 @@ const WorkCard = ({ src, title, alt, href }) => {
           src={src}
           alt={alt}
           fill
+          className={styles.fitCover}
         />
       </div>
       <div className={styles.workCardTitleContainer}>

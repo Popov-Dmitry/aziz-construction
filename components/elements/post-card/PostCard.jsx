@@ -7,7 +7,7 @@ const PostCard = ({ title, slug, shortDescription, cover, categorySlug, publishD
   return (
     <div className={styles.postCard}>
       <Link href={`/blog/${categorySlug}/${slug}`} className={styles.postImage}>
-        <Image src={cover.url} alt="" fill objectFit="cover"/>
+        <Image src={cover.url} alt="" fill className={styles.fitCover} />
       </Link>
       <div className={styles.postContent}>
         <Link href={`/blog/${categorySlug}/${slug}`} className={styles.postTitle}>

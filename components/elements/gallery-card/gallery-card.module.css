@@ -13,6 +13,10 @@
     transition: .2s opacity;
 }
 
+.fitCover {
+    object-fit: cover;
+}
+
 .galleryCardTitle {
     color: #000000;
     font-family: var(--font-popins);

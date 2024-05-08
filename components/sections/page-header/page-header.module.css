@@ -49,6 +49,10 @@
     object-position: center center;
 }
 
+.fitCover {
+    object-fit: cover;
+}
+
 .pageHeaderButton {
     width: fit-content;
 }

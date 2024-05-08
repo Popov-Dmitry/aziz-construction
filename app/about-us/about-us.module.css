@@ -89,6 +89,10 @@
     padding: 70px 0;
 }
 
+.fitCover {
+    object-fit: cover;
+}
+
 /*.flipCardsBlock {*/
 /*    display: flex;*/
 /*    gap: 20px;*/

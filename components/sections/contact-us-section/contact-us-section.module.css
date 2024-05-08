@@ -67,6 +67,10 @@
     width: 100%;
 }
 
+.fitCover {
+    object-fit: cover;
+}
+
 @keyframes loading-spinner {
     from {
         transform: rotate(0turn);

@@ -33,7 +33,7 @@ const PageHeader = ({ title, subtitle, description, src, contactUsId }) => {
         )}
       </div>
       <div className={joinClassNames(styles.pageHeaderImage, styles.pageHeaderColumn)}>
-        <Image src={src} alt={title} fill objectFit="cover" />
+        <Image src={src} alt={title} fill className={styles.fitCover} />
       </div>
     </div>
   );

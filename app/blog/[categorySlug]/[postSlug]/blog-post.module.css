@@ -27,6 +27,10 @@
     margin-top: 40px;
 }
 
+.fitCover {
+    object-fit: cover;
+}
+
 .postInfo {
     display: flex;
     gap: 6px;

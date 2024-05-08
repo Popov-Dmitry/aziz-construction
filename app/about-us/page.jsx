@@ -102,7 +102,12 @@ const AboutUs = () => {
               </div>
             </div>
             <div className={styles.benefitsPhoto}>
-              <Image src="/about-us/benefits-of-choosing-us.jpeg" alt="" fill objectFit="cover" />
+              <Image
+                src="/about-us/benefits-of-choosing-us.jpeg"
+                alt=""
+                fill
+                className={styles.fitCover}
+              />
             </div>
           </div>
         </div>

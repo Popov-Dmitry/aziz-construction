@@ -46,3 +46,7 @@
 .photo:hover:after {
     opacity: .7;
 }
+
+.fitCover {
+    object-fit: cover;
+}

@@ -12,6 +12,10 @@
     cursor: pointer;
 }
 
+.fitCover {
+    object-fit: cover;
+}
+
 .postContent {
     padding: 16px 25px 25px;
 }

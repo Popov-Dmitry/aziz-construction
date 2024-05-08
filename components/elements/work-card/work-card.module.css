@@ -9,6 +9,10 @@
     width: 100%;
 }
 
+.fitCover {
+    object-fit: cover;
+}
+
 .workCardTitleContainer {
     padding: 10px 10px 10px 10px;
     background-color: #FFFFFFD9;

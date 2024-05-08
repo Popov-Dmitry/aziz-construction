@@ -26,7 +26,7 @@ const FaqSection = ({ data = faqData, accordionClassname }) => {
         <AccordionsGroup data={data} accordionClassname={accordionClassname} />
       </div>
       <div className={styles.photo}>
-        <Image src="/home/faq.jpeg" alt="" fill objectFit="cover" />
+        <Image src="/home/faq.jpeg" alt="" fill className={styles.fitCover} />
       </div>
       <script
         type="application/ld+json"
