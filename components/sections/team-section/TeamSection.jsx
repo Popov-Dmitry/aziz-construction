@@ -11,7 +11,7 @@ const TeamSection = () => {
           <Image src="/home/aziz.jpeg" alt="Aziz" fill className={styles.photo} />
         </div>
         <div className={styles.texts}>
-          <div className={styles.name}>Aziz</div>
+          <div className={styles.name}>Aziz Osmani</div>
           <div className={styles.description}>
             Aziz started his journey as a general contractor in 2016. He
             began as a versatile construction specialist, working in many
@@ -41,7 +41,7 @@ const TeamSection = () => {
           <Image src="/image/oleg.jpg" alt="Oleg" fill className={styles.photoPositionTop} />
         </div>
         <div className={styles.texts}>
-          <div className={styles.name}>Oleg</div>
+          <div className={styles.name}>Oleg Salamatov</div>
           <div className={styles.description}>
             Oleg joined Aziz Construction in 2023 after a successful asset management and operations career with various
             international organizations. As a seasoned operations specialist, he served abroad and domestically,
