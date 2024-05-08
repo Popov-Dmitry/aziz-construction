@@ -137,3 +137,116 @@ export const flipCardsData = [
     src: "/about-us/our-specialty.jpeg"
   }
 ];
+
+export const mapPinPointsData = [
+  {
+    lat: 37.33874,
+    lng: -121.8852525,
+    name: "San Jose"
+  },
+  {
+    lat: 37.3541079,
+    lng: -121.9552356,
+    name: "Santa Clara"
+  },
+  {
+    lat: 37.36883,
+    lng: -122.0363496,
+    name: "Sunnyvale"
+  },
+  {
+    lat: 37.4323341,
+    lng: -121.8995741,
+    name: "Milpitas"
+  },
+  {
+    lat: 37.3860517,
+    lng: -122.0838511,
+    name: "Mountain View"
+  },
+  {
+    lat: 37.3229978,
+    lng: -122.0321823,
+    name: "Cupertino"
+  },
+  {
+    lat: 37.5485396,
+    lng: -121.988583,
+    name: "Fremont"
+  },
+  {
+    lat: 37.4418834,
+    lng: -122.1430195,
+    name: "Palo Alto"
+  },
+  {
+    lat: 37.1305012,
+    lng: -121.6543901,
+    name: "Morgan Hill"
+  },
+  {
+    lat: 37.4613272,
+    lng: -122.197743,
+    name: "Atherton"
+  },
+  {
+    lat: 37.5741032,
+    lng: -122.3794163,
+    name: "Hillsborough"
+  },
+  {
+    lat: 37.3796627,
+    lng: -122.1374637,
+    name: "Los Altos Hills"
+  },
+  {
+    lat: 37.8727044,
+    lng: -122.4644171,
+    name: "Belvedere"
+  },
+  {
+    lat: 37.9624239,
+    lng: -122.5549775,
+    name: "Ross"
+  },
+  {
+    lat: 37.8735377,
+    lng: -122.4566392,
+    name: "Tiburon"
+  },
+  {
+    lat: 37.2717475,
+    lng: -122.0184265,
+    name: "Saratoga"
+  },
+  {
+    lat: 37.7749295,
+    lng: -122.4194155,
+    name: "San Francisco"
+  },
+  {
+    lat: 37.4529598,
+    lng: -122.1817252,
+    name: "Menlo Park"
+  },
+  {
+    lat: 37.8771476,
+    lng: -122.1796888,
+    name: "Orinda"
+  },
+  {
+    lat: 37.8215929,
+    lng: -121.9999606,
+    name: "Danville"
+  },
+  {
+    lat: 37.7643595,
+    lng: -121.9539616,
+    name: "San Ramon"
+  },
+  {
+    lat: 37.0029828,
+    lng: -121.5566373,
+    name: "Gilroy"
+  }
+];

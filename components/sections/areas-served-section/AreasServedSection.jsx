@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./areas-served-section.module.css";
 import Image from "next/image";
+import Map from "@/components/elements/map/Map";
 
 const AreasServedSection = () => {
   return (
@@ -28,17 +29,7 @@ const AreasServedSection = () => {
           <li>San Mateo</li>
         </div>
       </div>
-      <div>
-        <iframe
-          src="https://www.google.com/maps/d/embed?mid=1OXPRhfP98Ts_aZ70sJ6CHzuQEhvYIco&ehbc=2E312F&noprof=1"
-          width="100%"
-          height="400"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-      </div>
+      <Map />
     </div>
   );
 };
