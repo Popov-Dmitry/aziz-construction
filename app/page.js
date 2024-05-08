@@ -180,7 +180,7 @@ const reviewsBlock = () => (
 const contactUsBlock = () => (
   <div className={styles.wrapper}>
     <div className={styles.container}>
-      <ContactUsSection />
+      <ContactUsSection className={styles.contactUs} />
     </div>
   </div>
 );

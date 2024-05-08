@@ -233,6 +233,10 @@
     margin: 8px 0 15px 0;
 }
 
+.contactUs {
+    width: 100%;
+}
+
 @media (max-width: 1024px) {
     .container {
         max-width: 1024px;

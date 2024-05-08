@@ -8,6 +8,7 @@ import TextArea from "@/components/elements/text-area/TextArea";
 import Button from "@/components/elements/button/Button";
 import Image from "next/image";
 import { submitData } from "@/lib/airtable";
+import { joinClassNames } from "@/utils/join-class-names";
 
 const Form = ({ result }) => {
   const { pending } = useFormStatus();
@@ -73,7 +74,7 @@ const Form = ({ result }) => {
   );
 };
 
-const ContactUsSection = () => {
+const ContactUsSection = ({ className }) => {
   const [result, dispatch] = useFormState(submitData);
   const ref = useRef();
 
@@ -84,7 +85,7 @@ const ContactUsSection = () => {
   }, [result]);
 
   return (
-    <div className={styles.twoColsFlex}>
+    <div className={joinClassNames(styles.twoColsFlex, className)}>
       <div className={styles.leftColumn}>
         <div className={styles.contactUsTitle}>Contact Us</div>
         <div className={styles.subtitle}>Get A Quote</div>
