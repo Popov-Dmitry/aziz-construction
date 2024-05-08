@@ -29,14 +29,18 @@ const Blog = async () => {
         <div className={styles.categoriesContainer}>
           <div className={styles.categoriesTitle}>Categories</div>
           <div className={styles.categories}>
-            {categories.map((category) => (
+            {categories.filter((category) => category.showOnBlogPage).map((category) => (
               <Category key={category.slug} {...category}/>
             ))}
           </div>
         </div>
         <div className={styles.posts}>
           {posts.map((post) => (
-            <PostCard key={post.slug} {...post} categorySlug={post.categoriesCollection.items[0].slug} />
+            <PostCard
+              key={post.slug}
+              {...post}
+              categorySlug={post.categoriesCollection.items[0].slug}
+            />
           ))}
         </div>
       </div>
