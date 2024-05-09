@@ -92,7 +92,7 @@ const aboutBlock = () => (
           <div className={styles.aboutDescription}>
             Welcome to Aziz Construction, where craftsmanship and family legacy
             meet. With years of hands-on experience and guidance from industry
-            experts, I have established a general contractor business that aims
+            experts, we have established a general contractor business that aims
             to stand the test of time. At Aziz Construction, we believe in
             creating a lasting reputation for excellence, delivering quality
             workmanship, and building a foundation for future generations.
