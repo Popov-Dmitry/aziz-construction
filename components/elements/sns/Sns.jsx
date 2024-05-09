@@ -5,7 +5,6 @@ import Link from "next/link";
 import Google from "@/components/icons/Google";
 import Facebook from "@/components/icons/Facebook";
 import Instagram from "@/components/icons/Instagram";
-import Twitter from "@/components/icons/Twitter";
 import Youtube from "@/components/icons/Youtube";
 import Yelp from "@/components/icons/Yelp";
 
@@ -22,7 +21,7 @@ const Sns = ({ fill = "#21212d", size = "sm", className }) => {
         />
       </Link>
       <Link
-        href="https://www.facebook.com/aziz.construction12/"
+        href="https://www.facebook.com/azizconstructionsf"
       >
         <Facebook
           fill={fill}
@@ -31,21 +30,12 @@ const Sns = ({ fill = "#21212d", size = "sm", className }) => {
         />
       </Link>
       <Link
-        href="https://www.instagram.com/azizconstruction12/"
+        href="https://www.instagram.com/aziz.constructionsf"
       >
         <Instagram
           fill={fill}
           width={size === "sm" ? 20 : 26}
           height={size === "sm" ? 20 : 26}
-        />
-      </Link>
-      <Link
-        href="https://twitter.com/AzizUllahO56912"
-      >
-        <Twitter
-          fill={fill}
-          width={size === "sm" ? 20 : 30}
-          height={size === "sm" ? 20 : 30}
         />
       </Link>
       <Link
