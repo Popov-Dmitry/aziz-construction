@@ -31,7 +31,7 @@ const jsonLd = {
   hasMap: "https://maps.app.goo.gl/UH3tS4oYdBFxRqwG6",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "(510) 478-3188",
+    telephone: "(650) 787-5802",
     contactType: "Phone"
   }
 };
