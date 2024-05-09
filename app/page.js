@@ -90,12 +90,10 @@ const aboutBlock = () => (
             Constructive Partners in Building Your Future
           </h1>
           <div className={styles.aboutDescription}>
-            Welcome to Aziz Construction, where craftsmanship and family legacy
-            meet. With years of hands-on experience and guidance from industry
-            experts, we have established a general contractor business that aims
-            to stand the test of time. At Aziz Construction, we believe in
-            creating a lasting reputation for excellence, delivering quality
-            workmanship, and building a foundation for future generations.
+            Welcome to Aziz Construction, a unique blend of craftsmanship and family legacy. With a wealth of hands-on
+            experience and guidance from industry experts, we have built a general contractor business that is designed
+            to endure. At Aziz Construction, we are committed to creating a lasting reputation for excellence,
+            delivering quality craftsmanship, and laying a solid foundation for future generations.
           </div>
           <div className={styles.aboutDescription}>
             {"Let's build together!"}
