@@ -10,7 +10,7 @@
 }
 
 .image {
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .title {
