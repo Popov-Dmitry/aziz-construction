@@ -94,7 +94,7 @@ const ContactUsSection = ({ className }) => {
         </form>
       </div>
       <div className={styles.photo}>
-        <Image src="/home/contact-us.jpeg" alt="" fill className={styles.fitCover} />
+        <Image src="/image/contact-us.jpg" alt="" fill className={styles.fitCover} />
       </div>
     </div>
   );
