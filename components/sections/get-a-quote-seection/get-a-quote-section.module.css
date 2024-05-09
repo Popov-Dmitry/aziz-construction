@@ -37,6 +37,7 @@
 .form {
     display: flex;
     flex-direction: column;
+    align-self: end;
     gap: 10px;
 }
 
