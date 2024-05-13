@@ -22,7 +22,7 @@ const TeamSection = () => {
             <br /><br/>
             Throughout his career, Aziz has earned the trust of
             numerous families who have entrusted him with the
-            construction of entire houses, DUs, and the renovation of
+            construction of entire houses, ADUs, and the renovation of
             kitchens and bathrooms. This trust has led to the successful
             completion of these projects and significantly enhanced the
             value of his {"client's"} properties.

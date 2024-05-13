@@ -10,10 +10,10 @@ const Contacts = ({ size = "sm" }) => {
     <div className={styles.links}>
       <Link
         className={joinClassNames(styles.link, styles.row)}
-        href="tel:6507875802"
+        href="tel:+16507875802"
       >
         <Image src="/phone.svg" alt="" width={18} height={18} />
-        <div>(510) 478-3188</div>
+        <div>(650) 787-5802</div>
       </Link>
       <Link
         className={joinClassNames(styles.link, styles.row)}
