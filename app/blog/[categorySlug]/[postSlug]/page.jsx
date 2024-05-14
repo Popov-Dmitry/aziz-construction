@@ -30,6 +30,8 @@ const BlogPost = async ({ params }) => {
   const {
     title,
     cover,
+    shortDescription,
+    author,
     categoriesCollection,
     publishDate,
     minutesToRead,
@@ -41,13 +43,39 @@ const BlogPost = async ({ params }) => {
     params?.postSlug
   );
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://aziz-construction.vercel.app/blog/${params.categorySlug}/${params.postSlug}`
+    },
+    "headline": `${title}`,
+    "description": `${shortDescription}`,
+    "image": `${cover}`,
+    "author": {
+      "@type": "",
+      "name": `${author}`,
+      "url": "https://aziz-construction.vercel.app/about-us"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "",
+      "logo": {
+        "@type": "ImageObject",
+        "url": ""
+      }
+    },
+    "datePublished": `${new Date(publishDate).toISOString().split('T')[0]}`
+  };
+
   return (
     <>
       <Breadcrumbs useDefaultContainer />
       <div className={styles.container}>
         <div className={styles.categories}>
           {categoriesCollection.items.map((category) => (
-            <Category key={category.slug} {...category}/>
+            <Category key={category.slug} {...category} />
           ))}
         </div>
         <div className={styles.postTitle}>{title}</div>
@@ -74,6 +102,10 @@ const BlogPost = async ({ params }) => {
           </div>
         )}
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </>
   );
 };
