@@ -29,14 +29,17 @@ export async function generateMetadata({ params }) {
 const BlogPost = async ({ params }) => {
   const {
     title,
-    slug,
     cover,
     categoriesCollection,
     publishDate,
     minutesToRead,
     body
   } = await getPost(params?.postSlug);
-  const relativePosts = await getAllPosts(2, categoriesCollection.items[0]?.slug, slug)
+  const relativePosts = await getAllPosts(
+    2,
+    categoriesCollection.items?.map((category) => category.slug),
+    params?.postSlug
+  );
 
   return (
     <>
@@ -60,7 +63,7 @@ const BlogPost = async ({ params }) => {
           {documentToReactComponents(body?.json)}
         </div>
         <SnsShareSection className={styles.snsShare} />
-        {relativePosts && (
+        {relativePosts?.length > 0 && (
           <div className={styles.relativePostsContainer}>
             <div className={styles.relativePostsTitle}>See more</div>
             <div className={styles.relativePosts}>

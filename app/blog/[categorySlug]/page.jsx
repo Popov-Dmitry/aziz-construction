@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
 
 const PostCategory = async ({ params }) => {
   const { name, description } = await getCategory(params?.categorySlug);
-  const posts = await getAllPosts(100, params?.categorySlug);
+  const posts = await getAllPosts(100, [params?.categorySlug]);
 
   return (
     <>
