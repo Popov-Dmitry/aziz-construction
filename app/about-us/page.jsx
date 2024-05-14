@@ -75,6 +75,11 @@ const AboutUs = () => {
           contactUsId="contact-us"
         />
         <div className={styles.block}>
+          <div className={styles.blockWrapper}>
+            <TeamSection />
+          </div>
+        </div>
+        <div className={styles.block}>
           <TimelineSection />
         </div>
         <div className={styles.block}>
@@ -105,11 +110,6 @@ const AboutUs = () => {
         </div>
         <div className={styles.block}>
           <GoogleReviewsSection />
-        </div>
-        <div className={styles.block}>
-          <div className={styles.blockWrapper}>
-            <TeamSection />
-          </div>
         </div>
         <div className={styles.block}>
           <div className={styles.blockWrapper}>
