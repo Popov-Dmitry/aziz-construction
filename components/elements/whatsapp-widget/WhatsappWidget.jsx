@@ -1,11 +1,24 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./whatsapp-widget.module.css";
 import Image from "next/image";
 
 const WhatsappWidget = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
+  const opened = useRef(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (!opened.current) {
+        setOpen(true);
+      }
+    }, 30000);
+
+    return () => {
+      clearTimeout(timeout);
+    }
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -73,7 +86,10 @@ const WhatsappWidget = () => {
       )}
       <div
         className={styles.button}
-        onClick={() => setOpen((prevState) => !prevState)}
+        onClick={() => {
+          setOpen((prevState) => !prevState);
+          opened.current = true;
+        }}
       >
         <Image
           src="/chat.svg"
