@@ -48,15 +48,15 @@ const BlogPost = async ({ params }) => {
     "@type": "BlogPosting",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://aziz-construction.vercel.app/blog/${params.categorySlug}/${params.postSlug}`
+      "@id": `https://azizconstruction.com/blog/${params.categorySlug}/${params.postSlug}`
     },
     "headline": `${title}`,
     "description": `${shortDescription}`,
     "image": `${cover}`,
     "author": {
-      "@type": "",
+      "@type": "Person",
       "name": `${author}`,
-      "url": "https://aziz-construction.vercel.app/about-us"
+      "url": "https://azizconstruction.com/about-us"
     },
     "publisher": {
       "@type": "Organization",

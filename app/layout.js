@@ -35,7 +35,8 @@ const popins = Poppins({
 
 export const metadata = {
   title: "General Contractor in San Francisco Bay Area, CA | Aziz Construction",
-  description: "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!",
+  description:
+    "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!",
   generator: "Next.js",
   viewport: {
     width: "device-width",
@@ -57,8 +58,10 @@ export const metadata = {
     }
   },
   openGraph: {
-    title: "General Contractor in San Francisco Bay Area, CA | Aziz Construction",
-    description: "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!",
+    title:
+      "General Contractor in San Francisco Bay Area, CA | Aziz Construction",
+    description:
+      "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!",
     url: "https://azizconstruction.com/",
     images: ["https://azizconstruction.com/home/aziz.jpeg"],
     siteName: "Aziz Construction",
@@ -68,8 +71,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "General Contractor in San Francisco Bay Area, CA | Aziz Construction",
-    description: "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!",
+    title:
+      "General Contractor in San Francisco Bay Area, CA | Aziz Construction",
+    description:
+      "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!",
     images: ["https://azizconstruction.com/home/aziz.jpeg"],
     creator: "aziz-construction"
   }
@@ -87,11 +92,16 @@ export default function RootLayout({ children }) {
         <meta name="twitter:label2" content="Time to read" />
         <meta name="twitter:data2" content="3 minutes" />
       </head>
-      <body className={joinClassNames(inter.variable, openSans.variable, roboto.variable, popins.variable)}>
+      <body
+        className={joinClassNames(
+          inter.variable,
+          openSans.variable,
+          roboto.variable,
+          popins.variable
+        )}
+      >
         <Header />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
         <WhatsappWidget />
       </body>
