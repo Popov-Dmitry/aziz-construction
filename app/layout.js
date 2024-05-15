@@ -4,6 +4,7 @@ import Header from "@/components/elements/header/Header";
 import { joinClassNames } from "@/utils/join-class-names";
 import Footer from "@/components/elements/footer/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import WhatsappWidget from "@/components/elements/whatsapp-widget/WhatsappWidget";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -70,30 +71,31 @@ export const metadata = {
     title: "General Contractor in San Francisco Bay Area, CA | Aziz Construction",
     description: "Looking for the best general contracting services in San Francisco bay area? Look no further than Aziz Construction. Contact us today for a free quote!",
     images: ["https://azizconstruction.com/home/aziz.jpeg"],
-    creator: "aziz-construction",
+    creator: "aziz-construction"
   }
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <head>
-      <link rel="icon" href="/image/lOGO-01-80x80.png" sizes="32x32" />
-      <link rel="icon" href="/image/lOGO-01.png" sizes="192x192" />
-      <link rel="apple-touch-icon" href="/image/lOGO-01.png" />
-      <meta name="twitter:label1" content="Written by" />
-      <meta name="twitter:data1" content="aziz-construction" />
-      <meta name="twitter:label2" content="Time to read" />
-      <meta name="twitter:data2" content="3 minutes" />
-    </head>
-    <body className={joinClassNames(inter.variable, openSans.variable, roboto.variable, popins.variable)}>
-    <Header />
-    <main>
-      {children}
-    </main>
-    <Footer />
-    </body>
-    <GoogleAnalytics gaId={process.env.GA_ID} />
+      <head>
+        <link rel="icon" href="/image/lOGO-01-80x80.png" sizes="32x32" />
+        <link rel="icon" href="/image/lOGO-01.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/image/lOGO-01.png" />
+        <meta name="twitter:label1" content="Written by" />
+        <meta name="twitter:data1" content="aziz-construction" />
+        <meta name="twitter:label2" content="Time to read" />
+        <meta name="twitter:data2" content="3 minutes" />
+      </head>
+      <body className={joinClassNames(inter.variable, openSans.variable, roboto.variable, popins.variable)}>
+        <Header />
+        <main>
+          {children}
+        </main>
+        <Footer />
+        <WhatsappWidget />
+      </body>
+      <GoogleAnalytics gaId={process.env.GA_ID} />
     </html>
   );
 }
