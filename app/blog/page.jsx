@@ -27,7 +27,7 @@ const Blog = async () => {
       <Breadcrumbs useDefaultContainer />
       <div className={styles.container}>
         <div className={styles.categoriesContainer}>
-          <div className={styles.categoriesTitle}>Blog</div>
+          <h1 className={styles.categoriesTitle}>Blog</h1>
           <div className={styles.categories}>
             {categories.filter((category) => category.showOnBlogPage).map((category) => (
               <Category key={category.slug} {...category}/>

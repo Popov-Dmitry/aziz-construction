@@ -78,7 +78,7 @@ const BlogPost = async ({ params }) => {
             <Category key={category.slug} {...category} />
           ))}
         </div>
-        <div className={styles.postTitle}>{title}</div>
+        <h1 className={styles.postTitle}>{title}</h1>
         <div className={styles.postInfo}>
           <div>{new Date(publishDate).toLocaleDateString()}</div>
           <div>•</div>

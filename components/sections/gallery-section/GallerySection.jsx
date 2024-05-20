@@ -23,7 +23,7 @@ const GallerySection = ({ gallery }) => {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.title}>{gallery.name}</div>
+        <h1 className={styles.title}>{gallery.name}</h1>
         {gallery.renderLink && (
           <Button
             text="View 3D Render"

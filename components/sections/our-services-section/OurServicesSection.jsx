@@ -12,7 +12,7 @@ const OurServicesSection = async () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.title}>Our Services</div>
+      <h1 className={styles.title}>Our Services</h1>
       <div className={styles.subtitle}>What We Offer</div>
       <div className={styles.services}>
         {services.map((service) => (

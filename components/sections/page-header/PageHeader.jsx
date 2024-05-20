@@ -21,7 +21,7 @@ const PageHeader = ({ title, subtitle, description, src, contactUsId }) => {
   return (
     <div className={styles.pageHeader}>
       <div className={styles.pageHeaderColumn}>
-        <div className={styles.pageHeaderTitle}>{title}</div>
+        <h1 className={styles.pageHeaderTitle}>{title}</h1>
         <div className={styles.pageHeaderSubtitle}>{subtitle}</div>
         <div className={styles.pageHeaderDescription}>{description}</div>
         {contactUsId && (

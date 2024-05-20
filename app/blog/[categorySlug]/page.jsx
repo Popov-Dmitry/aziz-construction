@@ -27,7 +27,7 @@ const PostCategory = async ({ params }) => {
       <Breadcrumbs useDefaultContainer />
       <div className={styles.container}>
         <div>
-          <div className={styles.title}>{name}</div>
+          <h1 className={styles.title}>{name}</h1>
           <div className={styles.description}>{description}</div>
         </div>
         <div className={styles.posts}>
