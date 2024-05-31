@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./areas-served-section.module.css";
 import Image from "next/image";
 import Map from "@/components/elements/map/Map";
+import { areasServed } from "@/data";
 
 const AreasServedSection = () => {
   return (
@@ -16,17 +17,9 @@ const AreasServedSection = () => {
           <div className={styles.boldText}>8:00 AM - 8:00 PM</div>
         </div>
         <div className={styles.areas}>
-          <li>Atherton</li>
-          <li>Burlingame</li>
-          <li>Foster City</li>
-          <li>Half Moon Bay</li>
-          <li>Hillsborough</li>
-          <li>Menlo Park</li>
-          <li>Millbrae</li>
-          <li>Palo Alto</li>
-          <li>Redwood City</li>
-          <li>San Carlos</li>
-          <li>San Mateo</li>
+          {areasServed.map((area) => (
+            <li key={area}>{area}</li>
+          ))}
         </div>
       </div>
       <Map />

@@ -250,3 +250,33 @@ export const mapPinPointsData = [
     name: "Gilroy"
   }
 ];
+
+export const areasServed = [
+  "San Jose",
+  "Santa Clara",
+  "Sunnyvale",
+  "Mountain View",
+  "Cupertino",
+  "Fremont",
+  "Palo Alto",
+  "Morgan Hill",
+  "Hillsborough",
+  "Los Altos Hills",
+  "Belvedere",
+  "Ross",
+  "Tiburon",
+  "Saratoga",
+  "San Francisco",
+  "Menlo Park",
+  "Orinda",
+  "Danville",
+  "San Ramon",
+  "Atherton",
+  "Burlingame",
+  "Foster City",
+  "Half Moon Bay",
+  "Millbrae",
+  "Redwood City",
+  "San Carlos",
+  "San Mateo"
+];
