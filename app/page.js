@@ -145,6 +145,22 @@ const faqBlock = () => (
   </div>
 );
 
+const lastProjectBock = () => (
+  <div className={styles.wrapper}>
+    <div className={styles.container}>
+      <div className={styles.twoColsFlex}>
+        <div className={styles.leftColumn}>
+          <div className={styles.title}>Last Project</div>
+          <div className={styles.subtitle}>
+            Take a virtual tour of our latest home we built in Hayward.
+          </div>
+        </div>
+        <iframe src="https://my.matterport.com/show/?m=3PScDJ4vsiW" className={styles.render} />
+      </div>
+    </div>
+  </div>
+);
+
 const recentWorksBock = () => (
   <div className={styles.wrapper}>
     <div className={styles.container}>
@@ -192,6 +208,7 @@ export default function Home() {
       {whyChooseUsBlock()}
       {servicesBlock()}
       {faqBlock()}
+      {lastProjectBock()}
       {recentWorksBock()}
       {clientsFeedbackBlock()}
       {reviewsBlock()}
