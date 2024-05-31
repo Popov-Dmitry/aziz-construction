@@ -90,17 +90,24 @@ const aboutBlock = () => (
             Constructive Partners in Building Your Future
           </h1>
           <div className={styles.aboutDescription}>
-            Welcome to Aziz Construction, a unique blend of craftsmanship and family legacy. With a wealth of hands-on
-            experience and guidance from industry experts, we have built a general contractor business that is designed
-            to endure. At Aziz Construction, we are committed to creating a lasting reputation for excellence,
-            delivering quality craftsmanship, and laying a solid foundation for future generations.
+            Welcome to Aziz Construction, a unique blend of craftsmanship and
+            family legacy. With a wealth of hands-on experience and guidance
+            from industry experts, we have built a general contractor business
+            that is designed to endure. At Aziz Construction, we are committed
+            to creating a lasting reputation for excellence, delivering quality
+            craftsmanship, and laying a solid foundation for future generations.
           </div>
           <div className={styles.aboutDescription}>
             {"Let's build together!"}
           </div>
         </div>
         <div className={styles.aboutPhoto}>
-          <Image src="/home/aziz.jpeg" alt="" fill className={styles.fitCover} />
+          <Image
+            src="/home/aziz.jpeg"
+            alt=""
+            fill
+            className={styles.fitCover}
+          />
         </div>
       </div>
     </div>
@@ -150,12 +157,15 @@ const lastProjectBock = () => (
     <div className={styles.container}>
       <div className={styles.twoColsFlex}>
         <div className={styles.leftColumn}>
-          <div className={styles.title}>Last Project</div>
+          <div className={styles.title}>Latest Project</div>
           <div className={styles.subtitle}>
             Take a virtual tour of our latest home we built in Hayward.
           </div>
         </div>
-        <iframe src="https://my.matterport.com/show/?m=3PScDJ4vsiW" className={styles.render} />
+        <iframe
+          src="https://my.matterport.com/show/?m=3PScDJ4vsiW"
+          className={styles.render}
+        />
       </div>
     </div>
   </div>
