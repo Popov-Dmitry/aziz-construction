@@ -1,0 +1,21 @@
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background-color: #ffffff;
+}
+
+.row:nth-child(odd) {
+    padding: 70px 10px 70px 0;
+}
+
+.row:nth-child(even) {
+    flex-direction: row-reverse;
+    background-color: #E5E5E5;
+    padding: 70px 0 70px 10px;
+}
+
+.contactUs {
+    max-width: 1200px;
+    width: 100%;
+}

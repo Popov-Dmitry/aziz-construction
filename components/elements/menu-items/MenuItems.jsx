@@ -41,6 +41,12 @@ const Items = ({ path, mobile, services }) => (
       </Dropdown>
     </div>
     <Link
+      className={joinClassNames(styles.element, path === "/our-process" ? styles.active : undefined)}
+      href="/our-process"
+    >
+      Our Process
+    </Link>
+    <Link
       className={joinClassNames(styles.element, path === "/blog" ? styles.active : undefined)}
       href="/blog"
     >

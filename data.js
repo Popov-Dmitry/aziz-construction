@@ -280,3 +280,41 @@ export const areasServed = [
   "San Carlos",
   "San Mateo"
 ];
+
+export const ourProcessData = [
+  {
+    title: "STEP 1 — FREE CONSULTATION",
+    description: "Let’s talk about your project scope and goals!",
+    src: "/about-us/benefits-of-choosing-us.jpeg"
+  },
+  {
+    title: "STEP 2 — AS BUILTS",
+    description: "Here’s where we start conceptualizing the build process. ",
+    src: "/about-us/benefits-of-choosing-us.jpeg"
+  },
+  {
+    title: "STEP 3 — ESTABLISHING LAYOUTS AND GETTING CLIENT APPROVAL",
+    description: "Approving plans and getting started on the work. ",
+    src: "/about-us/benefits-of-choosing-us.jpeg"
+  },
+  {
+    title: "STEP 4 — RENDERING",
+    description: "Creating visualization of the remodel so that you can determine all of your finishes and details before we begin. ",
+    src: "/about-us/benefits-of-choosing-us.jpeg"
+  },
+  {
+    title: "STEP 5 — DEVELOPING PERMIT SET AND SUBMITTING TO CITY",
+    description: "Once all of the design details are determined, we will ensure all necessary permits are submitted. ",
+    src: "/about-us/benefits-of-choosing-us.jpeg"
+  },
+  {
+    title: "STEP 6 — DESIGN PROCESS AND MATERIAL SELECTION STARTED",
+    description: "This is where we will determine all final finishes and materials. ",
+    src: "/about-us/benefits-of-choosing-us.jpeg"
+  },
+  {
+    title: "STEP 7 — CONSTRUCTION AFTER PERMIT IS ISSUED",
+    description: "Now that everything is planned and determined, we execute!",
+    src: "/about-us/benefits-of-choosing-us.jpeg"
+  }
+];
